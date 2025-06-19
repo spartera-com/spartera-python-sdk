@@ -22,7 +22,7 @@ from setuptools import setup, find_packages  # noqa: H301
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 NAME = "spartera-api-python-sdk"
-VERSION = "1.0.31"
+VERSION = "1.0.32"
 PYTHON_REQUIRES = ">= 3.9"
 REQUIRES = [
     "urllib3 >= 2.1.0, < 3.0.0",
@@ -34,7 +34,7 @@ REQUIRES = [
 setup(
     name=NAME,
     version=VERSION,
-    description="Spartera API Documentation",
+    description="Official Python SDK for the Spartera API platform",
     author="API Support",
     author_email="support@spartera.com",
     url="https://github.com/spartera-com/spartera-api-sdks/tree/main/python",
@@ -44,8 +44,5 @@ setup(
     include_package_data=True,
     license="Apache 2.0",
     long_description_content_type='text/markdown',
-    long_description="""\
-    Auto-generated API documentation for REST services of the Spartera platform
-    """,  # noqa: E501
-    package_data={"spartera_api_sdk": ["py.typed"]},
+    long_description=open("README.md", "r", encoding="utf-8").read(),    package_data={"spartera_api_sdk": ["py.typed"]},
 )
