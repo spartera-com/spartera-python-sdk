@@ -15,7 +15,7 @@
 """  # noqa: E501
 
 
-__version__ = "1.0.20"
+__version__ = "1.0.25"
 
 # import apis into sdk package
 from spartera_api_sdk.api.api_keys_api import APIKeysApi
