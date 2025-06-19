@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "spartera_api_sdk"
-version = "1.0.30"
+version = "1.0.31"
 description = "Spartera API Documentation"
 authors = ["API Support <support@spartera.com>"]
 license = "Apache 2.0"
