@@ -1,47 +1,61 @@
-# Spartera Upython SDK
+# Python SDK Documentation
 
-Official Upython SDK for the Spartera API platform.
+## Overview
+The Python SDK for Spartera API provides a convenient way to interact with the Spartera platform from Python applications.
 
-## 🚀 Installation
+**Install:** `pip install spartera-api-sdk`
 
-```bash
-pip install spartera-api-sdk
-```
+## Requirements
+- Python 3.8 or higher
+- pip package manager
 
-## 🔐 Authentication
-
-All SDKs use Spartera's **X-API-Key** header authentication.
-
-### Getting Your API Key:
-1. Login to [app.spartera.com](https://app.spartera.com)
-2. Navigate to **Settings** → **API Keys**
-3. Click **"Create API Key"**
-4. Copy the generated key
-
-## 📖 Quick Start
+## Quick Start
 
 ```python
-// Example usage will be generated with SDK!
+from spartera_api_sdk import ApiClient, Configuration
+from spartera_api_sdk.api import companies_api, assets_api
+
+# Configure client
+config = Configuration()
+config.host = "https://api.spartera.com"
+config.api_key = {'X-API-Key': 'your-api-key-here'}
+
+# Create API client
+client = ApiClient(config)
+companies_instance = companies_api.CompaniesApi(client)
+
+# Make API call
+company = companies_instance.companies_company_id_get('your-company-id')
+print(f"Company: {company.company_name}")
 ```
 
-## 📚 Documentation
+## Environment Variables
 
-- **API Documentation**: [docs.spartera.com](https://docs.spartera.com)
-- **SDK Documentation**: See the `docs/` directory
+```bash
+export SPARTERA_API_KEY="your-api-key"
+export SPARTERA_COMPANY_ID="your-company-id"
+export SPARTERA_API_BASE_URL="https://api.spartera.com"
+```
 
-## 🛠️ Development
+## Error Handling
 
-This SDK is auto-generated from our OpenAPI specification. 
+```python
+from spartera_api_sdk.exceptions import ApiException
 
-### Issues & Support
+try:
+    company = companies_instance.companies_company_id_get(company_id)
+except ApiException as e:
+    print(f"API Error: {e}")
+    print(f"Status: {e.status}")
+    print(f"Reason: {e.reason}")
+```
 
-- **Issues**: [GitHub Issues](https://github.com/spartera-com/spartera-python-sdk/issues)
-- **Email**: support@spartera.com
+## Package Manager
+- **Platform**: PyPI
+- **Install**: `pip install spartera-api-sdk`
+- **Import**: `from spartera_api_sdk import ApiClient`
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-**Note**: This is an auto-generated SDK. Please report any issues or feature requests in the [GitHub Issues](https://github.com/spartera-com/spartera-python-sdk/issues).
+## Publishing
+1. Build: `python setup.py sdist bdist_wheel`
+2. Upload: `twine upload dist/*`
+3. Install: `pip install spartera-api-sdk`
