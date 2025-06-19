@@ -1,0 +1,12 @@
+{
+    "packageName": "spartera_api_sdk",
+    "projectName": "spartera-api-python-sdk",
+    "packageVersion": "1.0.7",
+    "clientPackage": "spartera_api_sdk",
+    "packageCompany": "Spartera Inc.",
+    "packageAuthor": "Tony D",
+    "packageAuthorEmail": "tony@spartera.com",
+    "packageUrl": "https://github.com/spartera-com/spartera-api-sdks/tree/main/python",
+    "packageDescription": "Official SDK for Spartera API - Interface to manage companies' accounts and process insights remotely",
+    "pythonVersion": "3.8"
+}

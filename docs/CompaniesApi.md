@@ -1,0 +1,720 @@
+# spartera_api_sdk.CompaniesApi
+
+All URIs are relative to *https://api.spartera.com*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**companies_company_id_analytics_assets_get**](CompaniesApi.md#companies_company_id_analytics_assets_get) | **GET** /companies/{company_id}/analytics/assets | Get asset performance analytics     Query params: start_date, end_date, limit, sort_by, include
+[**companies_company_id_analytics_customers_get**](CompaniesApi.md#companies_company_id_analytics_customers_get) | **GET** /companies/{company_id}/analytics/customers | Get customer analytics including growth and segmentation     Query params: start_date, end_date, group_by, segment_by
+[**companies_company_id_analytics_dashboard_get**](CompaniesApi.md#companies_company_id_analytics_dashboard_get) | **GET** /companies/{company_id}/analytics/dashboard | Get comprehensive dashboard analytics for seller dashboard     Includes all metrics needed for dashboard charts in one call     Query params: start_date, end_date, period (day/week/month/quarter)
+[**companies_company_id_analytics_sales_get**](CompaniesApi.md#companies_company_id_analytics_sales_get) | **GET** /companies/{company_id}/analytics/sales | Get sales over time analytics     Query params: start_date, end_date, group_by (day/week/month/quarter), metrics
+[**companies_company_id_get**](CompaniesApi.md#companies_company_id_get) | **GET** /companies/{company_id} | Get details of the requestor&#39;s own company
+[**companies_company_id_objects_get**](CompaniesApi.md#companies_company_id_objects_get) | **GET** /companies/{company_id}/objects | Get all objects (connections, assets) of a single company
+[**companies_company_id_patch**](CompaniesApi.md#companies_company_id_patch) | **PATCH** /companies/{company_id} | Update an existing company by ID
+[**companies_company_id_requests_plan_get**](CompaniesApi.md#companies_company_id_requests_plan_get) | **GET** /companies/{company_id}/requests/plan | Get the total number of requests allocated in the company&#39;s current subscription plan.
+[**companies_company_id_requests_usage_get**](CompaniesApi.md#companies_company_id_requests_usage_get) | **GET** /companies/{company_id}/requests/usage | Get company request usage data for a specific month. Returns JSON metrics by default or CSV logs when download parameter is included.
+
+
+# **companies_company_id_analytics_assets_get**
+> object companies_company_id_analytics_assets_get(company_id)
+
+Get asset performance analytics     Query params: start_date, end_date, limit, sort_by, include
+
+### Example
+
+* Bearer (JWT) Authentication (bearerAuth):
+
+```python
+import spartera_api_sdk
+from spartera_api_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.spartera.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = spartera_api_sdk.Configuration(
+    host = "https://api.spartera.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearerAuth
+configuration = spartera_api_sdk.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with spartera_api_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = spartera_api_sdk.CompaniesApi(api_client)
+    company_id = 'company_id_example' # str | 
+
+    try:
+        # Get asset performance analytics     Query params: start_date, end_date, limit, sort_by, include
+        api_response = api_instance.companies_company_id_analytics_assets_get(company_id)
+        print("The response of CompaniesApi->companies_company_id_analytics_assets_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling CompaniesApi->companies_company_id_analytics_assets_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **company_id** | **str**|  | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful operation |  -  |
+**401** | Authentication required |  -  |
+**403** | Permission denied |  -  |
+**404** | Resource not found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **companies_company_id_analytics_customers_get**
+> object companies_company_id_analytics_customers_get(company_id)
+
+Get customer analytics including growth and segmentation     Query params: start_date, end_date, group_by, segment_by
+
+### Example
+
+* Bearer (JWT) Authentication (bearerAuth):
+
+```python
+import spartera_api_sdk
+from spartera_api_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.spartera.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = spartera_api_sdk.Configuration(
+    host = "https://api.spartera.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearerAuth
+configuration = spartera_api_sdk.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with spartera_api_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = spartera_api_sdk.CompaniesApi(api_client)
+    company_id = 'company_id_example' # str | 
+
+    try:
+        # Get customer analytics including growth and segmentation     Query params: start_date, end_date, group_by, segment_by
+        api_response = api_instance.companies_company_id_analytics_customers_get(company_id)
+        print("The response of CompaniesApi->companies_company_id_analytics_customers_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling CompaniesApi->companies_company_id_analytics_customers_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **company_id** | **str**|  | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful operation |  -  |
+**401** | Authentication required |  -  |
+**403** | Permission denied |  -  |
+**404** | Resource not found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **companies_company_id_analytics_dashboard_get**
+> object companies_company_id_analytics_dashboard_get(company_id)
+
+Get comprehensive dashboard analytics for seller dashboard     Includes all metrics needed for dashboard charts in one call     Query params: start_date, end_date, period (day/week/month/quarter)
+
+### Example
+
+* Bearer (JWT) Authentication (bearerAuth):
+
+```python
+import spartera_api_sdk
+from spartera_api_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.spartera.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = spartera_api_sdk.Configuration(
+    host = "https://api.spartera.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearerAuth
+configuration = spartera_api_sdk.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with spartera_api_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = spartera_api_sdk.CompaniesApi(api_client)
+    company_id = 'company_id_example' # str | 
+
+    try:
+        # Get comprehensive dashboard analytics for seller dashboard     Includes all metrics needed for dashboard charts in one call     Query params: start_date, end_date, period (day/week/month/quarter)
+        api_response = api_instance.companies_company_id_analytics_dashboard_get(company_id)
+        print("The response of CompaniesApi->companies_company_id_analytics_dashboard_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling CompaniesApi->companies_company_id_analytics_dashboard_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **company_id** | **str**|  | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful operation |  -  |
+**401** | Authentication required |  -  |
+**403** | Permission denied |  -  |
+**404** | Resource not found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **companies_company_id_analytics_sales_get**
+> object companies_company_id_analytics_sales_get(company_id)
+
+Get sales over time analytics     Query params: start_date, end_date, group_by (day/week/month/quarter), metrics
+
+### Example
+
+* Bearer (JWT) Authentication (bearerAuth):
+
+```python
+import spartera_api_sdk
+from spartera_api_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.spartera.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = spartera_api_sdk.Configuration(
+    host = "https://api.spartera.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearerAuth
+configuration = spartera_api_sdk.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with spartera_api_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = spartera_api_sdk.CompaniesApi(api_client)
+    company_id = 'company_id_example' # str | 
+
+    try:
+        # Get sales over time analytics     Query params: start_date, end_date, group_by (day/week/month/quarter), metrics
+        api_response = api_instance.companies_company_id_analytics_sales_get(company_id)
+        print("The response of CompaniesApi->companies_company_id_analytics_sales_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling CompaniesApi->companies_company_id_analytics_sales_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **company_id** | **str**|  | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful operation |  -  |
+**401** | Authentication required |  -  |
+**403** | Permission denied |  -  |
+**404** | Resource not found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **companies_company_id_get**
+> object companies_company_id_get(company_id)
+
+Get details of the requestor's own company
+
+### Example
+
+* Bearer (JWT) Authentication (bearerAuth):
+
+```python
+import spartera_api_sdk
+from spartera_api_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.spartera.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = spartera_api_sdk.Configuration(
+    host = "https://api.spartera.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearerAuth
+configuration = spartera_api_sdk.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with spartera_api_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = spartera_api_sdk.CompaniesApi(api_client)
+    company_id = 'company_id_example' # str | 
+
+    try:
+        # Get details of the requestor's own company
+        api_response = api_instance.companies_company_id_get(company_id)
+        print("The response of CompaniesApi->companies_company_id_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling CompaniesApi->companies_company_id_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **company_id** | **str**|  | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful operation |  -  |
+**401** | Authentication required |  -  |
+**403** | Permission denied |  -  |
+**404** | Resource not found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **companies_company_id_objects_get**
+> object companies_company_id_objects_get(company_id)
+
+Get all objects (connections, assets) of a single company
+
+### Example
+
+* Bearer (JWT) Authentication (bearerAuth):
+
+```python
+import spartera_api_sdk
+from spartera_api_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.spartera.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = spartera_api_sdk.Configuration(
+    host = "https://api.spartera.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearerAuth
+configuration = spartera_api_sdk.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with spartera_api_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = spartera_api_sdk.CompaniesApi(api_client)
+    company_id = 'company_id_example' # str | 
+
+    try:
+        # Get all objects (connections, assets) of a single company
+        api_response = api_instance.companies_company_id_objects_get(company_id)
+        print("The response of CompaniesApi->companies_company_id_objects_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling CompaniesApi->companies_company_id_objects_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **company_id** | **str**|  | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful operation |  -  |
+**401** | Authentication required |  -  |
+**403** | Permission denied |  -  |
+**404** | Resource not found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **companies_company_id_patch**
+> object companies_company_id_patch(company_id)
+
+Update an existing company by ID
+
+### Example
+
+* Bearer (JWT) Authentication (bearerAuth):
+
+```python
+import spartera_api_sdk
+from spartera_api_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.spartera.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = spartera_api_sdk.Configuration(
+    host = "https://api.spartera.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearerAuth
+configuration = spartera_api_sdk.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with spartera_api_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = spartera_api_sdk.CompaniesApi(api_client)
+    company_id = 'company_id_example' # str | 
+
+    try:
+        # Update an existing company by ID
+        api_response = api_instance.companies_company_id_patch(company_id)
+        print("The response of CompaniesApi->companies_company_id_patch:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling CompaniesApi->companies_company_id_patch: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **company_id** | **str**|  | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful operation |  -  |
+**401** | Authentication required |  -  |
+**403** | Permission denied |  -  |
+**400** | Invalid input |  -  |
+**404** | Resource not found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **companies_company_id_requests_plan_get**
+> object companies_company_id_requests_plan_get(company_id)
+
+Get the total number of requests allocated in the company's current subscription plan.
+
+### Example
+
+* Bearer (JWT) Authentication (bearerAuth):
+
+```python
+import spartera_api_sdk
+from spartera_api_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.spartera.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = spartera_api_sdk.Configuration(
+    host = "https://api.spartera.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearerAuth
+configuration = spartera_api_sdk.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with spartera_api_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = spartera_api_sdk.CompaniesApi(api_client)
+    company_id = 'company_id_example' # str | 
+
+    try:
+        # Get the total number of requests allocated in the company's current subscription plan.
+        api_response = api_instance.companies_company_id_requests_plan_get(company_id)
+        print("The response of CompaniesApi->companies_company_id_requests_plan_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling CompaniesApi->companies_company_id_requests_plan_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **company_id** | **str**|  | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful operation |  -  |
+**401** | Authentication required |  -  |
+**403** | Permission denied |  -  |
+**404** | Resource not found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **companies_company_id_requests_usage_get**
+> object companies_company_id_requests_usage_get(company_id)
+
+Get company request usage data for a specific month. Returns JSON metrics by default or CSV logs when download parameter is included.
+
+### Example
+
+* Bearer (JWT) Authentication (bearerAuth):
+
+```python
+import spartera_api_sdk
+from spartera_api_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.spartera.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = spartera_api_sdk.Configuration(
+    host = "https://api.spartera.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure Bearer authorization (JWT): bearerAuth
+configuration = spartera_api_sdk.Configuration(
+    access_token = os.environ["BEARER_TOKEN"]
+)
+
+# Enter a context with an instance of the API client
+with spartera_api_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = spartera_api_sdk.CompaniesApi(api_client)
+    company_id = 'company_id_example' # str | 
+
+    try:
+        # Get company request usage data for a specific month. Returns JSON metrics by default or CSV logs when download parameter is included.
+        api_response = api_instance.companies_company_id_requests_usage_get(company_id)
+        print("The response of CompaniesApi->companies_company_id_requests_usage_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling CompaniesApi->companies_company_id_requests_usage_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **company_id** | **str**|  | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful operation |  -  |
+**401** | Authentication required |  -  |
+**403** | Permission denied |  -  |
+**404** | Resource not found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
