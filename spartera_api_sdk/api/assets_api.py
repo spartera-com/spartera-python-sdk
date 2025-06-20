@@ -18,7 +18,7 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 from pydantic import StrictStr
-from typing import Any, Dict, Optional
+from typing import Any, Dict
 from spartera_api_sdk.models.asset import Asset
 
 from spartera_api_sdk.api_client import ApiClient, RequestSerialized
@@ -42,8 +42,8 @@ class AssetsApi:
     @validate_call
     def analyze_company_handle_assets_asset_slug_get(
         self,
-        company_handle: StrictStr,
         asset_slug: StrictStr,
+        company_handle: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -57,13 +57,13 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> object:
-        """Process assets route that handles both owned and purchased assets.             Minimal route function that passes all logic to crudder.process_asset              Args:                 asset_path: The path after /analyze/ containing asset information                 company_handle: The subdomain from Flask's routing (if available)
+        """Process (analyze) an asset. Attempt to process an analytic on a backend warehouse/AI model.
 
 
-        :param company_handle: (required)
-        :type company_handle: str
         :param asset_slug: (required)
         :type asset_slug: str
+        :param company_handle: (required)
+        :type company_handle: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -87,8 +87,8 @@ class AssetsApi:
         """ # noqa: E501
 
         _param = self._analyze_company_handle_assets_asset_slug_get_serialize(
-            company_handle=company_handle,
             asset_slug=asset_slug,
+            company_handle=company_handle,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -115,8 +115,8 @@ class AssetsApi:
     @validate_call
     def analyze_company_handle_assets_asset_slug_get_with_http_info(
         self,
-        company_handle: StrictStr,
         asset_slug: StrictStr,
+        company_handle: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -130,13 +130,13 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[object]:
-        """Process assets route that handles both owned and purchased assets.             Minimal route function that passes all logic to crudder.process_asset              Args:                 asset_path: The path after /analyze/ containing asset information                 company_handle: The subdomain from Flask's routing (if available)
+        """Process (analyze) an asset. Attempt to process an analytic on a backend warehouse/AI model.
 
 
-        :param company_handle: (required)
-        :type company_handle: str
         :param asset_slug: (required)
         :type asset_slug: str
+        :param company_handle: (required)
+        :type company_handle: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -160,8 +160,8 @@ class AssetsApi:
         """ # noqa: E501
 
         _param = self._analyze_company_handle_assets_asset_slug_get_serialize(
-            company_handle=company_handle,
             asset_slug=asset_slug,
+            company_handle=company_handle,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -188,8 +188,8 @@ class AssetsApi:
     @validate_call
     def analyze_company_handle_assets_asset_slug_get_without_preload_content(
         self,
-        company_handle: StrictStr,
         asset_slug: StrictStr,
+        company_handle: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -203,13 +203,13 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Process assets route that handles both owned and purchased assets.             Minimal route function that passes all logic to crudder.process_asset              Args:                 asset_path: The path after /analyze/ containing asset information                 company_handle: The subdomain from Flask's routing (if available)
+        """Process (analyze) an asset. Attempt to process an analytic on a backend warehouse/AI model.
 
 
-        :param company_handle: (required)
-        :type company_handle: str
         :param asset_slug: (required)
         :type asset_slug: str
+        :param company_handle: (required)
+        :type company_handle: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -233,8 +233,8 @@ class AssetsApi:
         """ # noqa: E501
 
         _param = self._analyze_company_handle_assets_asset_slug_get_serialize(
-            company_handle=company_handle,
             asset_slug=asset_slug,
+            company_handle=company_handle,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -256,8 +256,8 @@ class AssetsApi:
 
     def _analyze_company_handle_assets_asset_slug_get_serialize(
         self,
-        company_handle,
         asset_slug,
+        company_handle,
         _request_auth,
         _content_type,
         _headers,
@@ -279,10 +279,10 @@ class AssetsApi:
         _body_params: Optional[bytes] = None
 
         # process the path parameters
-        if company_handle is not None:
-            _path_params['company_handle'] = company_handle
         if asset_slug is not None:
             _path_params['asset_slug'] = asset_slug
+        if company_handle is not None:
+            _path_params['company_handle'] = company_handle
         # process the query parameters
         # process the header parameters
         # process the form parameters
@@ -300,7 +300,7 @@ class AssetsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -582,7 +582,7 @@ class AssetsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -864,7 +864,7 @@ class AssetsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -1146,7 +1146,7 @@ class AssetsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -1185,7 +1185,7 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> object:
-        """Get the information schema for a specific asset and save it to the asset's asset_schema field
+        """Retrieve and save an asset's information schema
 
 
         :param company_id: (required)
@@ -1258,7 +1258,7 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[object]:
-        """Get the information schema for a specific asset and save it to the asset's asset_schema field
+        """Retrieve and save an asset's information schema
 
 
         :param company_id: (required)
@@ -1331,7 +1331,7 @@ class AssetsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Get the information schema for a specific asset and save it to the asset's asset_schema field
+        """Retrieve and save an asset's information schema
 
 
         :param company_id: (required)
@@ -1428,7 +1428,7 @@ class AssetsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -1741,7 +1741,7 @@ class AssetsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -2023,627 +2023,12 @@ class AssetsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
             method='GET',
             resource_path='/companies/{company_id}/assets/{asset_id}/predicted_price',
-            path_params=_path_params,
-            query_params=_query_params,
-            header_params=_header_params,
-            body=_body_params,
-            post_params=_form_params,
-            files=_files,
-            auth_settings=_auth_settings,
-            collection_formats=_collection_formats,
-            _host=_host,
-            _request_auth=_request_auth
-        )
-
-
-
-
-    @validate_call
-    def companies_company_id_assets_asset_id_recommendations_explain_get(
-        self,
-        company_id: StrictStr,
-        asset_id: StrictStr,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
-        """Get detailed explanation of how asset recommendations are calculated for debugging purposes.
-
-
-        :param company_id: (required)
-        :type company_id: str
-        :param asset_id: (required)
-        :type asset_id: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """ # noqa: E501
-
-        _param = self._companies_company_id_assets_asset_id_recommendations_explain_get_serialize(
-            company_id=company_id,
-            asset_id=asset_id,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
-            '401': "InlineObject1",
-            '403': "InlineObject2",
-            '404': "InlineObject3",
-        }
-        response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
-        response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        ).data
-
-
-    @validate_call
-    def companies_company_id_assets_asset_id_recommendations_explain_get_with_http_info(
-        self,
-        company_id: StrictStr,
-        asset_id: StrictStr,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
-        """Get detailed explanation of how asset recommendations are calculated for debugging purposes.
-
-
-        :param company_id: (required)
-        :type company_id: str
-        :param asset_id: (required)
-        :type asset_id: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """ # noqa: E501
-
-        _param = self._companies_company_id_assets_asset_id_recommendations_explain_get_serialize(
-            company_id=company_id,
-            asset_id=asset_id,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
-            '401': "InlineObject1",
-            '403': "InlineObject2",
-            '404': "InlineObject3",
-        }
-        response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
-        response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        )
-
-
-    @validate_call
-    def companies_company_id_assets_asset_id_recommendations_explain_get_without_preload_content(
-        self,
-        company_id: StrictStr,
-        asset_id: StrictStr,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> RESTResponseType:
-        """Get detailed explanation of how asset recommendations are calculated for debugging purposes.
-
-
-        :param company_id: (required)
-        :type company_id: str
-        :param asset_id: (required)
-        :type asset_id: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """ # noqa: E501
-
-        _param = self._companies_company_id_assets_asset_id_recommendations_explain_get_serialize(
-            company_id=company_id,
-            asset_id=asset_id,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
-            '401': "InlineObject1",
-            '403': "InlineObject2",
-            '404': "InlineObject3",
-        }
-        response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
-        return response_data.response
-
-
-    def _companies_company_id_assets_asset_id_recommendations_explain_get_serialize(
-        self,
-        company_id,
-        asset_id,
-        _request_auth,
-        _content_type,
-        _headers,
-        _host_index,
-    ) -> RequestSerialized:
-
-        _host = None
-
-        _collection_formats: Dict[str, str] = {
-        }
-
-        _path_params: Dict[str, str] = {}
-        _query_params: List[Tuple[str, str]] = []
-        _header_params: Dict[str, Optional[str]] = _headers or {}
-        _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
-        _body_params: Optional[bytes] = None
-
-        # process the path parameters
-        if company_id is not None:
-            _path_params['company_id'] = company_id
-        if asset_id is not None:
-            _path_params['asset_id'] = asset_id
-        # process the query parameters
-        # process the header parameters
-        # process the form parameters
-        # process the body parameter
-
-
-        # set the HTTP header `Accept`
-        if 'Accept' not in _header_params:
-            _header_params['Accept'] = self.api_client.select_header_accept(
-                [
-                    'application/json'
-                ]
-            )
-
-
-        # authentication setting
-        _auth_settings: List[str] = [
-            'bearerAuth'
-        ]
-
-        return self.api_client.param_serialize(
-            method='GET',
-            resource_path='/companies/{company_id}/assets/{asset_id}/recommendations/explain',
-            path_params=_path_params,
-            query_params=_query_params,
-            header_params=_header_params,
-            body=_body_params,
-            post_params=_form_params,
-            files=_files,
-            auth_settings=_auth_settings,
-            collection_formats=_collection_formats,
-            _host=_host,
-            _request_auth=_request_auth
-        )
-
-
-
-
-    @validate_call
-    def companies_company_id_assets_asset_id_recommendations_get(
-        self,
-        company_id: StrictStr,
-        asset_id: StrictStr,
-        limit: Optional[StrictStr] = None,
-        min_score: Optional[StrictStr] = None,
-        include_details: Optional[StrictStr] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
-        """Get asset recommendations for a specific asset using heuristic waterfall matching     Returns list of similar assets based on industry, company, connection, tags, etc.      Query Parameters:     - limit: Number of recommendations to return (default: 12, max: 50)     - min_score: Minimum similarity score threshold (default: 0.1)     - include_details: Include component similarity scores (default: false)
-
-
-        :param company_id: (required)
-        :type company_id: str
-        :param asset_id: (required)
-        :type asset_id: str
-        :param limit:
-        :type limit: str
-        :param min_score:
-        :type min_score: str
-        :param include_details:
-        :type include_details: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """ # noqa: E501
-
-        _param = self._companies_company_id_assets_asset_id_recommendations_get_serialize(
-            company_id=company_id,
-            asset_id=asset_id,
-            limit=limit,
-            min_score=min_score,
-            include_details=include_details,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
-            '401': "InlineObject1",
-            '403': "InlineObject2",
-            '404': "InlineObject3",
-        }
-        response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
-        response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        ).data
-
-
-    @validate_call
-    def companies_company_id_assets_asset_id_recommendations_get_with_http_info(
-        self,
-        company_id: StrictStr,
-        asset_id: StrictStr,
-        limit: Optional[StrictStr] = None,
-        min_score: Optional[StrictStr] = None,
-        include_details: Optional[StrictStr] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
-        """Get asset recommendations for a specific asset using heuristic waterfall matching     Returns list of similar assets based on industry, company, connection, tags, etc.      Query Parameters:     - limit: Number of recommendations to return (default: 12, max: 50)     - min_score: Minimum similarity score threshold (default: 0.1)     - include_details: Include component similarity scores (default: false)
-
-
-        :param company_id: (required)
-        :type company_id: str
-        :param asset_id: (required)
-        :type asset_id: str
-        :param limit:
-        :type limit: str
-        :param min_score:
-        :type min_score: str
-        :param include_details:
-        :type include_details: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """ # noqa: E501
-
-        _param = self._companies_company_id_assets_asset_id_recommendations_get_serialize(
-            company_id=company_id,
-            asset_id=asset_id,
-            limit=limit,
-            min_score=min_score,
-            include_details=include_details,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
-            '401': "InlineObject1",
-            '403': "InlineObject2",
-            '404': "InlineObject3",
-        }
-        response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
-        response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        )
-
-
-    @validate_call
-    def companies_company_id_assets_asset_id_recommendations_get_without_preload_content(
-        self,
-        company_id: StrictStr,
-        asset_id: StrictStr,
-        limit: Optional[StrictStr] = None,
-        min_score: Optional[StrictStr] = None,
-        include_details: Optional[StrictStr] = None,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> RESTResponseType:
-        """Get asset recommendations for a specific asset using heuristic waterfall matching     Returns list of similar assets based on industry, company, connection, tags, etc.      Query Parameters:     - limit: Number of recommendations to return (default: 12, max: 50)     - min_score: Minimum similarity score threshold (default: 0.1)     - include_details: Include component similarity scores (default: false)
-
-
-        :param company_id: (required)
-        :type company_id: str
-        :param asset_id: (required)
-        :type asset_id: str
-        :param limit:
-        :type limit: str
-        :param min_score:
-        :type min_score: str
-        :param include_details:
-        :type include_details: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """ # noqa: E501
-
-        _param = self._companies_company_id_assets_asset_id_recommendations_get_serialize(
-            company_id=company_id,
-            asset_id=asset_id,
-            limit=limit,
-            min_score=min_score,
-            include_details=include_details,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
-            '401': "InlineObject1",
-            '403': "InlineObject2",
-            '404': "InlineObject3",
-        }
-        response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
-        return response_data.response
-
-
-    def _companies_company_id_assets_asset_id_recommendations_get_serialize(
-        self,
-        company_id,
-        asset_id,
-        limit,
-        min_score,
-        include_details,
-        _request_auth,
-        _content_type,
-        _headers,
-        _host_index,
-    ) -> RequestSerialized:
-
-        _host = None
-
-        _collection_formats: Dict[str, str] = {
-        }
-
-        _path_params: Dict[str, str] = {}
-        _query_params: List[Tuple[str, str]] = []
-        _header_params: Dict[str, Optional[str]] = _headers or {}
-        _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
-        _body_params: Optional[bytes] = None
-
-        # process the path parameters
-        if company_id is not None:
-            _path_params['company_id'] = company_id
-        if asset_id is not None:
-            _path_params['asset_id'] = asset_id
-        # process the query parameters
-        if limit is not None:
-            
-            _query_params.append(('limit', limit))
-            
-        if min_score is not None:
-            
-            _query_params.append(('min_score', min_score))
-            
-        if include_details is not None:
-            
-            _query_params.append(('include_details', include_details))
-            
-        # process the header parameters
-        # process the form parameters
-        # process the body parameter
-
-
-        # set the HTTP header `Accept`
-        if 'Accept' not in _header_params:
-            _header_params['Accept'] = self.api_client.select_header_accept(
-                [
-                    'application/json'
-                ]
-            )
-
-
-        # authentication setting
-        _auth_settings: List[str] = [
-            'bearerAuth'
-        ]
-
-        return self.api_client.param_serialize(
-            method='GET',
-            resource_path='/companies/{company_id}/assets/{asset_id}/recommendations',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -2920,7 +2305,7 @@ class AssetsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -3202,7 +2587,7 @@ class AssetsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -3469,7 +2854,7 @@ class AssetsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -3764,574 +3149,12 @@ class AssetsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
             method='POST',
             resource_path='/companies/{company_id}/assets',
-            path_params=_path_params,
-            query_params=_query_params,
-            header_params=_header_params,
-            body=_body_params,
-            post_params=_form_params,
-            files=_files,
-            auth_settings=_auth_settings,
-            collection_formats=_collection_formats,
-            _host=_host,
-            _request_auth=_request_auth
-        )
-
-
-
-
-    @validate_call
-    def companies_company_id_assets_recommendations_bulk_post(
-        self,
-        company_id: StrictStr,
-        asset: Asset,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
-        """Get recommendations for multiple assets in a single request. Useful for pre-loading recommendations.
-
-
-        :param company_id: (required)
-        :type company_id: str
-        :param asset: (required)
-        :type asset: Asset
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """ # noqa: E501
-
-        _param = self._companies_company_id_assets_recommendations_bulk_post_serialize(
-            company_id=company_id,
-            asset=asset,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
-            '401': "InlineObject1",
-            '403': "InlineObject2",
-            '400': "InlineObject",
-        }
-        response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
-        response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        ).data
-
-
-    @validate_call
-    def companies_company_id_assets_recommendations_bulk_post_with_http_info(
-        self,
-        company_id: StrictStr,
-        asset: Asset,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
-        """Get recommendations for multiple assets in a single request. Useful for pre-loading recommendations.
-
-
-        :param company_id: (required)
-        :type company_id: str
-        :param asset: (required)
-        :type asset: Asset
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """ # noqa: E501
-
-        _param = self._companies_company_id_assets_recommendations_bulk_post_serialize(
-            company_id=company_id,
-            asset=asset,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
-            '401': "InlineObject1",
-            '403': "InlineObject2",
-            '400': "InlineObject",
-        }
-        response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
-        response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        )
-
-
-    @validate_call
-    def companies_company_id_assets_recommendations_bulk_post_without_preload_content(
-        self,
-        company_id: StrictStr,
-        asset: Asset,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> RESTResponseType:
-        """Get recommendations for multiple assets in a single request. Useful for pre-loading recommendations.
-
-
-        :param company_id: (required)
-        :type company_id: str
-        :param asset: (required)
-        :type asset: Asset
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """ # noqa: E501
-
-        _param = self._companies_company_id_assets_recommendations_bulk_post_serialize(
-            company_id=company_id,
-            asset=asset,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
-            '401': "InlineObject1",
-            '403': "InlineObject2",
-            '400': "InlineObject",
-        }
-        response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
-        return response_data.response
-
-
-    def _companies_company_id_assets_recommendations_bulk_post_serialize(
-        self,
-        company_id,
-        asset,
-        _request_auth,
-        _content_type,
-        _headers,
-        _host_index,
-    ) -> RequestSerialized:
-
-        _host = None
-
-        _collection_formats: Dict[str, str] = {
-        }
-
-        _path_params: Dict[str, str] = {}
-        _query_params: List[Tuple[str, str]] = []
-        _header_params: Dict[str, Optional[str]] = _headers or {}
-        _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
-        _body_params: Optional[bytes] = None
-
-        # process the path parameters
-        if company_id is not None:
-            _path_params['company_id'] = company_id
-        # process the query parameters
-        # process the header parameters
-        # process the form parameters
-        # process the body parameter
-        if asset is not None:
-            _body_params = asset
-
-
-        # set the HTTP header `Accept`
-        if 'Accept' not in _header_params:
-            _header_params['Accept'] = self.api_client.select_header_accept(
-                [
-                    'application/json'
-                ]
-            )
-
-        # set the HTTP header `Content-Type`
-        if _content_type:
-            _header_params['Content-Type'] = _content_type
-        else:
-            _default_content_type = (
-                self.api_client.select_header_content_type(
-                    [
-                        'application/json'
-                    ]
-                )
-            )
-            if _default_content_type is not None:
-                _header_params['Content-Type'] = _default_content_type
-
-        # authentication setting
-        _auth_settings: List[str] = [
-            'bearerAuth'
-        ]
-
-        return self.api_client.param_serialize(
-            method='POST',
-            resource_path='/companies/{company_id}/assets/recommendations/bulk',
-            path_params=_path_params,
-            query_params=_query_params,
-            header_params=_header_params,
-            body=_body_params,
-            post_params=_form_params,
-            files=_files,
-            auth_settings=_auth_settings,
-            collection_formats=_collection_formats,
-            _host=_host,
-            _request_auth=_request_auth
-        )
-
-
-
-
-    @validate_call
-    def companies_company_id_assets_recommendations_health_get(
-        self,
-        company_id: StrictStr,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
-        """Health check for the recommendations system with sample data and performance metrics.
-
-
-        :param company_id: (required)
-        :type company_id: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """ # noqa: E501
-
-        _param = self._companies_company_id_assets_recommendations_health_get_serialize(
-            company_id=company_id,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
-            '401': "InlineObject1",
-            '403': "InlineObject2",
-            '404': "InlineObject3",
-        }
-        response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
-        response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        ).data
-
-
-    @validate_call
-    def companies_company_id_assets_recommendations_health_get_with_http_info(
-        self,
-        company_id: StrictStr,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
-        """Health check for the recommendations system with sample data and performance metrics.
-
-
-        :param company_id: (required)
-        :type company_id: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """ # noqa: E501
-
-        _param = self._companies_company_id_assets_recommendations_health_get_serialize(
-            company_id=company_id,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
-            '401': "InlineObject1",
-            '403': "InlineObject2",
-            '404': "InlineObject3",
-        }
-        response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
-        response_data.read()
-        return self.api_client.response_deserialize(
-            response_data=response_data,
-            response_types_map=_response_types_map,
-        )
-
-
-    @validate_call
-    def companies_company_id_assets_recommendations_health_get_without_preload_content(
-        self,
-        company_id: StrictStr,
-        _request_timeout: Union[
-            None,
-            Annotated[StrictFloat, Field(gt=0)],
-            Tuple[
-                Annotated[StrictFloat, Field(gt=0)],
-                Annotated[StrictFloat, Field(gt=0)]
-            ]
-        ] = None,
-        _request_auth: Optional[Dict[StrictStr, Any]] = None,
-        _content_type: Optional[StrictStr] = None,
-        _headers: Optional[Dict[StrictStr, Any]] = None,
-        _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> RESTResponseType:
-        """Health check for the recommendations system with sample data and performance metrics.
-
-
-        :param company_id: (required)
-        :type company_id: str
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :type _request_timeout: int, tuple(int, int), optional
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the
-                              authentication in the spec for a single request.
-        :type _request_auth: dict, optional
-        :param _content_type: force content-type for the request.
-        :type _content_type: str, Optional
-        :param _headers: set to override the headers for a single
-                         request; this effectively ignores the headers
-                         in the spec for a single request.
-        :type _headers: dict, optional
-        :param _host_index: set to override the host_index for a single
-                            request; this effectively ignores the host_index
-                            in the spec for a single request.
-        :type _host_index: int, optional
-        :return: Returns the result object.
-        """ # noqa: E501
-
-        _param = self._companies_company_id_assets_recommendations_health_get_serialize(
-            company_id=company_id,
-            _request_auth=_request_auth,
-            _content_type=_content_type,
-            _headers=_headers,
-            _host_index=_host_index
-        )
-
-        _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
-            '401': "InlineObject1",
-            '403': "InlineObject2",
-            '404': "InlineObject3",
-        }
-        response_data = self.api_client.call_api(
-            *_param,
-            _request_timeout=_request_timeout
-        )
-        return response_data.response
-
-
-    def _companies_company_id_assets_recommendations_health_get_serialize(
-        self,
-        company_id,
-        _request_auth,
-        _content_type,
-        _headers,
-        _host_index,
-    ) -> RequestSerialized:
-
-        _host = None
-
-        _collection_formats: Dict[str, str] = {
-        }
-
-        _path_params: Dict[str, str] = {}
-        _query_params: List[Tuple[str, str]] = []
-        _header_params: Dict[str, Optional[str]] = _headers or {}
-        _form_params: List[Tuple[str, str]] = []
-        _files: Dict[
-            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
-        ] = {}
-        _body_params: Optional[bytes] = None
-
-        # process the path parameters
-        if company_id is not None:
-            _path_params['company_id'] = company_id
-        # process the query parameters
-        # process the header parameters
-        # process the form parameters
-        # process the body parameter
-
-
-        # set the HTTP header `Accept`
-        if 'Accept' not in _header_params:
-            _header_params['Accept'] = self.api_client.select_header_accept(
-                [
-                    'application/json'
-                ]
-            )
-
-
-        # authentication setting
-        _auth_settings: List[str] = [
-            'bearerAuth'
-        ]
-
-        return self.api_client.param_serialize(
-            method='GET',
-            resource_path='/companies/{company_id}/assets/recommendations/health',
             path_params=_path_params,
             query_params=_query_params,
             header_params=_header_params,
@@ -4593,7 +3416,7 @@ class AssetsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(

@@ -30,7 +30,7 @@ class TestUsersApi(unittest.TestCase):
     def test_companies_company_id_users_get(self) -> None:
         """Test case for companies_company_id_users_get
 
-        Get a list of all users for a particular company
+        Get a list of all users in a company
         """
         pass
 

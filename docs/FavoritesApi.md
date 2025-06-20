@@ -5,11 +5,11 @@ All URIs are relative to *https://api.spartera.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**companies_company_id_users_user_id_favorites_category_category_get**](FavoritesApi.md#companies_company_id_users_user_id_favorites_category_category_get) | **GET** /companies/{company_id}/users/{user_id}/favorites/category/{category} | Get all favorites for the specified user in a specific category
-[**companies_company_id_users_user_id_favorites_check_asset_id_get**](FavoritesApi.md#companies_company_id_users_user_id_favorites_check_asset_id_get) | **GET** /companies/{company_id}/users/{user_id}/favorites/check/{asset_id} | Check if the specified user has favorited a specific asset     Returns the favorite record if it exists, or empty result if not     Useful for UI to show/hide favorite button states
+[**companies_company_id_users_user_id_favorites_check_asset_id_get**](FavoritesApi.md#companies_company_id_users_user_id_favorites_check_asset_id_get) | **GET** /companies/{company_id}/users/{user_id}/favorites/check/{asset_id} | Check if the specified user has favorited a specific asset
 [**companies_company_id_users_user_id_favorites_favorite_id_delete**](FavoritesApi.md#companies_company_id_users_user_id_favorites_favorite_id_delete) | **DELETE** /companies/{company_id}/users/{user_id}/favorites/{favorite_id} | Delete single favorite by ID (unfavorite an asset)
 [**companies_company_id_users_user_id_favorites_favorite_id_get**](FavoritesApi.md#companies_company_id_users_user_id_favorites_favorite_id_get) | **GET** /companies/{company_id}/users/{user_id}/favorites/{favorite_id} | Get single favorite by ID
-[**companies_company_id_users_user_id_favorites_favorite_id_patch**](FavoritesApi.md#companies_company_id_users_user_id_favorites_favorite_id_patch) | **PATCH** /companies/{company_id}/users/{user_id}/favorites/{favorite_id} | Update an existing favorite by ID     Can update notes, category, priority
-[**companies_company_id_users_user_id_favorites_get**](FavoritesApi.md#companies_company_id_users_user_id_favorites_get) | **GET** /companies/{company_id}/users/{user_id}/favorites | Get a list of all favorites for a specific user     Query params:     - category: filter by category     - sort: sort field (priority, date_created, etc.)     - order: sort direction (asc, desc)
+[**companies_company_id_users_user_id_favorites_favorite_id_patch**](FavoritesApi.md#companies_company_id_users_user_id_favorites_favorite_id_patch) | **PATCH** /companies/{company_id}/users/{user_id}/favorites/{favorite_id} | Update an existing favorite by ID
+[**companies_company_id_users_user_id_favorites_get**](FavoritesApi.md#companies_company_id_users_user_id_favorites_get) | **GET** /companies/{company_id}/users/{user_id}/favorites | Get a list of all favorites for a specific user
 [**companies_company_id_users_user_id_favorites_post**](FavoritesApi.md#companies_company_id_users_user_id_favorites_post) | **POST** /companies/{company_id}/users/{user_id}/favorites | POST /companies/{company_id}/users/{user_id}/favorites
 [**companies_company_id_users_user_id_favorites_uncategorized_get**](FavoritesApi.md#companies_company_id_users_user_id_favorites_uncategorized_get) | **GET** /companies/{company_id}/users/{user_id}/favorites/uncategorized | Get all favorites for the specified user that don&#39;t have a category
 
@@ -21,7 +21,7 @@ Get all favorites for the specified user in a specific category
 
 ### Example
 
-* Bearer (JWT) Authentication (bearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import spartera_api_sdk
@@ -39,10 +39,11 @@ configuration = spartera_api_sdk.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization (JWT): bearerAuth
-configuration = spartera_api_sdk.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with spartera_api_sdk.ApiClient(configuration) as api_client:
@@ -78,7 +79,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -99,11 +100,11 @@ Name | Type | Description  | Notes
 # **companies_company_id_users_user_id_favorites_check_asset_id_get**
 > object companies_company_id_users_user_id_favorites_check_asset_id_get(company_id, user_id, asset_id)
 
-Check if the specified user has favorited a specific asset     Returns the favorite record if it exists, or empty result if not     Useful for UI to show/hide favorite button states
+Check if the specified user has favorited a specific asset
 
 ### Example
 
-* Bearer (JWT) Authentication (bearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import spartera_api_sdk
@@ -121,10 +122,11 @@ configuration = spartera_api_sdk.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization (JWT): bearerAuth
-configuration = spartera_api_sdk.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with spartera_api_sdk.ApiClient(configuration) as api_client:
@@ -135,7 +137,7 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
     asset_id = 'asset_id_example' # str | 
 
     try:
-        # Check if the specified user has favorited a specific asset     Returns the favorite record if it exists, or empty result if not     Useful for UI to show/hide favorite button states
+        # Check if the specified user has favorited a specific asset
         api_response = api_instance.companies_company_id_users_user_id_favorites_check_asset_id_get(company_id, user_id, asset_id)
         print("The response of FavoritesApi->companies_company_id_users_user_id_favorites_check_asset_id_get:\n")
         pprint(api_response)
@@ -160,7 +162,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -185,7 +187,7 @@ Delete single favorite by ID (unfavorite an asset)
 
 ### Example
 
-* Bearer (JWT) Authentication (bearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import spartera_api_sdk
@@ -203,10 +205,11 @@ configuration = spartera_api_sdk.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization (JWT): bearerAuth
-configuration = spartera_api_sdk.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with spartera_api_sdk.ApiClient(configuration) as api_client:
@@ -242,7 +245,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -267,7 +270,7 @@ Get single favorite by ID
 
 ### Example
 
-* Bearer (JWT) Authentication (bearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import spartera_api_sdk
@@ -285,10 +288,11 @@ configuration = spartera_api_sdk.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization (JWT): bearerAuth
-configuration = spartera_api_sdk.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with spartera_api_sdk.ApiClient(configuration) as api_client:
@@ -324,7 +328,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -345,11 +349,11 @@ Name | Type | Description  | Notes
 # **companies_company_id_users_user_id_favorites_favorite_id_patch**
 > object companies_company_id_users_user_id_favorites_favorite_id_patch(company_id, user_id, favorite_id, favorite)
 
-Update an existing favorite by ID     Can update notes, category, priority
+Update an existing favorite by ID
 
 ### Example
 
-* Bearer (JWT) Authentication (bearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import spartera_api_sdk
@@ -368,10 +372,11 @@ configuration = spartera_api_sdk.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization (JWT): bearerAuth
-configuration = spartera_api_sdk.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with spartera_api_sdk.ApiClient(configuration) as api_client:
@@ -383,7 +388,7 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
     favorite = spartera_api_sdk.Favorite() # Favorite | 
 
     try:
-        # Update an existing favorite by ID     Can update notes, category, priority
+        # Update an existing favorite by ID
         api_response = api_instance.companies_company_id_users_user_id_favorites_favorite_id_patch(company_id, user_id, favorite_id, favorite)
         print("The response of FavoritesApi->companies_company_id_users_user_id_favorites_favorite_id_patch:\n")
         pprint(api_response)
@@ -409,7 +414,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -431,11 +436,11 @@ Name | Type | Description  | Notes
 # **companies_company_id_users_user_id_favorites_get**
 > object companies_company_id_users_user_id_favorites_get(company_id, user_id)
 
-Get a list of all favorites for a specific user     Query params:     - category: filter by category     - sort: sort field (priority, date_created, etc.)     - order: sort direction (asc, desc)
+Get a list of all favorites for a specific user
 
 ### Example
 
-* Bearer (JWT) Authentication (bearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import spartera_api_sdk
@@ -453,10 +458,11 @@ configuration = spartera_api_sdk.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization (JWT): bearerAuth
-configuration = spartera_api_sdk.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with spartera_api_sdk.ApiClient(configuration) as api_client:
@@ -466,7 +472,7 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
     user_id = 'user_id_example' # str | 
 
     try:
-        # Get a list of all favorites for a specific user     Query params:     - category: filter by category     - sort: sort field (priority, date_created, etc.)     - order: sort direction (asc, desc)
+        # Get a list of all favorites for a specific user
         api_response = api_instance.companies_company_id_users_user_id_favorites_get(company_id, user_id)
         print("The response of FavoritesApi->companies_company_id_users_user_id_favorites_get:\n")
         pprint(api_response)
@@ -490,7 +496,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -515,7 +521,7 @@ POST /companies/{company_id}/users/{user_id}/favorites
 
 ### Example
 
-* Bearer (JWT) Authentication (bearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import spartera_api_sdk
@@ -534,10 +540,11 @@ configuration = spartera_api_sdk.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization (JWT): bearerAuth
-configuration = spartera_api_sdk.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with spartera_api_sdk.ApiClient(configuration) as api_client:
@@ -573,7 +580,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -598,7 +605,7 @@ Get all favorites for the specified user that don't have a category
 
 ### Example
 
-* Bearer (JWT) Authentication (bearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import spartera_api_sdk
@@ -616,10 +623,11 @@ configuration = spartera_api_sdk.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization (JWT): bearerAuth
-configuration = spartera_api_sdk.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with spartera_api_sdk.ApiClient(configuration) as api_client:
@@ -653,7 +661,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 

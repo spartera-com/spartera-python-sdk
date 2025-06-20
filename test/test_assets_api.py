@@ -30,7 +30,7 @@ class TestAssetsApi(unittest.TestCase):
     def test_analyze_company_handle_assets_asset_slug_get(self) -> None:
         """Test case for analyze_company_handle_assets_asset_slug_get
 
-        Process assets route that handles both owned and purchased assets.             Minimal route function that passes all logic to crudder.process_asset              Args:                 asset_path: The path after /analyze/ containing asset information                 company_handle: The subdomain from Flask's routing (if available)
+        Process (analyze) an asset. Attempt to process an analytic on a backend warehouse/AI model.
         """
         pass
 
@@ -58,7 +58,7 @@ class TestAssetsApi(unittest.TestCase):
     def test_companies_company_id_assets_asset_id_infoschema_save_get(self) -> None:
         """Test case for companies_company_id_assets_asset_id_infoschema_save_get
 
-        Get the information schema for a specific asset and save it to the asset's asset_schema field
+        Retrieve and save an asset's information schema
         """
         pass
 
@@ -73,20 +73,6 @@ class TestAssetsApi(unittest.TestCase):
         """Test case for companies_company_id_assets_asset_id_predicted_price_get
 
         Get AI-predicted pricing for a specific asset
-        """
-        pass
-
-    def test_companies_company_id_assets_asset_id_recommendations_explain_get(self) -> None:
-        """Test case for companies_company_id_assets_asset_id_recommendations_explain_get
-
-        Get detailed explanation of how asset recommendations are calculated for debugging purposes.
-        """
-        pass
-
-    def test_companies_company_id_assets_asset_id_recommendations_get(self) -> None:
-        """Test case for companies_company_id_assets_asset_id_recommendations_get
-
-        Get asset recommendations for a specific asset using heuristic waterfall matching     Returns list of similar assets based on industry, company, connection, tags, etc.      Query Parameters:     - limit: Number of recommendations to return (default: 12, max: 50)     - min_score: Minimum similarity score threshold (default: 0.1)     - include_details: Include component similarity scores (default: false)
         """
         pass
 
@@ -115,20 +101,6 @@ class TestAssetsApi(unittest.TestCase):
         """Test case for companies_company_id_assets_post
 
         Create a new asset
-        """
-        pass
-
-    def test_companies_company_id_assets_recommendations_bulk_post(self) -> None:
-        """Test case for companies_company_id_assets_recommendations_bulk_post
-
-        Get recommendations for multiple assets in a single request. Useful for pre-loading recommendations.
-        """
-        pass
-
-    def test_companies_company_id_assets_recommendations_health_get(self) -> None:
-        """Test case for companies_company_id_assets_recommendations_health_get
-
-        Health check for the recommendations system with sample data and performance metrics.
         """
         pass
 

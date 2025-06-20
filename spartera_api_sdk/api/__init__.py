@@ -9,5 +9,6 @@ from spartera_api_sdk.api.cloud_providers_api import CloudProvidersApi
 from spartera_api_sdk.api.companies_api import CompaniesApi
 from spartera_api_sdk.api.connections_api import ConnectionsApi
 from spartera_api_sdk.api.favorites_api import FavoritesApi
+from spartera_api_sdk.api.storage_engines_api import StorageEnginesApi
 from spartera_api_sdk.api.users_api import UsersApi
 

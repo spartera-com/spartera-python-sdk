@@ -1,17 +1,17 @@
-# spartera_api_sdk.CloudProvidersApi
+# spartera_api_sdk.StorageEnginesApi
 
 All URIs are relative to *https://api.spartera.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cloud_providers_get**](CloudProvidersApi.md#cloud_providers_get) | **GET** /cloud-providers | Get a list of all cloud providers
-[**cloud_providers_provider_id_get**](CloudProvidersApi.md#cloud_providers_provider_id_get) | **GET** /cloud-providers/{provider_id} | Get single cloud provider by ID
+[**cloud_providers_provider_id_storage_engines_engine_id_get**](StorageEnginesApi.md#cloud_providers_provider_id_storage_engines_engine_id_get) | **GET** /cloud-providers/{provider_id}/storage-engines/{engine_id} | Get single storage engine by ID
+[**cloud_providers_provider_id_storage_engines_get**](StorageEnginesApi.md#cloud_providers_provider_id_storage_engines_get) | **GET** /cloud-providers/{provider_id}/storage-engines | Get a list of all storage engines
 
 
-# **cloud_providers_get**
-> object cloud_providers_get()
+# **cloud_providers_provider_id_storage_engines_engine_id_get**
+> object cloud_providers_provider_id_storage_engines_engine_id_get(provider_id, engine_id)
 
-Get a list of all cloud providers
+Get single storage engine by ID
 
 ### Example
 
@@ -42,22 +42,28 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # Enter a context with an instance of the API client
 with spartera_api_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = spartera_api_sdk.CloudProvidersApi(api_client)
+    api_instance = spartera_api_sdk.StorageEnginesApi(api_client)
+    provider_id = 'provider_id_example' # str | 
+    engine_id = 'engine_id_example' # str | 
 
     try:
-        # Get a list of all cloud providers
-        api_response = api_instance.cloud_providers_get()
-        print("The response of CloudProvidersApi->cloud_providers_get:\n")
+        # Get single storage engine by ID
+        api_response = api_instance.cloud_providers_provider_id_storage_engines_engine_id_get(provider_id, engine_id)
+        print("The response of StorageEnginesApi->cloud_providers_provider_id_storage_engines_engine_id_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling CloudProvidersApi->cloud_providers_get: %s\n" % e)
+        print("Exception when calling StorageEnginesApi->cloud_providers_provider_id_storage_engines_engine_id_get: %s\n" % e)
 ```
 
 
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **provider_id** | **str**|  | 
+ **engine_id** | **str**|  | 
 
 ### Return type
 
@@ -83,10 +89,10 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **cloud_providers_provider_id_get**
-> object cloud_providers_provider_id_get(provider_id)
+# **cloud_providers_provider_id_storage_engines_get**
+> object cloud_providers_provider_id_storage_engines_get(provider_id)
 
-Get single cloud provider by ID
+Get a list of all storage engines
 
 ### Example
 
@@ -117,16 +123,16 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 # Enter a context with an instance of the API client
 with spartera_api_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = spartera_api_sdk.CloudProvidersApi(api_client)
+    api_instance = spartera_api_sdk.StorageEnginesApi(api_client)
     provider_id = 'provider_id_example' # str | 
 
     try:
-        # Get single cloud provider by ID
-        api_response = api_instance.cloud_providers_provider_id_get(provider_id)
-        print("The response of CloudProvidersApi->cloud_providers_provider_id_get:\n")
+        # Get a list of all storage engines
+        api_response = api_instance.cloud_providers_provider_id_storage_engines_get(provider_id)
+        print("The response of StorageEnginesApi->cloud_providers_provider_id_storage_engines_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling CloudProvidersApi->cloud_providers_provider_id_get: %s\n" % e)
+        print("Exception when calling StorageEnginesApi->cloud_providers_provider_id_storage_engines_get: %s\n" % e)
 ```
 
 

@@ -34,31 +34,10 @@ class TestCloudProvidersApi(unittest.TestCase):
         """
         pass
 
-    def test_cloud_providers_post(self) -> None:
-        """Test case for cloud_providers_post
-
-        Create single cloud provider
-        """
-        pass
-
-    def test_cloud_providers_provider_id_delete(self) -> None:
-        """Test case for cloud_providers_provider_id_delete
-
-        Delete single cloud provider by ID
-        """
-        pass
-
     def test_cloud_providers_provider_id_get(self) -> None:
         """Test case for cloud_providers_provider_id_get
 
         Get single cloud provider by ID
-        """
-        pass
-
-    def test_cloud_providers_provider_id_patch(self) -> None:
-        """Test case for cloud_providers_provider_id_patch
-
-        Update an existing cloud provider by ID
         """
         pass
 

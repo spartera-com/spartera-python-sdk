@@ -58,7 +58,7 @@ class TestConnectionsApi(unittest.TestCase):
     def test_companies_company_id_connections_connection_id_test_get(self) -> None:
         """Test case for companies_company_id_connections_connection_id_test_get
 
-        Verify the specified connection to ensure it is functioning correctly
+        Test the specified connection
         """
         pass
 

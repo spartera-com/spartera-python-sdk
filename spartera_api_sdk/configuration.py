@@ -114,7 +114,6 @@ HTTPSignatureAuthSetting = TypedDict(
 AuthSettings = TypedDict(
     "AuthSettings",
     {
-        "bearerAuth": BearerFormatAuthSetting,
         "ApiKeyAuth": APIKeyAuthSetting,
     },
     total=False,
@@ -513,19 +512,11 @@ conf = spartera_api_sdk.Configuration(
         :return: The Auth Settings information dict.
         """
         auth: AuthSettings = {}
-        if self.access_token is not None:
-            auth['bearerAuth'] = {
-                'type': 'bearer',
-                'in': 'header',
-                'format': 'JWT',
-                'key': 'Authorization',
-                'value': 'Bearer ' + self.access_token
-            }
         if 'ApiKeyAuth' in self.api_key:
             auth['ApiKeyAuth'] = {
                 'type': 'api_key',
                 'in': 'header',
-                'key': 'X-API-Key',
+                'key': 'x-api-key',
                 'value': self.get_api_key_with_prefix(
                     'ApiKeyAuth',
                 ),
@@ -541,7 +532,7 @@ conf = spartera_api_sdk.Configuration(
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: 0.0.0\n"\
-               "SDK Package Version: 1.0.62".\
+               "SDK Package Version: 1.0.68".\
                format(env=sys.platform, pyversion=sys.version)
 
     def get_host_settings(self) -> List[HostSetting]:

@@ -18,7 +18,7 @@ Get single API key by ID
 
 ### Example
 
-* Bearer (JWT) Authentication (bearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import spartera_api_sdk
@@ -36,10 +36,11 @@ configuration = spartera_api_sdk.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization (JWT): bearerAuth
-configuration = spartera_api_sdk.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with spartera_api_sdk.ApiClient(configuration) as api_client:
@@ -73,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -98,7 +99,7 @@ Update an existing API key by ID
 
 ### Example
 
-* Bearer (JWT) Authentication (bearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import spartera_api_sdk
@@ -116,10 +117,11 @@ configuration = spartera_api_sdk.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization (JWT): bearerAuth
-configuration = spartera_api_sdk.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with spartera_api_sdk.ApiClient(configuration) as api_client:
@@ -153,7 +155,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -179,7 +181,7 @@ Get all API keys
 
 ### Example
 
-* Bearer (JWT) Authentication (bearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import spartera_api_sdk
@@ -197,10 +199,11 @@ configuration = spartera_api_sdk.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization (JWT): bearerAuth
-configuration = spartera_api_sdk.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with spartera_api_sdk.ApiClient(configuration) as api_client:
@@ -232,7 +235,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -257,7 +260,7 @@ Create single API key
 
 ### Example
 
-* Bearer (JWT) Authentication (bearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import spartera_api_sdk
@@ -275,10 +278,11 @@ configuration = spartera_api_sdk.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization (JWT): bearerAuth
-configuration = spartera_api_sdk.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with spartera_api_sdk.ApiClient(configuration) as api_client:
@@ -310,7 +314,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -335,7 +339,7 @@ Delete single API key by token
 
 ### Example
 
-* Bearer (JWT) Authentication (bearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import spartera_api_sdk
@@ -353,10 +357,11 @@ configuration = spartera_api_sdk.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization (JWT): bearerAuth
-configuration = spartera_api_sdk.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with spartera_api_sdk.ApiClient(configuration) as api_client:
@@ -390,7 +395,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 

@@ -58,14 +58,14 @@ class TestAssetPriceHistoryApi(unittest.TestCase):
     def test_companies_company_id_assets_asset_id_prices_calculate_credits_post(self) -> None:
         """Test case for companies_company_id_assets_asset_id_prices_calculate_credits_post
 
-        Calculate the credit equivalent for a given USD price without saving
+        POST /companies/{company_id}/assets/{asset_id}/prices/calculate_credits
         """
         pass
 
     def test_companies_company_id_assets_asset_id_prices_discount_post(self) -> None:
         """Test case for companies_company_id_assets_asset_id_prices_discount_post
 
-        Apply a discount to the active price for an asset
+        POST /companies/{company_id}/assets/{asset_id}/prices/discount
         """
         pass
 

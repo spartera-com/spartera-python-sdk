@@ -37,7 +37,7 @@ class TestFavoritesApi(unittest.TestCase):
     def test_companies_company_id_users_user_id_favorites_check_asset_id_get(self) -> None:
         """Test case for companies_company_id_users_user_id_favorites_check_asset_id_get
 
-        Check if the specified user has favorited a specific asset     Returns the favorite record if it exists, or empty result if not     Useful for UI to show/hide favorite button states
+        Check if the specified user has favorited a specific asset
         """
         pass
 
@@ -58,14 +58,14 @@ class TestFavoritesApi(unittest.TestCase):
     def test_companies_company_id_users_user_id_favorites_favorite_id_patch(self) -> None:
         """Test case for companies_company_id_users_user_id_favorites_favorite_id_patch
 
-        Update an existing favorite by ID     Can update notes, category, priority
+        Update an existing favorite by ID
         """
         pass
 
     def test_companies_company_id_users_user_id_favorites_get(self) -> None:
         """Test case for companies_company_id_users_user_id_favorites_get
 
-        Get a list of all favorites for a specific user     Query params:     - category: filter by category     - sort: sort field (priority, date_created, etc.)     - order: sort direction (asc, desc)
+        Get a list of all favorites for a specific user
         """
         pass
 

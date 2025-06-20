@@ -299,7 +299,7 @@ class AssetPriceHistoryApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -596,7 +596,7 @@ class AssetPriceHistoryApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -893,7 +893,7 @@ class AssetPriceHistoryApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -1193,7 +1193,7 @@ class AssetPriceHistoryApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -1232,7 +1232,7 @@ class AssetPriceHistoryApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> object:
-        """Calculate the credit equivalent for a given USD price without saving
+        """POST /companies/{company_id}/assets/{asset_id}/prices/calculate_credits
 
 
         :param company_id: (required)
@@ -1305,7 +1305,7 @@ class AssetPriceHistoryApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[object]:
-        """Calculate the credit equivalent for a given USD price without saving
+        """POST /companies/{company_id}/assets/{asset_id}/prices/calculate_credits
 
 
         :param company_id: (required)
@@ -1378,7 +1378,7 @@ class AssetPriceHistoryApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Calculate the credit equivalent for a given USD price without saving
+        """POST /companies/{company_id}/assets/{asset_id}/prices/calculate_credits
 
 
         :param company_id: (required)
@@ -1475,7 +1475,7 @@ class AssetPriceHistoryApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -1514,7 +1514,7 @@ class AssetPriceHistoryApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> object:
-        """Apply a discount to the active price for an asset
+        """POST /companies/{company_id}/assets/{asset_id}/prices/discount
 
 
         :param company_id: (required)
@@ -1587,7 +1587,7 @@ class AssetPriceHistoryApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[object]:
-        """Apply a discount to the active price for an asset
+        """POST /companies/{company_id}/assets/{asset_id}/prices/discount
 
 
         :param company_id: (required)
@@ -1660,7 +1660,7 @@ class AssetPriceHistoryApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Apply a discount to the active price for an asset
+        """POST /companies/{company_id}/assets/{asset_id}/prices/discount
 
 
         :param company_id: (required)
@@ -1757,7 +1757,7 @@ class AssetPriceHistoryApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -2039,7 +2039,7 @@ class AssetPriceHistoryApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -2321,7 +2321,7 @@ class AssetPriceHistoryApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(

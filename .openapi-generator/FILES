@@ -25,6 +25,7 @@ docs/InlineObject.md
 docs/InlineObject1.md
 docs/InlineObject2.md
 docs/InlineObject3.md
+docs/StorageEnginesApi.md
 docs/User.md
 docs/UsersApi.md
 git_push.sh
@@ -42,6 +43,7 @@ spartera_api_sdk/api/cloud_providers_api.py
 spartera_api_sdk/api/companies_api.py
 spartera_api_sdk/api/connections_api.py
 spartera_api_sdk/api/favorites_api.py
+spartera_api_sdk/api/storage_engines_api.py
 spartera_api_sdk/api/users_api.py
 spartera_api_sdk/api_client.py
 spartera_api_sdk/api_response.py
@@ -87,6 +89,7 @@ test/test_inline_object.py
 test/test_inline_object1.py
 test/test_inline_object2.py
 test/test_inline_object3.py
+test/test_storage_engines_api.py
 test/test_user.py
 test/test_users_api.py
 tox.ini

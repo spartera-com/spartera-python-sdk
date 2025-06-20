@@ -315,7 +315,7 @@ class AlertsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -612,7 +612,7 @@ class AlertsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -940,7 +940,7 @@ class AlertsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -980,7 +980,7 @@ class AlertsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> object:
-        """Get all alerts for a specific asset (from all users)     This would typically be restricted to asset owners or admins
+        """Get all alerts for a specific asset
 
 
         :param company_id: (required)
@@ -1057,7 +1057,7 @@ class AlertsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[object]:
-        """Get all alerts for a specific asset (from all users)     This would typically be restricted to asset owners or admins
+        """Get all alerts for a specific asset
 
 
         :param company_id: (required)
@@ -1134,7 +1134,7 @@ class AlertsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Get all alerts for a specific asset (from all users)     This would typically be restricted to asset owners or admins
+        """Get all alerts for a specific asset
 
 
         :param company_id: (required)
@@ -1237,7 +1237,7 @@ class AlertsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -1277,7 +1277,7 @@ class AlertsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> object:
-        """Get all alerts for a specific asset by the specified user     Useful for checking if user already has an alert set up for an asset
+        """Get all alerts for a specific asset (by user)
 
 
         :param company_id: (required)
@@ -1354,7 +1354,7 @@ class AlertsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[object]:
-        """Get all alerts for a specific asset by the specified user     Useful for checking if user already has an alert set up for an asset
+        """Get all alerts for a specific asset (by user)
 
 
         :param company_id: (required)
@@ -1431,7 +1431,7 @@ class AlertsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Get all alerts for a specific asset by the specified user     Useful for checking if user already has an alert set up for an asset
+        """Get all alerts for a specific asset (by user)
 
 
         :param company_id: (required)
@@ -1534,7 +1534,7 @@ class AlertsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -1816,7 +1816,7 @@ class AlertsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -2126,7 +2126,7 @@ class AlertsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(

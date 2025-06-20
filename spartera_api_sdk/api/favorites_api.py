@@ -315,7 +315,7 @@ class FavoritesApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -355,7 +355,7 @@ class FavoritesApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> object:
-        """Check if the specified user has favorited a specific asset     Returns the favorite record if it exists, or empty result if not     Useful for UI to show/hide favorite button states
+        """Check if the specified user has favorited a specific asset
 
 
         :param company_id: (required)
@@ -432,7 +432,7 @@ class FavoritesApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[object]:
-        """Check if the specified user has favorited a specific asset     Returns the favorite record if it exists, or empty result if not     Useful for UI to show/hide favorite button states
+        """Check if the specified user has favorited a specific asset
 
 
         :param company_id: (required)
@@ -509,7 +509,7 @@ class FavoritesApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Check if the specified user has favorited a specific asset     Returns the favorite record if it exists, or empty result if not     Useful for UI to show/hide favorite button states
+        """Check if the specified user has favorited a specific asset
 
 
         :param company_id: (required)
@@ -612,7 +612,7 @@ class FavoritesApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -909,7 +909,7 @@ class FavoritesApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -1206,7 +1206,7 @@ class FavoritesApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -1247,7 +1247,7 @@ class FavoritesApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> object:
-        """Update an existing favorite by ID     Can update notes, category, priority
+        """Update an existing favorite by ID
 
 
         :param company_id: (required)
@@ -1329,7 +1329,7 @@ class FavoritesApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[object]:
-        """Update an existing favorite by ID     Can update notes, category, priority
+        """Update an existing favorite by ID
 
 
         :param company_id: (required)
@@ -1411,7 +1411,7 @@ class FavoritesApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Update an existing favorite by ID     Can update notes, category, priority
+        """Update an existing favorite by ID
 
 
         :param company_id: (required)
@@ -1534,7 +1534,7 @@ class FavoritesApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -1573,7 +1573,7 @@ class FavoritesApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> object:
-        """Get a list of all favorites for a specific user     Query params:     - category: filter by category     - sort: sort field (priority, date_created, etc.)     - order: sort direction (asc, desc)
+        """Get a list of all favorites for a specific user
 
 
         :param company_id: (required)
@@ -1646,7 +1646,7 @@ class FavoritesApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[object]:
-        """Get a list of all favorites for a specific user     Query params:     - category: filter by category     - sort: sort field (priority, date_created, etc.)     - order: sort direction (asc, desc)
+        """Get a list of all favorites for a specific user
 
 
         :param company_id: (required)
@@ -1719,7 +1719,7 @@ class FavoritesApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Get a list of all favorites for a specific user     Query params:     - category: filter by category     - sort: sort field (priority, date_created, etc.)     - order: sort direction (asc, desc)
+        """Get a list of all favorites for a specific user
 
 
         :param company_id: (required)
@@ -1816,7 +1816,7 @@ class FavoritesApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -2126,7 +2126,7 @@ class FavoritesApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -2408,7 +2408,7 @@ class FavoritesApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(

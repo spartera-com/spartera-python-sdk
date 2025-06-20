@@ -7,8 +7,8 @@ Method | HTTP request | Description
 [**companies_company_id_users_user_id_alerts_alert_id_delete**](AlertsApi.md#companies_company_id_users_user_id_alerts_alert_id_delete) | **DELETE** /companies/{company_id}/users/{user_id}/alerts/{alert_id} | Delete single alert by ID
 [**companies_company_id_users_user_id_alerts_alert_id_get**](AlertsApi.md#companies_company_id_users_user_id_alerts_alert_id_get) | **GET** /companies/{company_id}/users/{user_id}/alerts/{alert_id} | Get single alert by ID
 [**companies_company_id_users_user_id_alerts_alert_id_patch**](AlertsApi.md#companies_company_id_users_user_id_alerts_alert_id_patch) | **PATCH** /companies/{company_id}/users/{user_id}/alerts/{alert_id} | Update an existing alert by ID
-[**companies_company_id_users_user_id_alerts_asset_asset_id_all_get**](AlertsApi.md#companies_company_id_users_user_id_alerts_asset_asset_id_all_get) | **GET** /companies/{company_id}/users/{user_id}/alerts/asset/{asset_id}/all | Get all alerts for a specific asset (from all users)     This would typically be restricted to asset owners or admins
-[**companies_company_id_users_user_id_alerts_asset_asset_id_get**](AlertsApi.md#companies_company_id_users_user_id_alerts_asset_asset_id_get) | **GET** /companies/{company_id}/users/{user_id}/alerts/asset/{asset_id} | Get all alerts for a specific asset by the specified user     Useful for checking if user already has an alert set up for an asset
+[**companies_company_id_users_user_id_alerts_asset_asset_id_all_get**](AlertsApi.md#companies_company_id_users_user_id_alerts_asset_asset_id_all_get) | **GET** /companies/{company_id}/users/{user_id}/alerts/asset/{asset_id}/all | Get all alerts for a specific asset
+[**companies_company_id_users_user_id_alerts_asset_asset_id_get**](AlertsApi.md#companies_company_id_users_user_id_alerts_asset_asset_id_get) | **GET** /companies/{company_id}/users/{user_id}/alerts/asset/{asset_id} | Get all alerts for a specific asset (by user)
 [**companies_company_id_users_user_id_alerts_get**](AlertsApi.md#companies_company_id_users_user_id_alerts_get) | **GET** /companies/{company_id}/users/{user_id}/alerts | Get a list of all alerts for a specific user
 [**companies_company_id_users_user_id_alerts_post**](AlertsApi.md#companies_company_id_users_user_id_alerts_post) | **POST** /companies/{company_id}/users/{user_id}/alerts | POST /companies/{company_id}/users/{user_id}/alerts
 
@@ -20,7 +20,7 @@ Delete single alert by ID
 
 ### Example
 
-* Bearer (JWT) Authentication (bearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import spartera_api_sdk
@@ -38,10 +38,11 @@ configuration = spartera_api_sdk.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization (JWT): bearerAuth
-configuration = spartera_api_sdk.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with spartera_api_sdk.ApiClient(configuration) as api_client:
@@ -77,7 +78,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -102,7 +103,7 @@ Get single alert by ID
 
 ### Example
 
-* Bearer (JWT) Authentication (bearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import spartera_api_sdk
@@ -120,10 +121,11 @@ configuration = spartera_api_sdk.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization (JWT): bearerAuth
-configuration = spartera_api_sdk.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with spartera_api_sdk.ApiClient(configuration) as api_client:
@@ -159,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -184,7 +186,7 @@ Update an existing alert by ID
 
 ### Example
 
-* Bearer (JWT) Authentication (bearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import spartera_api_sdk
@@ -203,10 +205,11 @@ configuration = spartera_api_sdk.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization (JWT): bearerAuth
-configuration = spartera_api_sdk.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with spartera_api_sdk.ApiClient(configuration) as api_client:
@@ -244,7 +247,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -266,11 +269,11 @@ Name | Type | Description  | Notes
 # **companies_company_id_users_user_id_alerts_asset_asset_id_all_get**
 > object companies_company_id_users_user_id_alerts_asset_asset_id_all_get(company_id, user_id, asset_id)
 
-Get all alerts for a specific asset (from all users)     This would typically be restricted to asset owners or admins
+Get all alerts for a specific asset
 
 ### Example
 
-* Bearer (JWT) Authentication (bearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import spartera_api_sdk
@@ -288,10 +291,11 @@ configuration = spartera_api_sdk.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization (JWT): bearerAuth
-configuration = spartera_api_sdk.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with spartera_api_sdk.ApiClient(configuration) as api_client:
@@ -302,7 +306,7 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
     asset_id = 'asset_id_example' # str | 
 
     try:
-        # Get all alerts for a specific asset (from all users)     This would typically be restricted to asset owners or admins
+        # Get all alerts for a specific asset
         api_response = api_instance.companies_company_id_users_user_id_alerts_asset_asset_id_all_get(company_id, user_id, asset_id)
         print("The response of AlertsApi->companies_company_id_users_user_id_alerts_asset_asset_id_all_get:\n")
         pprint(api_response)
@@ -327,7 +331,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -348,11 +352,11 @@ Name | Type | Description  | Notes
 # **companies_company_id_users_user_id_alerts_asset_asset_id_get**
 > object companies_company_id_users_user_id_alerts_asset_asset_id_get(company_id, user_id, asset_id)
 
-Get all alerts for a specific asset by the specified user     Useful for checking if user already has an alert set up for an asset
+Get all alerts for a specific asset (by user)
 
 ### Example
 
-* Bearer (JWT) Authentication (bearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import spartera_api_sdk
@@ -370,10 +374,11 @@ configuration = spartera_api_sdk.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization (JWT): bearerAuth
-configuration = spartera_api_sdk.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with spartera_api_sdk.ApiClient(configuration) as api_client:
@@ -384,7 +389,7 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
     asset_id = 'asset_id_example' # str | 
 
     try:
-        # Get all alerts for a specific asset by the specified user     Useful for checking if user already has an alert set up for an asset
+        # Get all alerts for a specific asset (by user)
         api_response = api_instance.companies_company_id_users_user_id_alerts_asset_asset_id_get(company_id, user_id, asset_id)
         print("The response of AlertsApi->companies_company_id_users_user_id_alerts_asset_asset_id_get:\n")
         pprint(api_response)
@@ -409,7 +414,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -434,7 +439,7 @@ Get a list of all alerts for a specific user
 
 ### Example
 
-* Bearer (JWT) Authentication (bearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import spartera_api_sdk
@@ -452,10 +457,11 @@ configuration = spartera_api_sdk.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization (JWT): bearerAuth
-configuration = spartera_api_sdk.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with spartera_api_sdk.ApiClient(configuration) as api_client:
@@ -489,7 +495,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 
@@ -514,7 +520,7 @@ POST /companies/{company_id}/users/{user_id}/alerts
 
 ### Example
 
-* Bearer (JWT) Authentication (bearerAuth):
+* Api Key Authentication (ApiKeyAuth):
 
 ```python
 import spartera_api_sdk
@@ -533,10 +539,11 @@ configuration = spartera_api_sdk.Configuration(
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
 
-# Configure Bearer authorization (JWT): bearerAuth
-configuration = spartera_api_sdk.Configuration(
-    access_token = os.environ["BEARER_TOKEN"]
-)
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with spartera_api_sdk.ApiClient(configuration) as api_client:
@@ -572,7 +579,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+[ApiKeyAuth](../README.md#ApiKeyAuth)
 
 ### HTTP request headers
 

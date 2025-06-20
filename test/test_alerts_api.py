@@ -51,14 +51,14 @@ class TestAlertsApi(unittest.TestCase):
     def test_companies_company_id_users_user_id_alerts_asset_asset_id_all_get(self) -> None:
         """Test case for companies_company_id_users_user_id_alerts_asset_asset_id_all_get
 
-        Get all alerts for a specific asset (from all users)     This would typically be restricted to asset owners or admins
+        Get all alerts for a specific asset
         """
         pass
 
     def test_companies_company_id_users_user_id_alerts_asset_asset_id_get(self) -> None:
         """Test case for companies_company_id_users_user_id_alerts_asset_asset_id_get
 
-        Get all alerts for a specific asset by the specified user     Useful for checking if user already has an alert set up for an asset
+        Get all alerts for a specific asset (by user)
         """
         pass
 

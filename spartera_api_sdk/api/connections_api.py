@@ -300,7 +300,7 @@ class ConnectionsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -582,7 +582,7 @@ class ConnectionsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -864,7 +864,7 @@ class ConnectionsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -1177,7 +1177,7 @@ class ConnectionsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -1216,7 +1216,7 @@ class ConnectionsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> object:
-        """Verify the specified connection to ensure it is functioning correctly
+        """Test the specified connection
 
 
         :param company_id: (required)
@@ -1289,7 +1289,7 @@ class ConnectionsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> ApiResponse[object]:
-        """Verify the specified connection to ensure it is functioning correctly
+        """Test the specified connection
 
 
         :param company_id: (required)
@@ -1362,7 +1362,7 @@ class ConnectionsApi:
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
     ) -> RESTResponseType:
-        """Verify the specified connection to ensure it is functioning correctly
+        """Test the specified connection
 
 
         :param company_id: (required)
@@ -1459,7 +1459,7 @@ class ConnectionsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -1726,7 +1726,7 @@ class ConnectionsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
@@ -2021,7 +2021,7 @@ class ConnectionsApi:
 
         # authentication setting
         _auth_settings: List[str] = [
-            'bearerAuth'
+            'ApiKeyAuth'
         ]
 
         return self.api_client.param_serialize(
