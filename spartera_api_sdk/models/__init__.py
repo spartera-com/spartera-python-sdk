@@ -19,6 +19,7 @@ from spartera_api_sdk.models.alert import Alert
 from spartera_api_sdk.models.apikey import Apikey
 from spartera_api_sdk.models.asset import Asset
 from spartera_api_sdk.models.assetpricehistory import Assetpricehistory
+from spartera_api_sdk.models.cloudprovider import Cloudprovider
 from spartera_api_sdk.models.company import Company
 from spartera_api_sdk.models.connection import Connection
 from spartera_api_sdk.models.error import Error

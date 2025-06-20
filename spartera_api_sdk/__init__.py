@@ -15,13 +15,14 @@
 """  # noqa: E501
 
 
-__version__ = "1.0.38"
+__version__ = "1.0.62"
 
 # import apis into sdk package
 from spartera_api_sdk.api.api_keys_api import APIKeysApi
 from spartera_api_sdk.api.alerts_api import AlertsApi
 from spartera_api_sdk.api.asset_price_history_api import AssetPriceHistoryApi
 from spartera_api_sdk.api.assets_api import AssetsApi
+from spartera_api_sdk.api.cloud_providers_api import CloudProvidersApi
 from spartera_api_sdk.api.companies_api import CompaniesApi
 from spartera_api_sdk.api.connections_api import ConnectionsApi
 from spartera_api_sdk.api.favorites_api import FavoritesApi
@@ -43,6 +44,7 @@ from spartera_api_sdk.models.alert import Alert
 from spartera_api_sdk.models.apikey import Apikey
 from spartera_api_sdk.models.asset import Asset
 from spartera_api_sdk.models.assetpricehistory import Assetpricehistory
+from spartera_api_sdk.models.cloudprovider import Cloudprovider
 from spartera_api_sdk.models.company import Company
 from spartera_api_sdk.models.connection import Connection
 from spartera_api_sdk.models.error import Error

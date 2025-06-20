@@ -12,6 +12,8 @@ docs/Asset.md
 docs/AssetPriceHistoryApi.md
 docs/Assetpricehistory.md
 docs/AssetsApi.md
+docs/CloudProvidersApi.md
+docs/Cloudprovider.md
 docs/CompaniesApi.md
 docs/Company.md
 docs/Connection.md
@@ -36,6 +38,7 @@ spartera_api_sdk/api/alerts_api.py
 spartera_api_sdk/api/api_keys_api.py
 spartera_api_sdk/api/asset_price_history_api.py
 spartera_api_sdk/api/assets_api.py
+spartera_api_sdk/api/cloud_providers_api.py
 spartera_api_sdk/api/companies_api.py
 spartera_api_sdk/api/connections_api.py
 spartera_api_sdk/api/favorites_api.py
@@ -49,6 +52,7 @@ spartera_api_sdk/models/alert.py
 spartera_api_sdk/models/apikey.py
 spartera_api_sdk/models/asset.py
 spartera_api_sdk/models/assetpricehistory.py
+spartera_api_sdk/models/cloudprovider.py
 spartera_api_sdk/models/company.py
 spartera_api_sdk/models/connection.py
 spartera_api_sdk/models/error.py
@@ -70,6 +74,8 @@ test/test_asset.py
 test/test_asset_price_history_api.py
 test/test_assetpricehistory.py
 test/test_assets_api.py
+test/test_cloud_providers_api.py
+test/test_cloudprovider.py
 test/test_companies_api.py
 test/test_company.py
 test/test_connection.py
