@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 # **companies_company_id_connections_connection_id_delete**
-> object companies_company_id_connections_connection_id_delete(company_id, connection_id)
+> CompaniesCompanyIdConnectionsConnectionIdDelete200Response companies_company_id_connections_connection_id_delete(company_id, connection_id)
 
 Delete single connection by ID
 
@@ -24,6 +24,7 @@ Delete single connection by ID
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_connections_connection_id_delete200_response import CompaniesCompanyIdConnectionsConnectionIdDelete200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -72,7 +73,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdConnectionsConnectionIdDelete200Response**](CompaniesCompanyIdConnectionsConnectionIdDelete200Response.md)
 
 ### Authorization
 
@@ -87,7 +88,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully deleted connections |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -95,7 +96,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_connections_connection_id_get**
-> object companies_company_id_connections_connection_id_get(company_id, connection_id)
+> CompaniesCompanyIdConnectionsConnectionIdGet200Response companies_company_id_connections_connection_id_get(company_id, connection_id)
 
 Get single connection by ID
 
@@ -105,6 +106,7 @@ Get single connection by ID
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_connections_connection_id_get200_response import CompaniesCompanyIdConnectionsConnectionIdGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -153,7 +155,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdConnectionsConnectionIdGet200Response**](CompaniesCompanyIdConnectionsConnectionIdGet200Response.md)
 
 ### Authorization
 
@@ -168,7 +170,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully retrieved connections |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -176,7 +178,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_connections_connection_id_infoschema_get**
-> object companies_company_id_connections_connection_id_infoschema_get(company_id, connection_id)
+> CompaniesCompanyIdConnectionsGet200Response companies_company_id_connections_connection_id_infoschema_get(company_id, connection_id)
 
 Retrieve the information schema for the specified connection
 
@@ -186,6 +188,7 @@ Retrieve the information schema for the specified connection
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_connections_get200_response import CompaniesCompanyIdConnectionsGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -234,7 +237,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdConnectionsGet200Response**](CompaniesCompanyIdConnectionsGet200Response.md)
 
 ### Authorization
 
@@ -249,7 +252,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully retrieved connections |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -257,7 +260,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_connections_connection_id_patch**
-> object companies_company_id_connections_connection_id_patch(company_id, connection_id, connection)
+> CompaniesCompanyIdConnectionsConnectionIdPatch200Response companies_company_id_connections_connection_id_patch(company_id, connection_id, connection)
 
 Update an existing connection by ID
 
@@ -267,6 +270,7 @@ Update an existing connection by ID
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_connections_connection_id_patch200_response import CompaniesCompanyIdConnectionsConnectionIdPatch200Response
 from spartera_api_sdk.models.connection import Connection
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
@@ -318,7 +322,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdConnectionsConnectionIdPatch200Response**](CompaniesCompanyIdConnectionsConnectionIdPatch200Response.md)
 
 ### Authorization
 
@@ -333,7 +337,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully updated connections |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **400** | Invalid input |  -  |
@@ -342,7 +346,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_connections_connection_id_test_get**
-> object companies_company_id_connections_connection_id_test_get(company_id, connection_id)
+> CompaniesCompanyIdConnectionsGet200Response companies_company_id_connections_connection_id_test_get(company_id, connection_id)
 
 Test the specified connection
 
@@ -352,6 +356,7 @@ Test the specified connection
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_connections_get200_response import CompaniesCompanyIdConnectionsGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -400,7 +405,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdConnectionsGet200Response**](CompaniesCompanyIdConnectionsGet200Response.md)
 
 ### Authorization
 
@@ -415,7 +420,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully retrieved connections |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -423,7 +428,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_connections_get**
-> object companies_company_id_connections_get(company_id)
+> CompaniesCompanyIdConnectionsGet200Response companies_company_id_connections_get(company_id)
 
 Get all connections for a specific company
 
@@ -433,6 +438,7 @@ Get all connections for a specific company
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_connections_get200_response import CompaniesCompanyIdConnectionsGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -479,7 +485,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdConnectionsGet200Response**](CompaniesCompanyIdConnectionsGet200Response.md)
 
 ### Authorization
 
@@ -494,7 +500,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully retrieved connections |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -502,7 +508,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_connections_post**
-> object companies_company_id_connections_post(company_id, connection)
+> CompaniesCompanyIdConnectionsPost200Response companies_company_id_connections_post(company_id, connection)
 
 Create a new connection by ID
 
@@ -512,6 +518,7 @@ Create a new connection by ID
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_connections_post200_response import CompaniesCompanyIdConnectionsPost200Response
 from spartera_api_sdk.models.connection import Connection
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
@@ -561,7 +568,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdConnectionsPost200Response**](CompaniesCompanyIdConnectionsPost200Response.md)
 
 ### Authorization
 
@@ -576,7 +583,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully created connections |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **400** | Invalid input |  -  |

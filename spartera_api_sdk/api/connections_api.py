@@ -18,7 +18,11 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 from pydantic import StrictStr
-from typing import Any, Dict
+from spartera_api_sdk.models.companies_company_id_connections_connection_id_delete200_response import CompaniesCompanyIdConnectionsConnectionIdDelete200Response
+from spartera_api_sdk.models.companies_company_id_connections_connection_id_get200_response import CompaniesCompanyIdConnectionsConnectionIdGet200Response
+from spartera_api_sdk.models.companies_company_id_connections_connection_id_patch200_response import CompaniesCompanyIdConnectionsConnectionIdPatch200Response
+from spartera_api_sdk.models.companies_company_id_connections_get200_response import CompaniesCompanyIdConnectionsGet200Response
+from spartera_api_sdk.models.companies_company_id_connections_post200_response import CompaniesCompanyIdConnectionsPost200Response
 from spartera_api_sdk.models.connection import Connection
 
 from spartera_api_sdk.api_client import ApiClient, RequestSerialized
@@ -56,7 +60,7 @@ class ConnectionsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdConnectionsConnectionIdDelete200Response:
         """Delete single connection by ID
 
 
@@ -96,7 +100,7 @@ class ConnectionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdConnectionsConnectionIdDelete200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -129,7 +133,7 @@ class ConnectionsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdConnectionsConnectionIdDelete200Response]:
         """Delete single connection by ID
 
 
@@ -169,7 +173,7 @@ class ConnectionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdConnectionsConnectionIdDelete200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -242,7 +246,7 @@ class ConnectionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdConnectionsConnectionIdDelete200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -338,7 +342,7 @@ class ConnectionsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdConnectionsConnectionIdGet200Response:
         """Get single connection by ID
 
 
@@ -378,7 +382,7 @@ class ConnectionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdConnectionsConnectionIdGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -411,7 +415,7 @@ class ConnectionsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdConnectionsConnectionIdGet200Response]:
         """Get single connection by ID
 
 
@@ -451,7 +455,7 @@ class ConnectionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdConnectionsConnectionIdGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -524,7 +528,7 @@ class ConnectionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdConnectionsConnectionIdGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -620,7 +624,7 @@ class ConnectionsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdConnectionsGet200Response:
         """Retrieve the information schema for the specified connection
 
 
@@ -660,7 +664,7 @@ class ConnectionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdConnectionsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -693,7 +697,7 @@ class ConnectionsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdConnectionsGet200Response]:
         """Retrieve the information schema for the specified connection
 
 
@@ -733,7 +737,7 @@ class ConnectionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdConnectionsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -806,7 +810,7 @@ class ConnectionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdConnectionsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -903,7 +907,7 @@ class ConnectionsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdConnectionsConnectionIdPatch200Response:
         """Update an existing connection by ID
 
 
@@ -946,7 +950,7 @@ class ConnectionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdConnectionsConnectionIdPatch200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '400': "InlineObject",
@@ -981,7 +985,7 @@ class ConnectionsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdConnectionsConnectionIdPatch200Response]:
         """Update an existing connection by ID
 
 
@@ -1024,7 +1028,7 @@ class ConnectionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdConnectionsConnectionIdPatch200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '400': "InlineObject",
@@ -1102,7 +1106,7 @@ class ConnectionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdConnectionsConnectionIdPatch200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '400': "InlineObject",
@@ -1215,7 +1219,7 @@ class ConnectionsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdConnectionsGet200Response:
         """Test the specified connection
 
 
@@ -1255,7 +1259,7 @@ class ConnectionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdConnectionsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1288,7 +1292,7 @@ class ConnectionsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdConnectionsGet200Response]:
         """Test the specified connection
 
 
@@ -1328,7 +1332,7 @@ class ConnectionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdConnectionsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1401,7 +1405,7 @@ class ConnectionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdConnectionsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1496,7 +1500,7 @@ class ConnectionsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdConnectionsGet200Response:
         """Get all connections for a specific company
 
 
@@ -1533,7 +1537,7 @@ class ConnectionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdConnectionsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1565,7 +1569,7 @@ class ConnectionsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdConnectionsGet200Response]:
         """Get all connections for a specific company
 
 
@@ -1602,7 +1606,7 @@ class ConnectionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdConnectionsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1671,7 +1675,7 @@ class ConnectionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdConnectionsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1764,7 +1768,7 @@ class ConnectionsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdConnectionsPost200Response:
         """Create a new connection by ID
 
 
@@ -1804,7 +1808,7 @@ class ConnectionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdConnectionsPost200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '400': "InlineObject",
@@ -1837,7 +1841,7 @@ class ConnectionsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdConnectionsPost200Response]:
         """Create a new connection by ID
 
 
@@ -1877,7 +1881,7 @@ class ConnectionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdConnectionsPost200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '400': "InlineObject",
@@ -1950,7 +1954,7 @@ class ConnectionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdConnectionsPost200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '400': "InlineObject",

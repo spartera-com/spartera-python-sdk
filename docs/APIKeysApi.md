@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **companies_company_id_api_keys_api_key_id_get**
-> object companies_company_id_api_keys_api_key_id_get(company_id, api_key_id)
+> CompaniesCompanyIdApiKeysGet200Response companies_company_id_api_keys_api_key_id_get(company_id, api_key_id)
 
 Get single API key by ID
 
@@ -22,6 +22,7 @@ Get single API key by ID
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -70,7 +71,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -85,7 +86,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully retrieved api keys |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -93,7 +94,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_api_keys_api_key_id_patch**
-> object companies_company_id_api_keys_api_key_id_patch(company_id, api_key_id)
+> CompaniesCompanyIdApiKeysGet200Response companies_company_id_api_keys_api_key_id_patch(company_id, api_key_id)
 
 Update an existing API key by ID
 
@@ -103,6 +104,7 @@ Update an existing API key by ID
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -151,7 +153,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -166,7 +168,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully updated api keys |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **400** | Invalid input |  -  |
@@ -175,7 +177,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_api_keys_get**
-> object companies_company_id_api_keys_get(company_id)
+> CompaniesCompanyIdApiKeysGet200Response companies_company_id_api_keys_get(company_id)
 
 Get all API keys
 
@@ -185,6 +187,7 @@ Get all API keys
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -231,7 +234,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -246,7 +249,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully retrieved api keys |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -254,7 +257,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_api_keys_post**
-> object companies_company_id_api_keys_post(company_id)
+> CompaniesCompanyIdApiKeysGet200Response companies_company_id_api_keys_post(company_id)
 
 Create single API key
 
@@ -264,6 +267,7 @@ Create single API key
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -310,7 +314,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -325,7 +329,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully created api keys |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **400** | Invalid input |  -  |
@@ -333,7 +337,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_api_keys_token_delete**
-> object companies_company_id_api_keys_token_delete(company_id, token)
+> CompaniesCompanyIdApiKeysGet200Response companies_company_id_api_keys_token_delete(company_id, token)
 
 Delete single API key by token
 
@@ -343,6 +347,7 @@ Delete single API key by token
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -391,7 +396,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -406,7 +411,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully deleted api keys |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |

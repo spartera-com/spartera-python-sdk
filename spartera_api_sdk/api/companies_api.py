@@ -18,7 +18,7 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 from pydantic import StrictStr
-from typing import Any, Dict
+from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
 
 from spartera_api_sdk.api_client import ApiClient, RequestSerialized
 from spartera_api_sdk.api_response import ApiResponse
@@ -54,7 +54,7 @@ class CompaniesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdApiKeysGet200Response:
         """Get asset performance analytics     Query params: start_date, end_date, limit, sort_by, include
 
 
@@ -91,7 +91,7 @@ class CompaniesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -123,7 +123,7 @@ class CompaniesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdApiKeysGet200Response]:
         """Get asset performance analytics     Query params: start_date, end_date, limit, sort_by, include
 
 
@@ -160,7 +160,7 @@ class CompaniesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -229,7 +229,7 @@ class CompaniesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -321,7 +321,7 @@ class CompaniesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdApiKeysGet200Response:
         """Get customer analytics including growth and segmentation     Query params: start_date, end_date, group_by, segment_by
 
 
@@ -358,7 +358,7 @@ class CompaniesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -390,7 +390,7 @@ class CompaniesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdApiKeysGet200Response]:
         """Get customer analytics including growth and segmentation     Query params: start_date, end_date, group_by, segment_by
 
 
@@ -427,7 +427,7 @@ class CompaniesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -496,7 +496,7 @@ class CompaniesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -588,7 +588,7 @@ class CompaniesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdApiKeysGet200Response:
         """Get comprehensive dashboard analytics for seller dashboard     Includes all metrics needed for dashboard charts in one call     Query params: start_date, end_date, period (day/week/month/quarter)
 
 
@@ -625,7 +625,7 @@ class CompaniesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -657,7 +657,7 @@ class CompaniesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdApiKeysGet200Response]:
         """Get comprehensive dashboard analytics for seller dashboard     Includes all metrics needed for dashboard charts in one call     Query params: start_date, end_date, period (day/week/month/quarter)
 
 
@@ -694,7 +694,7 @@ class CompaniesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -763,7 +763,7 @@ class CompaniesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -855,7 +855,7 @@ class CompaniesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdApiKeysGet200Response:
         """Get sales over time analytics     Query params: start_date, end_date, group_by (day/week/month/quarter), metrics
 
 
@@ -892,7 +892,7 @@ class CompaniesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -924,7 +924,7 @@ class CompaniesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdApiKeysGet200Response]:
         """Get sales over time analytics     Query params: start_date, end_date, group_by (day/week/month/quarter), metrics
 
 
@@ -961,7 +961,7 @@ class CompaniesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1030,7 +1030,7 @@ class CompaniesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1122,7 +1122,7 @@ class CompaniesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdApiKeysGet200Response:
         """Get details of the requestor's own company
 
 
@@ -1159,7 +1159,7 @@ class CompaniesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1191,7 +1191,7 @@ class CompaniesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdApiKeysGet200Response]:
         """Get details of the requestor's own company
 
 
@@ -1228,7 +1228,7 @@ class CompaniesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1297,7 +1297,7 @@ class CompaniesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1389,7 +1389,7 @@ class CompaniesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdApiKeysGet200Response:
         """Get all objects (connections, assets) of a single company
 
 
@@ -1426,7 +1426,7 @@ class CompaniesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1458,7 +1458,7 @@ class CompaniesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdApiKeysGet200Response]:
         """Get all objects (connections, assets) of a single company
 
 
@@ -1495,7 +1495,7 @@ class CompaniesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1564,7 +1564,7 @@ class CompaniesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1656,7 +1656,7 @@ class CompaniesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdApiKeysGet200Response:
         """Update an existing company by ID
 
 
@@ -1693,7 +1693,7 @@ class CompaniesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '400': "InlineObject",
@@ -1726,7 +1726,7 @@ class CompaniesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdApiKeysGet200Response]:
         """Update an existing company by ID
 
 
@@ -1763,7 +1763,7 @@ class CompaniesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '400': "InlineObject",
@@ -1833,7 +1833,7 @@ class CompaniesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '400': "InlineObject",
@@ -1926,7 +1926,7 @@ class CompaniesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdApiKeysGet200Response:
         """Get the total number of requests allocated in the company's current subscription plan.
 
 
@@ -1963,7 +1963,7 @@ class CompaniesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1995,7 +1995,7 @@ class CompaniesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdApiKeysGet200Response]:
         """Get the total number of requests allocated in the company's current subscription plan.
 
 
@@ -2032,7 +2032,7 @@ class CompaniesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -2101,7 +2101,7 @@ class CompaniesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -2193,7 +2193,7 @@ class CompaniesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdApiKeysGet200Response:
         """Get company request usage data for a specific month. Returns JSON metrics by default or CSV logs when download parameter is included.
 
 
@@ -2230,7 +2230,7 @@ class CompaniesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -2262,7 +2262,7 @@ class CompaniesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdApiKeysGet200Response]:
         """Get company request usage data for a specific month. Returns JSON metrics by default or CSV logs when download parameter is included.
 
 
@@ -2299,7 +2299,7 @@ class CompaniesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -2368,7 +2368,7 @@ class CompaniesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",

@@ -18,7 +18,7 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 from pydantic import StrictStr
-from typing import Any, Dict
+from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
 
 from spartera_api_sdk.api_client import ApiClient, RequestSerialized
 from spartera_api_sdk.api_response import ApiResponse
@@ -53,7 +53,7 @@ class CloudProvidersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdApiKeysGet200Response:
         """Get a list of all cloud providers
 
 
@@ -87,7 +87,7 @@ class CloudProvidersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -118,7 +118,7 @@ class CloudProvidersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdApiKeysGet200Response]:
         """Get a list of all cloud providers
 
 
@@ -152,7 +152,7 @@ class CloudProvidersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -217,7 +217,7 @@ class CloudProvidersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -306,7 +306,7 @@ class CloudProvidersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdApiKeysGet200Response:
         """Get single cloud provider by ID
 
 
@@ -343,7 +343,7 @@ class CloudProvidersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -375,7 +375,7 @@ class CloudProvidersApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdApiKeysGet200Response]:
         """Get single cloud provider by ID
 
 
@@ -412,7 +412,7 @@ class CloudProvidersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -481,7 +481,7 @@ class CloudProvidersApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdApiKeysGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",

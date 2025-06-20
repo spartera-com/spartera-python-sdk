@@ -18,8 +18,12 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 from pydantic import StrictStr
-from typing import Any, Dict
 from spartera_api_sdk.models.asset import Asset
+from spartera_api_sdk.models.companies_company_id_assets_asset_id_delete200_response import CompaniesCompanyIdAssetsAssetIdDelete200Response
+from spartera_api_sdk.models.companies_company_id_assets_asset_id_get200_response import CompaniesCompanyIdAssetsAssetIdGet200Response
+from spartera_api_sdk.models.companies_company_id_assets_asset_id_patch200_response import CompaniesCompanyIdAssetsAssetIdPatch200Response
+from spartera_api_sdk.models.companies_company_id_assets_get200_response import CompaniesCompanyIdAssetsGet200Response
+from spartera_api_sdk.models.companies_company_id_assets_post200_response import CompaniesCompanyIdAssetsPost200Response
 
 from spartera_api_sdk.api_client import ApiClient, RequestSerialized
 from spartera_api_sdk.api_response import ApiResponse
@@ -42,8 +46,8 @@ class AssetsApi:
     @validate_call
     def analyze_company_handle_assets_asset_slug_get(
         self,
-        asset_slug: StrictStr,
         company_handle: StrictStr,
+        asset_slug: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -56,14 +60,14 @@ class AssetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdAssetsAssetIdGet200Response:
         """Process (analyze) an asset. Attempt to process an analytic on a backend warehouse/AI model.
 
 
-        :param asset_slug: (required)
-        :type asset_slug: str
         :param company_handle: (required)
         :type company_handle: str
+        :param asset_slug: (required)
+        :type asset_slug: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -87,8 +91,8 @@ class AssetsApi:
         """ # noqa: E501
 
         _param = self._analyze_company_handle_assets_asset_slug_get_serialize(
-            asset_slug=asset_slug,
             company_handle=company_handle,
+            asset_slug=asset_slug,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -96,7 +100,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsAssetIdGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -115,8 +119,8 @@ class AssetsApi:
     @validate_call
     def analyze_company_handle_assets_asset_slug_get_with_http_info(
         self,
-        asset_slug: StrictStr,
         company_handle: StrictStr,
+        asset_slug: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -129,14 +133,14 @@ class AssetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdAssetsAssetIdGet200Response]:
         """Process (analyze) an asset. Attempt to process an analytic on a backend warehouse/AI model.
 
 
-        :param asset_slug: (required)
-        :type asset_slug: str
         :param company_handle: (required)
         :type company_handle: str
+        :param asset_slug: (required)
+        :type asset_slug: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -160,8 +164,8 @@ class AssetsApi:
         """ # noqa: E501
 
         _param = self._analyze_company_handle_assets_asset_slug_get_serialize(
-            asset_slug=asset_slug,
             company_handle=company_handle,
+            asset_slug=asset_slug,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -169,7 +173,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsAssetIdGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -188,8 +192,8 @@ class AssetsApi:
     @validate_call
     def analyze_company_handle_assets_asset_slug_get_without_preload_content(
         self,
-        asset_slug: StrictStr,
         company_handle: StrictStr,
+        asset_slug: StrictStr,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -206,10 +210,10 @@ class AssetsApi:
         """Process (analyze) an asset. Attempt to process an analytic on a backend warehouse/AI model.
 
 
-        :param asset_slug: (required)
-        :type asset_slug: str
         :param company_handle: (required)
         :type company_handle: str
+        :param asset_slug: (required)
+        :type asset_slug: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -233,8 +237,8 @@ class AssetsApi:
         """ # noqa: E501
 
         _param = self._analyze_company_handle_assets_asset_slug_get_serialize(
-            asset_slug=asset_slug,
             company_handle=company_handle,
+            asset_slug=asset_slug,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -242,7 +246,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsAssetIdGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -256,8 +260,8 @@ class AssetsApi:
 
     def _analyze_company_handle_assets_asset_slug_get_serialize(
         self,
-        asset_slug,
         company_handle,
+        asset_slug,
         _request_auth,
         _content_type,
         _headers,
@@ -279,10 +283,10 @@ class AssetsApi:
         _body_params: Optional[bytes] = None
 
         # process the path parameters
-        if asset_slug is not None:
-            _path_params['asset_slug'] = asset_slug
         if company_handle is not None:
             _path_params['company_handle'] = company_handle
+        if asset_slug is not None:
+            _path_params['asset_slug'] = asset_slug
         # process the query parameters
         # process the header parameters
         # process the form parameters
@@ -338,7 +342,7 @@ class AssetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdAssetsAssetIdDelete200Response:
         """Delete single asset by ID
 
 
@@ -378,7 +382,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsAssetIdDelete200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -411,7 +415,7 @@ class AssetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdAssetsAssetIdDelete200Response]:
         """Delete single asset by ID
 
 
@@ -451,7 +455,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsAssetIdDelete200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -524,7 +528,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsAssetIdDelete200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -620,7 +624,7 @@ class AssetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdAssetsAssetIdGet200Response:
         """Get single asset by ID
 
 
@@ -660,7 +664,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsAssetIdGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -693,7 +697,7 @@ class AssetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdAssetsAssetIdGet200Response]:
         """Get single asset by ID
 
 
@@ -733,7 +737,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsAssetIdGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -806,7 +810,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsAssetIdGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -902,7 +906,7 @@ class AssetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdAssetsGet200Response:
         """Get the information schema for a specific asset's table
 
 
@@ -942,7 +946,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -975,7 +979,7 @@ class AssetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdAssetsGet200Response]:
         """Get the information schema for a specific asset's table
 
 
@@ -1015,7 +1019,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1088,7 +1092,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1184,7 +1188,7 @@ class AssetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdAssetsGet200Response:
         """Retrieve and save an asset's information schema
 
 
@@ -1224,7 +1228,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1257,7 +1261,7 @@ class AssetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdAssetsGet200Response]:
         """Retrieve and save an asset's information schema
 
 
@@ -1297,7 +1301,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1370,7 +1374,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1467,7 +1471,7 @@ class AssetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdAssetsAssetIdPatch200Response:
         """Update an existing asset by ID
 
 
@@ -1510,7 +1514,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsAssetIdPatch200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '400': "InlineObject",
@@ -1545,7 +1549,7 @@ class AssetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdAssetsAssetIdPatch200Response]:
         """Update an existing asset by ID
 
 
@@ -1588,7 +1592,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsAssetIdPatch200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '400': "InlineObject",
@@ -1666,7 +1670,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsAssetIdPatch200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '400': "InlineObject",
@@ -1779,7 +1783,7 @@ class AssetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdAssetsGet200Response:
         """Get AI-predicted pricing for a specific asset
 
 
@@ -1819,7 +1823,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1852,7 +1856,7 @@ class AssetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdAssetsGet200Response]:
         """Get AI-predicted pricing for a specific asset
 
 
@@ -1892,7 +1896,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1965,7 +1969,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -2061,7 +2065,7 @@ class AssetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdAssetsGet200Response:
         """Get statistics for a specific asset (public endpoint)
 
 
@@ -2101,7 +2105,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -2134,7 +2138,7 @@ class AssetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdAssetsGet200Response]:
         """Get statistics for a specific asset (public endpoint)
 
 
@@ -2174,7 +2178,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -2247,7 +2251,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -2343,7 +2347,7 @@ class AssetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdAssetsGet200Response:
         """Test out an Asset (on a subset of data)
 
 
@@ -2383,7 +2387,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -2416,7 +2420,7 @@ class AssetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdAssetsGet200Response]:
         """Test out an Asset (on a subset of data)
 
 
@@ -2456,7 +2460,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -2529,7 +2533,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -2624,7 +2628,7 @@ class AssetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdAssetsGet200Response:
         """Get all assets for a specific company
 
 
@@ -2661,7 +2665,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -2693,7 +2697,7 @@ class AssetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdAssetsGet200Response]:
         """Get all assets for a specific company
 
 
@@ -2730,7 +2734,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -2799,7 +2803,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -2892,7 +2896,7 @@ class AssetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdAssetsPost200Response:
         """Create a new asset
 
 
@@ -2932,7 +2936,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsPost200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '400': "InlineObject",
@@ -2965,7 +2969,7 @@ class AssetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdAssetsPost200Response]:
         """Create a new asset
 
 
@@ -3005,7 +3009,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsPost200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '400': "InlineObject",
@@ -3078,7 +3082,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsPost200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '400': "InlineObject",
@@ -3186,7 +3190,7 @@ class AssetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdAssetsGet200Response:
         """Get statistics for all assets the user has access to
 
 
@@ -3223,7 +3227,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -3255,7 +3259,7 @@ class AssetsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdAssetsGet200Response]:
         """Get statistics for all assets the user has access to
 
 
@@ -3292,7 +3296,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -3361,7 +3365,7 @@ class AssetsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdAssetsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",

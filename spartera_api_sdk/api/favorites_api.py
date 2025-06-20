@@ -18,7 +18,11 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 from pydantic import StrictStr
-from typing import Any, Dict
+from spartera_api_sdk.models.companies_company_id_users_user_id_favorites_favorite_id_delete200_response import CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdDelete200Response
+from spartera_api_sdk.models.companies_company_id_users_user_id_favorites_favorite_id_get200_response import CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response
+from spartera_api_sdk.models.companies_company_id_users_user_id_favorites_favorite_id_patch200_response import CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200Response
+from spartera_api_sdk.models.companies_company_id_users_user_id_favorites_get200_response import CompaniesCompanyIdUsersUserIdFavoritesGet200Response
+from spartera_api_sdk.models.companies_company_id_users_user_id_favorites_post200_response import CompaniesCompanyIdUsersUserIdFavoritesPost200Response
 from spartera_api_sdk.models.favorite import Favorite
 
 from spartera_api_sdk.api_client import ApiClient, RequestSerialized
@@ -57,7 +61,7 @@ class FavoritesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response:
         """Get all favorites for the specified user in a specific category
 
 
@@ -100,7 +104,7 @@ class FavoritesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -134,7 +138,7 @@ class FavoritesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response]:
         """Get all favorites for the specified user in a specific category
 
 
@@ -177,7 +181,7 @@ class FavoritesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -254,7 +258,7 @@ class FavoritesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -354,7 +358,7 @@ class FavoritesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response:
         """Check if the specified user has favorited a specific asset
 
 
@@ -397,7 +401,7 @@ class FavoritesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -431,7 +435,7 @@ class FavoritesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response]:
         """Check if the specified user has favorited a specific asset
 
 
@@ -474,7 +478,7 @@ class FavoritesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -551,7 +555,7 @@ class FavoritesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -651,7 +655,7 @@ class FavoritesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdDelete200Response:
         """Delete single favorite by ID (unfavorite an asset)
 
 
@@ -694,7 +698,7 @@ class FavoritesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdDelete200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -728,7 +732,7 @@ class FavoritesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdDelete200Response]:
         """Delete single favorite by ID (unfavorite an asset)
 
 
@@ -771,7 +775,7 @@ class FavoritesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdDelete200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -848,7 +852,7 @@ class FavoritesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdDelete200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -948,7 +952,7 @@ class FavoritesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response:
         """Get single favorite by ID
 
 
@@ -991,7 +995,7 @@ class FavoritesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1025,7 +1029,7 @@ class FavoritesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response]:
         """Get single favorite by ID
 
 
@@ -1068,7 +1072,7 @@ class FavoritesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1145,7 +1149,7 @@ class FavoritesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1246,7 +1250,7 @@ class FavoritesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200Response:
         """Update an existing favorite by ID
 
 
@@ -1292,7 +1296,7 @@ class FavoritesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '400': "InlineObject",
@@ -1328,7 +1332,7 @@ class FavoritesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200Response]:
         """Update an existing favorite by ID
 
 
@@ -1374,7 +1378,7 @@ class FavoritesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '400': "InlineObject",
@@ -1456,7 +1460,7 @@ class FavoritesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '400': "InlineObject",
@@ -1572,7 +1576,7 @@ class FavoritesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdUsersUserIdFavoritesGet200Response:
         """Get a list of all favorites for a specific user
 
 
@@ -1612,7 +1616,7 @@ class FavoritesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdFavoritesGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1645,7 +1649,7 @@ class FavoritesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdUsersUserIdFavoritesGet200Response]:
         """Get a list of all favorites for a specific user
 
 
@@ -1685,7 +1689,7 @@ class FavoritesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdFavoritesGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1758,7 +1762,7 @@ class FavoritesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdFavoritesGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1855,7 +1859,7 @@ class FavoritesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdUsersUserIdFavoritesPost200Response:
         """POST /companies/{company_id}/users/{user_id}/favorites
 
 
@@ -1898,7 +1902,7 @@ class FavoritesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdFavoritesPost200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '400': "InlineObject",
@@ -1932,7 +1936,7 @@ class FavoritesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdUsersUserIdFavoritesPost200Response]:
         """POST /companies/{company_id}/users/{user_id}/favorites
 
 
@@ -1975,7 +1979,7 @@ class FavoritesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdFavoritesPost200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '400': "InlineObject",
@@ -2052,7 +2056,7 @@ class FavoritesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdFavoritesPost200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '400': "InlineObject",
@@ -2164,7 +2168,7 @@ class FavoritesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdUsersUserIdFavoritesGet200Response:
         """Get all favorites for the specified user that don't have a category
 
 
@@ -2204,7 +2208,7 @@ class FavoritesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdFavoritesGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -2237,7 +2241,7 @@ class FavoritesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdUsersUserIdFavoritesGet200Response]:
         """Get all favorites for the specified user that don't have a category
 
 
@@ -2277,7 +2281,7 @@ class FavoritesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdFavoritesGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -2350,7 +2354,7 @@ class FavoritesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdFavoritesGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",

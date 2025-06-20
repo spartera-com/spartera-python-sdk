@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **cloud_providers_get**
-> object cloud_providers_get()
+> CompaniesCompanyIdApiKeysGet200Response cloud_providers_get()
 
 Get a list of all cloud providers
 
@@ -19,6 +19,7 @@ Get a list of all cloud providers
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -61,7 +62,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -76,7 +77,7 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully retrieved cloud providers |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -84,7 +85,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cloud_providers_provider_id_get**
-> object cloud_providers_provider_id_get(provider_id)
+> CompaniesCompanyIdApiKeysGet200Response cloud_providers_provider_id_get(provider_id)
 
 Get single cloud provider by ID
 
@@ -94,6 +95,7 @@ Get single cloud provider by ID
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -140,7 +142,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -155,7 +157,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully retrieved cloud providers |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |

@@ -18,8 +18,12 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 from pydantic import StrictStr
-from typing import Any, Dict
 from spartera_api_sdk.models.alert import Alert
+from spartera_api_sdk.models.companies_company_id_users_user_id_alerts_alert_id_delete200_response import CompaniesCompanyIdUsersUserIdAlertsAlertIdDelete200Response
+from spartera_api_sdk.models.companies_company_id_users_user_id_alerts_alert_id_get200_response import CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response
+from spartera_api_sdk.models.companies_company_id_users_user_id_alerts_alert_id_patch200_response import CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200Response
+from spartera_api_sdk.models.companies_company_id_users_user_id_alerts_get200_response import CompaniesCompanyIdUsersUserIdAlertsGet200Response
+from spartera_api_sdk.models.companies_company_id_users_user_id_alerts_post200_response import CompaniesCompanyIdUsersUserIdAlertsPost200Response
 
 from spartera_api_sdk.api_client import ApiClient, RequestSerialized
 from spartera_api_sdk.api_response import ApiResponse
@@ -57,7 +61,7 @@ class AlertsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdUsersUserIdAlertsAlertIdDelete200Response:
         """Delete single alert by ID
 
 
@@ -100,7 +104,7 @@ class AlertsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdAlertsAlertIdDelete200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -134,7 +138,7 @@ class AlertsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdUsersUserIdAlertsAlertIdDelete200Response]:
         """Delete single alert by ID
 
 
@@ -177,7 +181,7 @@ class AlertsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdAlertsAlertIdDelete200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -254,7 +258,7 @@ class AlertsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdAlertsAlertIdDelete200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -354,7 +358,7 @@ class AlertsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response:
         """Get single alert by ID
 
 
@@ -397,7 +401,7 @@ class AlertsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -431,7 +435,7 @@ class AlertsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response]:
         """Get single alert by ID
 
 
@@ -474,7 +478,7 @@ class AlertsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -551,7 +555,7 @@ class AlertsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -652,7 +656,7 @@ class AlertsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200Response:
         """Update an existing alert by ID
 
 
@@ -698,7 +702,7 @@ class AlertsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '400': "InlineObject",
@@ -734,7 +738,7 @@ class AlertsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200Response]:
         """Update an existing alert by ID
 
 
@@ -780,7 +784,7 @@ class AlertsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '400': "InlineObject",
@@ -862,7 +866,7 @@ class AlertsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '400': "InlineObject",
@@ -979,7 +983,7 @@ class AlertsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdUsersUserIdAlertsGet200Response:
         """Get all alerts for a specific asset
 
 
@@ -1022,7 +1026,7 @@ class AlertsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdAlertsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1056,7 +1060,7 @@ class AlertsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdUsersUserIdAlertsGet200Response]:
         """Get all alerts for a specific asset
 
 
@@ -1099,7 +1103,7 @@ class AlertsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdAlertsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1176,7 +1180,7 @@ class AlertsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdAlertsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1276,7 +1280,7 @@ class AlertsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response:
         """Get all alerts for a specific asset (by user)
 
 
@@ -1319,7 +1323,7 @@ class AlertsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1353,7 +1357,7 @@ class AlertsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response]:
         """Get all alerts for a specific asset (by user)
 
 
@@ -1396,7 +1400,7 @@ class AlertsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1473,7 +1477,7 @@ class AlertsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1572,7 +1576,7 @@ class AlertsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdUsersUserIdAlertsGet200Response:
         """Get a list of all alerts for a specific user
 
 
@@ -1612,7 +1616,7 @@ class AlertsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdAlertsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1645,7 +1649,7 @@ class AlertsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdUsersUserIdAlertsGet200Response]:
         """Get a list of all alerts for a specific user
 
 
@@ -1685,7 +1689,7 @@ class AlertsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdAlertsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1758,7 +1762,7 @@ class AlertsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdAlertsGet200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '404': "InlineObject3",
@@ -1855,7 +1859,7 @@ class AlertsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> object:
+    ) -> CompaniesCompanyIdUsersUserIdAlertsPost200Response:
         """POST /companies/{company_id}/users/{user_id}/alerts
 
 
@@ -1898,7 +1902,7 @@ class AlertsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdAlertsPost200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '400': "InlineObject",
@@ -1932,7 +1936,7 @@ class AlertsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[object]:
+    ) -> ApiResponse[CompaniesCompanyIdUsersUserIdAlertsPost200Response]:
         """POST /companies/{company_id}/users/{user_id}/alerts
 
 
@@ -1975,7 +1979,7 @@ class AlertsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdAlertsPost200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '400': "InlineObject",
@@ -2052,7 +2056,7 @@ class AlertsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "object",
+            '200': "CompaniesCompanyIdUsersUserIdAlertsPost200Response",
             '401': "InlineObject1",
             '403': "InlineObject2",
             '400': "InlineObject",

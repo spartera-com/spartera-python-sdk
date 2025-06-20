@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **companies_company_id_users_user_id_favorites_category_category_get**
-> object companies_company_id_users_user_id_favorites_category_category_get(company_id, user_id, category)
+> CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response companies_company_id_users_user_id_favorites_category_category_get(company_id, user_id, category)
 
 Get all favorites for the specified user in a specific category
 
@@ -25,6 +25,7 @@ Get all favorites for the specified user in a specific category
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_users_user_id_favorites_favorite_id_get200_response import CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -75,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response**](CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response.md)
 
 ### Authorization
 
@@ -90,7 +91,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully retrieved favorites |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -98,7 +99,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_users_user_id_favorites_check_asset_id_get**
-> object companies_company_id_users_user_id_favorites_check_asset_id_get(company_id, user_id, asset_id)
+> CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response companies_company_id_users_user_id_favorites_check_asset_id_get(company_id, user_id, asset_id)
 
 Check if the specified user has favorited a specific asset
 
@@ -108,6 +109,7 @@ Check if the specified user has favorited a specific asset
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_users_user_id_favorites_favorite_id_get200_response import CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -158,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response**](CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response.md)
 
 ### Authorization
 
@@ -173,7 +175,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully retrieved favorites |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -181,7 +183,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_users_user_id_favorites_favorite_id_delete**
-> object companies_company_id_users_user_id_favorites_favorite_id_delete(company_id, user_id, favorite_id)
+> CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdDelete200Response companies_company_id_users_user_id_favorites_favorite_id_delete(company_id, user_id, favorite_id)
 
 Delete single favorite by ID (unfavorite an asset)
 
@@ -191,6 +193,7 @@ Delete single favorite by ID (unfavorite an asset)
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_users_user_id_favorites_favorite_id_delete200_response import CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdDelete200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -241,7 +244,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdDelete200Response**](CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdDelete200Response.md)
 
 ### Authorization
 
@@ -256,7 +259,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully deleted favorites |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -264,7 +267,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_users_user_id_favorites_favorite_id_get**
-> object companies_company_id_users_user_id_favorites_favorite_id_get(company_id, user_id, favorite_id)
+> CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response companies_company_id_users_user_id_favorites_favorite_id_get(company_id, user_id, favorite_id)
 
 Get single favorite by ID
 
@@ -274,6 +277,7 @@ Get single favorite by ID
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_users_user_id_favorites_favorite_id_get200_response import CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -324,7 +328,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response**](CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response.md)
 
 ### Authorization
 
@@ -339,7 +343,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully retrieved favorites |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -347,7 +351,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_users_user_id_favorites_favorite_id_patch**
-> object companies_company_id_users_user_id_favorites_favorite_id_patch(company_id, user_id, favorite_id, favorite)
+> CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200Response companies_company_id_users_user_id_favorites_favorite_id_patch(company_id, user_id, favorite_id, favorite)
 
 Update an existing favorite by ID
 
@@ -357,6 +361,7 @@ Update an existing favorite by ID
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_users_user_id_favorites_favorite_id_patch200_response import CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200Response
 from spartera_api_sdk.models.favorite import Favorite
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
@@ -410,7 +415,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200Response**](CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200Response.md)
 
 ### Authorization
 
@@ -425,7 +430,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully updated favorites |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **400** | Invalid input |  -  |
@@ -434,7 +439,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_users_user_id_favorites_get**
-> object companies_company_id_users_user_id_favorites_get(company_id, user_id)
+> CompaniesCompanyIdUsersUserIdFavoritesGet200Response companies_company_id_users_user_id_favorites_get(company_id, user_id)
 
 Get a list of all favorites for a specific user
 
@@ -444,6 +449,7 @@ Get a list of all favorites for a specific user
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_users_user_id_favorites_get200_response import CompaniesCompanyIdUsersUserIdFavoritesGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -492,7 +498,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdUsersUserIdFavoritesGet200Response**](CompaniesCompanyIdUsersUserIdFavoritesGet200Response.md)
 
 ### Authorization
 
@@ -507,7 +513,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully retrieved favorites |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -515,7 +521,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_users_user_id_favorites_post**
-> object companies_company_id_users_user_id_favorites_post(company_id, user_id, favorite)
+> CompaniesCompanyIdUsersUserIdFavoritesPost200Response companies_company_id_users_user_id_favorites_post(company_id, user_id, favorite)
 
 POST /companies/{company_id}/users/{user_id}/favorites
 
@@ -525,6 +531,7 @@ POST /companies/{company_id}/users/{user_id}/favorites
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_users_user_id_favorites_post200_response import CompaniesCompanyIdUsersUserIdFavoritesPost200Response
 from spartera_api_sdk.models.favorite import Favorite
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
@@ -576,7 +583,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdUsersUserIdFavoritesPost200Response**](CompaniesCompanyIdUsersUserIdFavoritesPost200Response.md)
 
 ### Authorization
 
@@ -591,7 +598,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully created favorites |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **400** | Invalid input |  -  |
@@ -599,7 +606,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_users_user_id_favorites_uncategorized_get**
-> object companies_company_id_users_user_id_favorites_uncategorized_get(company_id, user_id)
+> CompaniesCompanyIdUsersUserIdFavoritesGet200Response companies_company_id_users_user_id_favorites_uncategorized_get(company_id, user_id)
 
 Get all favorites for the specified user that don't have a category
 
@@ -609,6 +616,7 @@ Get all favorites for the specified user that don't have a category
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_users_user_id_favorites_get200_response import CompaniesCompanyIdUsersUserIdFavoritesGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -657,7 +665,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdUsersUserIdFavoritesGet200Response**](CompaniesCompanyIdUsersUserIdFavoritesGet200Response.md)
 
 ### Authorization
 
@@ -672,7 +680,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully retrieved favorites |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |

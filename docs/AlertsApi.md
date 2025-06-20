@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 # **companies_company_id_users_user_id_alerts_alert_id_delete**
-> object companies_company_id_users_user_id_alerts_alert_id_delete(company_id, user_id, alert_id)
+> CompaniesCompanyIdUsersUserIdAlertsAlertIdDelete200Response companies_company_id_users_user_id_alerts_alert_id_delete(company_id, user_id, alert_id)
 
 Delete single alert by ID
 
@@ -24,6 +24,7 @@ Delete single alert by ID
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_users_user_id_alerts_alert_id_delete200_response import CompaniesCompanyIdUsersUserIdAlertsAlertIdDelete200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -74,7 +75,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdUsersUserIdAlertsAlertIdDelete200Response**](CompaniesCompanyIdUsersUserIdAlertsAlertIdDelete200Response.md)
 
 ### Authorization
 
@@ -89,7 +90,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully deleted alerts |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -97,7 +98,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_users_user_id_alerts_alert_id_get**
-> object companies_company_id_users_user_id_alerts_alert_id_get(company_id, user_id, alert_id)
+> CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response companies_company_id_users_user_id_alerts_alert_id_get(company_id, user_id, alert_id)
 
 Get single alert by ID
 
@@ -107,6 +108,7 @@ Get single alert by ID
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_users_user_id_alerts_alert_id_get200_response import CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -157,7 +159,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response**](CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response.md)
 
 ### Authorization
 
@@ -172,7 +174,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully retrieved alerts |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -180,7 +182,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_users_user_id_alerts_alert_id_patch**
-> object companies_company_id_users_user_id_alerts_alert_id_patch(company_id, user_id, alert_id, alert)
+> CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200Response companies_company_id_users_user_id_alerts_alert_id_patch(company_id, user_id, alert_id, alert)
 
 Update an existing alert by ID
 
@@ -191,6 +193,7 @@ Update an existing alert by ID
 ```python
 import spartera_api_sdk
 from spartera_api_sdk.models.alert import Alert
+from spartera_api_sdk.models.companies_company_id_users_user_id_alerts_alert_id_patch200_response import CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -243,7 +246,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200Response**](CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200Response.md)
 
 ### Authorization
 
@@ -258,7 +261,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully updated alerts |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **400** | Invalid input |  -  |
@@ -267,7 +270,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_users_user_id_alerts_asset_asset_id_all_get**
-> object companies_company_id_users_user_id_alerts_asset_asset_id_all_get(company_id, user_id, asset_id)
+> CompaniesCompanyIdUsersUserIdAlertsGet200Response companies_company_id_users_user_id_alerts_asset_asset_id_all_get(company_id, user_id, asset_id)
 
 Get all alerts for a specific asset
 
@@ -277,6 +280,7 @@ Get all alerts for a specific asset
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_users_user_id_alerts_get200_response import CompaniesCompanyIdUsersUserIdAlertsGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -327,7 +331,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdUsersUserIdAlertsGet200Response**](CompaniesCompanyIdUsersUserIdAlertsGet200Response.md)
 
 ### Authorization
 
@@ -342,7 +346,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully retrieved alerts |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -350,7 +354,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_users_user_id_alerts_asset_asset_id_get**
-> object companies_company_id_users_user_id_alerts_asset_asset_id_get(company_id, user_id, asset_id)
+> CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response companies_company_id_users_user_id_alerts_asset_asset_id_get(company_id, user_id, asset_id)
 
 Get all alerts for a specific asset (by user)
 
@@ -360,6 +364,7 @@ Get all alerts for a specific asset (by user)
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_users_user_id_alerts_alert_id_get200_response import CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -410,7 +415,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response**](CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response.md)
 
 ### Authorization
 
@@ -425,7 +430,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully retrieved alerts |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -433,7 +438,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_users_user_id_alerts_get**
-> object companies_company_id_users_user_id_alerts_get(company_id, user_id)
+> CompaniesCompanyIdUsersUserIdAlertsGet200Response companies_company_id_users_user_id_alerts_get(company_id, user_id)
 
 Get a list of all alerts for a specific user
 
@@ -443,6 +448,7 @@ Get a list of all alerts for a specific user
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_users_user_id_alerts_get200_response import CompaniesCompanyIdUsersUserIdAlertsGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -491,7 +497,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdUsersUserIdAlertsGet200Response**](CompaniesCompanyIdUsersUserIdAlertsGet200Response.md)
 
 ### Authorization
 
@@ -506,7 +512,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully retrieved alerts |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -514,7 +520,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_users_user_id_alerts_post**
-> object companies_company_id_users_user_id_alerts_post(company_id, user_id, alert)
+> CompaniesCompanyIdUsersUserIdAlertsPost200Response companies_company_id_users_user_id_alerts_post(company_id, user_id, alert)
 
 POST /companies/{company_id}/users/{user_id}/alerts
 
@@ -525,6 +531,7 @@ POST /companies/{company_id}/users/{user_id}/alerts
 ```python
 import spartera_api_sdk
 from spartera_api_sdk.models.alert import Alert
+from spartera_api_sdk.models.companies_company_id_users_user_id_alerts_post200_response import CompaniesCompanyIdUsersUserIdAlertsPost200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -575,7 +582,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdUsersUserIdAlertsPost200Response**](CompaniesCompanyIdUsersUserIdAlertsPost200Response.md)
 
 ### Authorization
 
@@ -590,7 +597,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully created alerts |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **400** | Invalid input |  -  |

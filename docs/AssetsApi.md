@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 
 # **analyze_company_handle_assets_asset_slug_get**
-> object analyze_company_handle_assets_asset_slug_get(asset_slug, company_handle)
+> CompaniesCompanyIdAssetsAssetIdGet200Response analyze_company_handle_assets_asset_slug_get(company_handle, asset_slug)
 
 Process (analyze) an asset. Attempt to process an analytic on a backend warehouse/AI model.
 
@@ -29,6 +29,7 @@ Process (analyze) an asset. Attempt to process an analytic on a backend warehous
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_assets_asset_id_get200_response import CompaniesCompanyIdAssetsAssetIdGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -53,12 +54,12 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 with spartera_api_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = spartera_api_sdk.AssetsApi(api_client)
-    asset_slug = 'asset_slug_example' # str | 
     company_handle = 'company_handle_example' # str | 
+    asset_slug = 'asset_slug_example' # str | 
 
     try:
         # Process (analyze) an asset. Attempt to process an analytic on a backend warehouse/AI model.
-        api_response = api_instance.analyze_company_handle_assets_asset_slug_get(asset_slug, company_handle)
+        api_response = api_instance.analyze_company_handle_assets_asset_slug_get(company_handle, asset_slug)
         print("The response of AssetsApi->analyze_company_handle_assets_asset_slug_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -72,12 +73,12 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **asset_slug** | **str**|  | 
  **company_handle** | **str**|  | 
+ **asset_slug** | **str**|  | 
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdAssetsAssetIdGet200Response**](CompaniesCompanyIdAssetsAssetIdGet200Response.md)
 
 ### Authorization
 
@@ -92,7 +93,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully retrieved assets |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -100,7 +101,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_assets_asset_id_delete**
-> object companies_company_id_assets_asset_id_delete(company_id, asset_id)
+> CompaniesCompanyIdAssetsAssetIdDelete200Response companies_company_id_assets_asset_id_delete(company_id, asset_id)
 
 Delete single asset by ID
 
@@ -110,6 +111,7 @@ Delete single asset by ID
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_assets_asset_id_delete200_response import CompaniesCompanyIdAssetsAssetIdDelete200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -158,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdAssetsAssetIdDelete200Response**](CompaniesCompanyIdAssetsAssetIdDelete200Response.md)
 
 ### Authorization
 
@@ -173,7 +175,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully deleted assets |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -181,7 +183,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_assets_asset_id_get**
-> object companies_company_id_assets_asset_id_get(company_id, asset_id)
+> CompaniesCompanyIdAssetsAssetIdGet200Response companies_company_id_assets_asset_id_get(company_id, asset_id)
 
 Get single asset by ID
 
@@ -191,6 +193,7 @@ Get single asset by ID
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_assets_asset_id_get200_response import CompaniesCompanyIdAssetsAssetIdGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -239,7 +242,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdAssetsAssetIdGet200Response**](CompaniesCompanyIdAssetsAssetIdGet200Response.md)
 
 ### Authorization
 
@@ -254,7 +257,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully retrieved assets |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -262,7 +265,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_assets_asset_id_infoschema_get**
-> object companies_company_id_assets_asset_id_infoschema_get(company_id, asset_id)
+> CompaniesCompanyIdAssetsGet200Response companies_company_id_assets_asset_id_infoschema_get(company_id, asset_id)
 
 Get the information schema for a specific asset's table
 
@@ -272,6 +275,7 @@ Get the information schema for a specific asset's table
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_assets_get200_response import CompaniesCompanyIdAssetsGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -320,7 +324,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdAssetsGet200Response**](CompaniesCompanyIdAssetsGet200Response.md)
 
 ### Authorization
 
@@ -335,7 +339,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully retrieved assets |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -343,7 +347,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_assets_asset_id_infoschema_save_get**
-> object companies_company_id_assets_asset_id_infoschema_save_get(company_id, asset_id)
+> CompaniesCompanyIdAssetsGet200Response companies_company_id_assets_asset_id_infoschema_save_get(company_id, asset_id)
 
 Retrieve and save an asset's information schema
 
@@ -353,6 +357,7 @@ Retrieve and save an asset's information schema
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_assets_get200_response import CompaniesCompanyIdAssetsGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -401,7 +406,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdAssetsGet200Response**](CompaniesCompanyIdAssetsGet200Response.md)
 
 ### Authorization
 
@@ -416,7 +421,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully retrieved assets |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -424,7 +429,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_assets_asset_id_patch**
-> object companies_company_id_assets_asset_id_patch(company_id, asset_id, asset)
+> CompaniesCompanyIdAssetsAssetIdPatch200Response companies_company_id_assets_asset_id_patch(company_id, asset_id, asset)
 
 Update an existing asset by ID
 
@@ -435,6 +440,7 @@ Update an existing asset by ID
 ```python
 import spartera_api_sdk
 from spartera_api_sdk.models.asset import Asset
+from spartera_api_sdk.models.companies_company_id_assets_asset_id_patch200_response import CompaniesCompanyIdAssetsAssetIdPatch200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -485,7 +491,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdAssetsAssetIdPatch200Response**](CompaniesCompanyIdAssetsAssetIdPatch200Response.md)
 
 ### Authorization
 
@@ -500,7 +506,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully updated assets |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **400** | Invalid input |  -  |
@@ -509,7 +515,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_assets_asset_id_predicted_price_get**
-> object companies_company_id_assets_asset_id_predicted_price_get(company_id, asset_id)
+> CompaniesCompanyIdAssetsGet200Response companies_company_id_assets_asset_id_predicted_price_get(company_id, asset_id)
 
 Get AI-predicted pricing for a specific asset
 
@@ -519,6 +525,7 @@ Get AI-predicted pricing for a specific asset
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_assets_get200_response import CompaniesCompanyIdAssetsGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -567,7 +574,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdAssetsGet200Response**](CompaniesCompanyIdAssetsGet200Response.md)
 
 ### Authorization
 
@@ -582,7 +589,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully retrieved assets |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -590,7 +597,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_assets_asset_id_statistics_get**
-> object companies_company_id_assets_asset_id_statistics_get(company_id, asset_id)
+> CompaniesCompanyIdAssetsGet200Response companies_company_id_assets_asset_id_statistics_get(company_id, asset_id)
 
 Get statistics for a specific asset (public endpoint)
 
@@ -600,6 +607,7 @@ Get statistics for a specific asset (public endpoint)
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_assets_get200_response import CompaniesCompanyIdAssetsGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -648,7 +656,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdAssetsGet200Response**](CompaniesCompanyIdAssetsGet200Response.md)
 
 ### Authorization
 
@@ -663,7 +671,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully retrieved assets |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -671,7 +679,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_assets_asset_id_test_get**
-> object companies_company_id_assets_asset_id_test_get(company_id, asset_id)
+> CompaniesCompanyIdAssetsGet200Response companies_company_id_assets_asset_id_test_get(company_id, asset_id)
 
 Test out an Asset (on a subset of data)
 
@@ -681,6 +689,7 @@ Test out an Asset (on a subset of data)
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_assets_get200_response import CompaniesCompanyIdAssetsGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -729,7 +738,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdAssetsGet200Response**](CompaniesCompanyIdAssetsGet200Response.md)
 
 ### Authorization
 
@@ -744,7 +753,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully retrieved assets |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -752,7 +761,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_assets_get**
-> object companies_company_id_assets_get(company_id)
+> CompaniesCompanyIdAssetsGet200Response companies_company_id_assets_get(company_id)
 
 Get all assets for a specific company
 
@@ -762,6 +771,7 @@ Get all assets for a specific company
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_assets_get200_response import CompaniesCompanyIdAssetsGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -808,7 +818,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdAssetsGet200Response**](CompaniesCompanyIdAssetsGet200Response.md)
 
 ### Authorization
 
@@ -823,7 +833,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully retrieved assets |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -831,7 +841,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_assets_post**
-> object companies_company_id_assets_post(company_id, asset)
+> CompaniesCompanyIdAssetsPost200Response companies_company_id_assets_post(company_id, asset)
 
 Create a new asset
 
@@ -842,6 +852,7 @@ Create a new asset
 ```python
 import spartera_api_sdk
 from spartera_api_sdk.models.asset import Asset
+from spartera_api_sdk.models.companies_company_id_assets_post200_response import CompaniesCompanyIdAssetsPost200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -890,7 +901,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdAssetsPost200Response**](CompaniesCompanyIdAssetsPost200Response.md)
 
 ### Authorization
 
@@ -905,7 +916,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully created assets |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **400** | Invalid input |  -  |
@@ -913,7 +924,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_assets_statistics_get**
-> object companies_company_id_assets_statistics_get(company_id)
+> CompaniesCompanyIdAssetsGet200Response companies_company_id_assets_statistics_get(company_id)
 
 Get statistics for all assets the user has access to
 
@@ -923,6 +934,7 @@ Get statistics for all assets the user has access to
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_assets_get200_response import CompaniesCompanyIdAssetsGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -969,7 +981,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdAssetsGet200Response**](CompaniesCompanyIdAssetsGet200Response.md)
 
 ### Authorization
 
@@ -984,7 +996,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully retrieved assets |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |

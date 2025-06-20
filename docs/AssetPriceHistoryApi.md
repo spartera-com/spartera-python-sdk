@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **companies_company_id_assets_asset_id_prices_active_get**
-> object companies_company_id_assets_asset_id_prices_active_get(company_id, asset_id)
+> CompaniesCompanyIdApiKeysGet200Response companies_company_id_assets_asset_id_prices_active_get(company_id, asset_id)
 
 Get the currently active price for an asset
 
@@ -25,6 +25,7 @@ Get the currently active price for an asset
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -73,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -88,7 +89,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully retrieved asset price history |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -96,7 +97,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_assets_asset_id_prices_aph_id_delete**
-> object companies_company_id_assets_asset_id_prices_aph_id_delete(company_id, asset_id, aph_id)
+> CompaniesCompanyIdApiKeysGet200Response companies_company_id_assets_asset_id_prices_aph_id_delete(company_id, asset_id, aph_id)
 
 Delete single price history record by ID
 
@@ -106,6 +107,7 @@ Delete single price history record by ID
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -156,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -171,7 +173,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully deleted asset price history |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -179,7 +181,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_assets_asset_id_prices_aph_id_get**
-> object companies_company_id_assets_asset_id_prices_aph_id_get(company_id, asset_id, aph_id)
+> CompaniesCompanyIdApiKeysGet200Response companies_company_id_assets_asset_id_prices_aph_id_get(company_id, asset_id, aph_id)
 
 Get single price history record by ID
 
@@ -189,6 +191,7 @@ Get single price history record by ID
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -239,7 +242,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -254,7 +257,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully retrieved asset price history |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -262,7 +265,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_assets_asset_id_prices_aph_id_patch**
-> object companies_company_id_assets_asset_id_prices_aph_id_patch(company_id, asset_id, aph_id)
+> CompaniesCompanyIdApiKeysGet200Response companies_company_id_assets_asset_id_prices_aph_id_patch(company_id, asset_id, aph_id)
 
 Update an existing price history record by ID
 
@@ -272,6 +275,7 @@ Update an existing price history record by ID
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -322,7 +326,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -337,7 +341,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully updated asset price history |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **400** | Invalid input |  -  |
@@ -346,7 +350,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_assets_asset_id_prices_calculate_credits_post**
-> object companies_company_id_assets_asset_id_prices_calculate_credits_post(company_id, asset_id)
+> CompaniesCompanyIdApiKeysGet200Response companies_company_id_assets_asset_id_prices_calculate_credits_post(company_id, asset_id)
 
 POST /companies/{company_id}/assets/{asset_id}/prices/calculate_credits
 
@@ -356,6 +360,7 @@ POST /companies/{company_id}/assets/{asset_id}/prices/calculate_credits
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -404,7 +409,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -419,7 +424,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully created asset price history |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **400** | Invalid input |  -  |
@@ -427,7 +432,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_assets_asset_id_prices_discount_post**
-> object companies_company_id_assets_asset_id_prices_discount_post(company_id, asset_id)
+> CompaniesCompanyIdApiKeysGet200Response companies_company_id_assets_asset_id_prices_discount_post(company_id, asset_id)
 
 POST /companies/{company_id}/assets/{asset_id}/prices/discount
 
@@ -437,6 +442,7 @@ POST /companies/{company_id}/assets/{asset_id}/prices/discount
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -485,7 +491,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -500,7 +506,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully created asset price history |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **400** | Invalid input |  -  |
@@ -508,7 +514,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_assets_asset_id_prices_get**
-> object companies_company_id_assets_asset_id_prices_get(company_id, asset_id)
+> CompaniesCompanyIdApiKeysGet200Response companies_company_id_assets_asset_id_prices_get(company_id, asset_id)
 
 Get all price history records for a specific asset
 
@@ -518,6 +524,7 @@ Get all price history records for a specific asset
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -566,7 +573,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -581,7 +588,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully retrieved asset price history |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -589,7 +596,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_assets_asset_id_prices_post**
-> object companies_company_id_assets_asset_id_prices_post(company_id, asset_id)
+> CompaniesCompanyIdApiKeysGet200Response companies_company_id_assets_asset_id_prices_post(company_id, asset_id)
 
 Create a new price history record for an asset
 
@@ -599,6 +606,7 @@ Create a new price history record for an asset
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -647,7 +655,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -662,7 +670,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully created asset price history |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **400** | Invalid input |  -  |

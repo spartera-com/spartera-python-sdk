@@ -9,10 +9,11 @@ Method | HTTP request | Description
 [**companies_company_id_users_user_id_delete**](UsersApi.md#companies_company_id_users_user_id_delete) | **DELETE** /companies/{company_id}/users/{user_id} | Delete single user by ID
 [**companies_company_id_users_user_id_get**](UsersApi.md#companies_company_id_users_user_id_get) | **GET** /companies/{company_id}/users/{user_id} | Get single user by ID
 [**companies_company_id_users_user_id_patch**](UsersApi.md#companies_company_id_users_user_id_patch) | **PATCH** /companies/{company_id}/users/{user_id} | Update an existing user by ID
+[**me_get**](UsersApi.md#me_get) | **GET** /me | Get current authenticated user&#39;s profile information.              Returns:                 JSON response with user profile data from database
 
 
 # **companies_company_id_users_get**
-> object companies_company_id_users_get(company_id)
+> CompaniesCompanyIdUsersGet200Response companies_company_id_users_get(company_id)
 
 Get a list of all users in a company
 
@@ -22,6 +23,7 @@ Get a list of all users in a company
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_users_get200_response import CompaniesCompanyIdUsersGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -68,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdUsersGet200Response**](CompaniesCompanyIdUsersGet200Response.md)
 
 ### Authorization
 
@@ -83,7 +85,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully retrieved users |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -91,7 +93,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_users_post**
-> object companies_company_id_users_post(company_id, user)
+> CompaniesCompanyIdUsersPost200Response companies_company_id_users_post(company_id, user)
 
 Create a new user
 
@@ -101,6 +103,7 @@ Create a new user
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_users_post200_response import CompaniesCompanyIdUsersPost200Response
 from spartera_api_sdk.models.user import User
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
@@ -150,7 +153,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdUsersPost200Response**](CompaniesCompanyIdUsersPost200Response.md)
 
 ### Authorization
 
@@ -165,7 +168,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully created users |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **400** | Invalid input |  -  |
@@ -173,7 +176,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_users_user_id_delete**
-> object companies_company_id_users_user_id_delete(company_id, user_id)
+> CompaniesCompanyIdUsersUserIdDelete200Response companies_company_id_users_user_id_delete(company_id, user_id)
 
 Delete single user by ID
 
@@ -183,6 +186,7 @@ Delete single user by ID
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_users_user_id_delete200_response import CompaniesCompanyIdUsersUserIdDelete200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -231,7 +235,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdUsersUserIdDelete200Response**](CompaniesCompanyIdUsersUserIdDelete200Response.md)
 
 ### Authorization
 
@@ -246,7 +250,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully deleted users |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -254,7 +258,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_users_user_id_get**
-> object companies_company_id_users_user_id_get(company_id, user_id)
+> CompaniesCompanyIdUsersUserIdGet200Response companies_company_id_users_user_id_get(company_id, user_id)
 
 Get single user by ID
 
@@ -264,6 +268,7 @@ Get single user by ID
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_users_user_id_get200_response import CompaniesCompanyIdUsersUserIdGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -312,7 +317,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdUsersUserIdGet200Response**](CompaniesCompanyIdUsersUserIdGet200Response.md)
 
 ### Authorization
 
@@ -327,7 +332,7 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully retrieved users |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
@@ -335,7 +340,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_users_user_id_patch**
-> object companies_company_id_users_user_id_patch(company_id, user_id, user)
+> CompaniesCompanyIdUsersUserIdPatch200Response companies_company_id_users_user_id_patch(company_id, user_id, user)
 
 Update an existing user by ID
 
@@ -345,6 +350,7 @@ Update an existing user by ID
 
 ```python
 import spartera_api_sdk
+from spartera_api_sdk.models.companies_company_id_users_user_id_patch200_response import CompaniesCompanyIdUsersUserIdPatch200Response
 from spartera_api_sdk.models.user import User
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
@@ -396,7 +402,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**CompaniesCompanyIdUsersUserIdPatch200Response**](CompaniesCompanyIdUsersUserIdPatch200Response.md)
 
 ### Authorization
 
@@ -411,10 +417,86 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful operation |  -  |
+**200** | Successfully updated users |  -  |
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **400** | Invalid input |  -  |
+**404** | Resource not found |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **me_get**
+> MeGet200Response me_get()
+
+Get current authenticated user's profile information.              Returns:                 JSON response with user profile data from database
+
+### Example
+
+* Api Key Authentication (ApiKeyAuth):
+
+```python
+import spartera_api_sdk
+from spartera_api_sdk.models.me_get200_response import MeGet200Response
+from spartera_api_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.spartera.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = spartera_api_sdk.Configuration(
+    host = "https://api.spartera.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with spartera_api_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = spartera_api_sdk.UsersApi(api_client)
+
+    try:
+        # Get current authenticated user's profile information.              Returns:                 JSON response with user profile data from database
+        api_response = api_instance.me_get()
+        print("The response of UsersApi->me_get:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling UsersApi->me_get: %s\n" % e)
+```
+
+
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**MeGet200Response**](MeGet200Response.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successfully retrieved users |  -  |
+**401** | Authentication required |  -  |
+**403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

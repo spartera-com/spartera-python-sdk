@@ -532,7 +532,7 @@ conf = spartera_api_sdk.Configuration(
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: 0.0.0\n"\
-               "SDK Package Version: 1.0.68".\
+               "SDK Package Version: 1.0.69".\
                format(env=sys.platform, pyversion=sys.version)
 
     def get_host_settings(self) -> List[HostSetting]:

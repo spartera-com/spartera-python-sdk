@@ -1,7 +1,7 @@
 {
     "packageName": "spartera_api_sdk",
     "projectName": "spartera-api-python-sdk",
-    "packageVersion": "1.0.68",
+    "packageVersion": "1.0.69",
     "clientPackage": "spartera_api_sdk",
     "packageCompany": "Spartera Inc.",
     "packageAuthor": "Tony D",

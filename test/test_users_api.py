@@ -62,6 +62,13 @@ class TestUsersApi(unittest.TestCase):
         """
         pass
 
+    def test_me_get(self) -> None:
+        """Test case for me_get
+
+        Get current authenticated user's profile information.              Returns:                 JSON response with user profile data from database
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()
