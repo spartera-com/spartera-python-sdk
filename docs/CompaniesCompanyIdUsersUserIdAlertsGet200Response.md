@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **message** | **str** | Response status message | 
-**data** | [**List[Alert]**](Alert.md) |  | 
+**data** | [**List[Alerts]**](Alerts.md) |  | 
 
 ## Example
 

@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **message** | **str** | Response status message | 
-**data** | [**List[User]**](User.md) |  | 
+**data** | [**List[Users]**](Users.md) |  | 
 
 ## Example
 

@@ -260,7 +260,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_connections_connection_id_patch**
-> CompaniesCompanyIdConnectionsConnectionIdPatch200Response companies_company_id_connections_connection_id_patch(company_id, connection_id, connection)
+> CompaniesCompanyIdConnectionsConnectionIdPatch200Response companies_company_id_connections_connection_id_patch(company_id, connection_id, connections_update)
 
 Update an existing connection by ID
 
@@ -271,7 +271,7 @@ Update an existing connection by ID
 ```python
 import spartera_api_sdk
 from spartera_api_sdk.models.companies_company_id_connections_connection_id_patch200_response import CompaniesCompanyIdConnectionsConnectionIdPatch200Response
-from spartera_api_sdk.models.connection import Connection
+from spartera_api_sdk.models.connections_update import ConnectionsUpdate
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -298,11 +298,11 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
     api_instance = spartera_api_sdk.ConnectionsApi(api_client)
     company_id = 'company_id_example' # str | 
     connection_id = 'connection_id_example' # str | 
-    connection = spartera_api_sdk.Connection() # Connection | 
+    connections_update = spartera_api_sdk.ConnectionsUpdate() # ConnectionsUpdate | 
 
     try:
         # Update an existing connection by ID
-        api_response = api_instance.companies_company_id_connections_connection_id_patch(company_id, connection_id, connection)
+        api_response = api_instance.companies_company_id_connections_connection_id_patch(company_id, connection_id, connections_update)
         print("The response of ConnectionsApi->companies_company_id_connections_connection_id_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -318,7 +318,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **str**|  | 
  **connection_id** | **str**|  | 
- **connection** | [**Connection**](Connection.md)|  | 
+ **connections_update** | [**ConnectionsUpdate**](ConnectionsUpdate.md)|  | 
 
 ### Return type
 
@@ -508,7 +508,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_connections_post**
-> CompaniesCompanyIdConnectionsPost200Response companies_company_id_connections_post(company_id, connection)
+> CompaniesCompanyIdConnectionsPost200Response companies_company_id_connections_post(company_id, connections_input)
 
 Create a new connection by ID
 
@@ -519,7 +519,7 @@ Create a new connection by ID
 ```python
 import spartera_api_sdk
 from spartera_api_sdk.models.companies_company_id_connections_post200_response import CompaniesCompanyIdConnectionsPost200Response
-from spartera_api_sdk.models.connection import Connection
+from spartera_api_sdk.models.connections_input import ConnectionsInput
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -545,11 +545,11 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = spartera_api_sdk.ConnectionsApi(api_client)
     company_id = 'company_id_example' # str | 
-    connection = spartera_api_sdk.Connection() # Connection | 
+    connections_input = spartera_api_sdk.ConnectionsInput() # ConnectionsInput | 
 
     try:
         # Create a new connection by ID
-        api_response = api_instance.companies_company_id_connections_post(company_id, connection)
+        api_response = api_instance.companies_company_id_connections_post(company_id, connections_input)
         print("The response of ConnectionsApi->companies_company_id_connections_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -564,7 +564,7 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **str**|  | 
- **connection** | [**Connection**](Connection.md)|  | 
+ **connections_input** | [**ConnectionsInput**](ConnectionsInput.md)|  | 
 
 ### Return type
 

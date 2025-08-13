@@ -8,14 +8,14 @@ Method | HTTP request | Description
 [**companies_company_id_assets_asset_id_prices_aph_id_delete**](AssetPriceHistoryApi.md#companies_company_id_assets_asset_id_prices_aph_id_delete) | **DELETE** /companies/{company_id}/assets/{asset_id}/prices/{aph_id} | Delete single price history record by ID
 [**companies_company_id_assets_asset_id_prices_aph_id_get**](AssetPriceHistoryApi.md#companies_company_id_assets_asset_id_prices_aph_id_get) | **GET** /companies/{company_id}/assets/{asset_id}/prices/{aph_id} | Get single price history record by ID
 [**companies_company_id_assets_asset_id_prices_aph_id_patch**](AssetPriceHistoryApi.md#companies_company_id_assets_asset_id_prices_aph_id_patch) | **PATCH** /companies/{company_id}/assets/{asset_id}/prices/{aph_id} | Update an existing price history record by ID
-[**companies_company_id_assets_asset_id_prices_calculate_credits_post**](AssetPriceHistoryApi.md#companies_company_id_assets_asset_id_prices_calculate_credits_post) | **POST** /companies/{company_id}/assets/{asset_id}/prices/calculate_credits | POST /companies/{company_id}/assets/{asset_id}/prices/calculate_credits
+[**companies_company_id_assets_asset_id_prices_calculate_credits_post**](AssetPriceHistoryApi.md#companies_company_id_assets_asset_id_prices_calculate_credits_post) | **POST** /companies/{company_id}/assets/{asset_id}/prices/calculate_credits | Calculate the credit equivalent for a given USD price without saving
 [**companies_company_id_assets_asset_id_prices_discount_post**](AssetPriceHistoryApi.md#companies_company_id_assets_asset_id_prices_discount_post) | **POST** /companies/{company_id}/assets/{asset_id}/prices/discount | POST /companies/{company_id}/assets/{asset_id}/prices/discount
 [**companies_company_id_assets_asset_id_prices_get**](AssetPriceHistoryApi.md#companies_company_id_assets_asset_id_prices_get) | **GET** /companies/{company_id}/assets/{asset_id}/prices | Get all price history records for a specific asset
 [**companies_company_id_assets_asset_id_prices_post**](AssetPriceHistoryApi.md#companies_company_id_assets_asset_id_prices_post) | **POST** /companies/{company_id}/assets/{asset_id}/prices | Create a new price history record for an asset
 
 
 # **companies_company_id_assets_asset_id_prices_active_get**
-> CompaniesCompanyIdApiKeysGet200Response companies_company_id_assets_asset_id_prices_active_get(company_id, asset_id)
+> CompaniesCompanyIdAssetsAssetIdPricesGet200Response companies_company_id_assets_asset_id_prices_active_get(company_id, asset_id)
 
 Get the currently active price for an asset
 
@@ -25,7 +25,7 @@ Get the currently active price for an asset
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
+from spartera_api_sdk.models.companies_company_id_assets_asset_id_prices_get200_response import CompaniesCompanyIdAssetsAssetIdPricesGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdAssetsAssetIdPricesGet200Response**](CompaniesCompanyIdAssetsAssetIdPricesGet200Response.md)
 
 ### Authorization
 
@@ -97,7 +97,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_assets_asset_id_prices_aph_id_delete**
-> CompaniesCompanyIdApiKeysGet200Response companies_company_id_assets_asset_id_prices_aph_id_delete(company_id, asset_id, aph_id)
+> CompaniesCompanyIdAssetsAssetIdPricesAphIdDelete200Response companies_company_id_assets_asset_id_prices_aph_id_delete(company_id, asset_id, aph_id)
 
 Delete single price history record by ID
 
@@ -107,7 +107,7 @@ Delete single price history record by ID
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
+from spartera_api_sdk.models.companies_company_id_assets_asset_id_prices_aph_id_delete200_response import CompaniesCompanyIdAssetsAssetIdPricesAphIdDelete200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdAssetsAssetIdPricesAphIdDelete200Response**](CompaniesCompanyIdAssetsAssetIdPricesAphIdDelete200Response.md)
 
 ### Authorization
 
@@ -181,7 +181,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_assets_asset_id_prices_aph_id_get**
-> CompaniesCompanyIdApiKeysGet200Response companies_company_id_assets_asset_id_prices_aph_id_get(company_id, asset_id, aph_id)
+> CompaniesCompanyIdAssetsAssetIdPricesAphIdGet200Response companies_company_id_assets_asset_id_prices_aph_id_get(company_id, asset_id, aph_id)
 
 Get single price history record by ID
 
@@ -191,7 +191,7 @@ Get single price history record by ID
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
+from spartera_api_sdk.models.companies_company_id_assets_asset_id_prices_aph_id_get200_response import CompaniesCompanyIdAssetsAssetIdPricesAphIdGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -242,7 +242,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdAssetsAssetIdPricesAphIdGet200Response**](CompaniesCompanyIdAssetsAssetIdPricesAphIdGet200Response.md)
 
 ### Authorization
 
@@ -265,7 +265,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_assets_asset_id_prices_aph_id_patch**
-> CompaniesCompanyIdApiKeysGet200Response companies_company_id_assets_asset_id_prices_aph_id_patch(company_id, asset_id, aph_id)
+> CompaniesCompanyIdAssetsAssetIdPricesAphIdPatch200Response companies_company_id_assets_asset_id_prices_aph_id_patch(company_id, asset_id, aph_id, asset_price_history_update)
 
 Update an existing price history record by ID
 
@@ -275,7 +275,8 @@ Update an existing price history record by ID
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
+from spartera_api_sdk.models.asset_price_history_update import AssetPriceHistoryUpdate
+from spartera_api_sdk.models.companies_company_id_assets_asset_id_prices_aph_id_patch200_response import CompaniesCompanyIdAssetsAssetIdPricesAphIdPatch200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -303,10 +304,11 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
     company_id = 'company_id_example' # str | 
     asset_id = 'asset_id_example' # str | 
     aph_id = 'aph_id_example' # str | 
+    asset_price_history_update = spartera_api_sdk.AssetPriceHistoryUpdate() # AssetPriceHistoryUpdate | 
 
     try:
         # Update an existing price history record by ID
-        api_response = api_instance.companies_company_id_assets_asset_id_prices_aph_id_patch(company_id, asset_id, aph_id)
+        api_response = api_instance.companies_company_id_assets_asset_id_prices_aph_id_patch(company_id, asset_id, aph_id, asset_price_history_update)
         print("The response of AssetPriceHistoryApi->companies_company_id_assets_asset_id_prices_aph_id_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -323,10 +325,11 @@ Name | Type | Description  | Notes
  **company_id** | **str**|  | 
  **asset_id** | **str**|  | 
  **aph_id** | **str**|  | 
+ **asset_price_history_update** | [**AssetPriceHistoryUpdate**](AssetPriceHistoryUpdate.md)|  | 
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdAssetsAssetIdPricesAphIdPatch200Response**](CompaniesCompanyIdAssetsAssetIdPricesAphIdPatch200Response.md)
 
 ### Authorization
 
@@ -334,7 +337,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -350,9 +353,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_assets_asset_id_prices_calculate_credits_post**
-> CompaniesCompanyIdApiKeysGet200Response companies_company_id_assets_asset_id_prices_calculate_credits_post(company_id, asset_id)
+> CompaniesCompanyIdAssetsAssetIdPricesPost200Response companies_company_id_assets_asset_id_prices_calculate_credits_post(company_id, asset_id, asset_price_history_input)
 
-POST /companies/{company_id}/assets/{asset_id}/prices/calculate_credits
+Calculate the credit equivalent for a given USD price without saving
 
 ### Example
 
@@ -360,7 +363,8 @@ POST /companies/{company_id}/assets/{asset_id}/prices/calculate_credits
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
+from spartera_api_sdk.models.asset_price_history_input import AssetPriceHistoryInput
+from spartera_api_sdk.models.companies_company_id_assets_asset_id_prices_post200_response import CompaniesCompanyIdAssetsAssetIdPricesPost200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -387,10 +391,11 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
     api_instance = spartera_api_sdk.AssetPriceHistoryApi(api_client)
     company_id = 'company_id_example' # str | 
     asset_id = 'asset_id_example' # str | 
+    asset_price_history_input = spartera_api_sdk.AssetPriceHistoryInput() # AssetPriceHistoryInput | 
 
     try:
-        # POST /companies/{company_id}/assets/{asset_id}/prices/calculate_credits
-        api_response = api_instance.companies_company_id_assets_asset_id_prices_calculate_credits_post(company_id, asset_id)
+        # Calculate the credit equivalent for a given USD price without saving
+        api_response = api_instance.companies_company_id_assets_asset_id_prices_calculate_credits_post(company_id, asset_id, asset_price_history_input)
         print("The response of AssetPriceHistoryApi->companies_company_id_assets_asset_id_prices_calculate_credits_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -406,10 +411,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **str**|  | 
  **asset_id** | **str**|  | 
+ **asset_price_history_input** | [**AssetPriceHistoryInput**](AssetPriceHistoryInput.md)|  | 
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdAssetsAssetIdPricesPost200Response**](CompaniesCompanyIdAssetsAssetIdPricesPost200Response.md)
 
 ### Authorization
 
@@ -417,7 +423,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -432,7 +438,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_assets_asset_id_prices_discount_post**
-> CompaniesCompanyIdApiKeysGet200Response companies_company_id_assets_asset_id_prices_discount_post(company_id, asset_id)
+> CompaniesCompanyIdAssetsAssetIdPricesPost200Response companies_company_id_assets_asset_id_prices_discount_post(company_id, asset_id, asset_price_history_input)
 
 POST /companies/{company_id}/assets/{asset_id}/prices/discount
 
@@ -442,7 +448,8 @@ POST /companies/{company_id}/assets/{asset_id}/prices/discount
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
+from spartera_api_sdk.models.asset_price_history_input import AssetPriceHistoryInput
+from spartera_api_sdk.models.companies_company_id_assets_asset_id_prices_post200_response import CompaniesCompanyIdAssetsAssetIdPricesPost200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -469,10 +476,11 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
     api_instance = spartera_api_sdk.AssetPriceHistoryApi(api_client)
     company_id = 'company_id_example' # str | 
     asset_id = 'asset_id_example' # str | 
+    asset_price_history_input = spartera_api_sdk.AssetPriceHistoryInput() # AssetPriceHistoryInput | 
 
     try:
         # POST /companies/{company_id}/assets/{asset_id}/prices/discount
-        api_response = api_instance.companies_company_id_assets_asset_id_prices_discount_post(company_id, asset_id)
+        api_response = api_instance.companies_company_id_assets_asset_id_prices_discount_post(company_id, asset_id, asset_price_history_input)
         print("The response of AssetPriceHistoryApi->companies_company_id_assets_asset_id_prices_discount_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -488,10 +496,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **str**|  | 
  **asset_id** | **str**|  | 
+ **asset_price_history_input** | [**AssetPriceHistoryInput**](AssetPriceHistoryInput.md)|  | 
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdAssetsAssetIdPricesPost200Response**](CompaniesCompanyIdAssetsAssetIdPricesPost200Response.md)
 
 ### Authorization
 
@@ -499,7 +508,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -514,7 +523,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_assets_asset_id_prices_get**
-> CompaniesCompanyIdApiKeysGet200Response companies_company_id_assets_asset_id_prices_get(company_id, asset_id)
+> CompaniesCompanyIdAssetsAssetIdPricesGet200Response companies_company_id_assets_asset_id_prices_get(company_id, asset_id)
 
 Get all price history records for a specific asset
 
@@ -524,7 +533,7 @@ Get all price history records for a specific asset
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
+from spartera_api_sdk.models.companies_company_id_assets_asset_id_prices_get200_response import CompaniesCompanyIdAssetsAssetIdPricesGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -573,7 +582,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdAssetsAssetIdPricesGet200Response**](CompaniesCompanyIdAssetsAssetIdPricesGet200Response.md)
 
 ### Authorization
 
@@ -596,7 +605,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_assets_asset_id_prices_post**
-> CompaniesCompanyIdApiKeysGet200Response companies_company_id_assets_asset_id_prices_post(company_id, asset_id)
+> CompaniesCompanyIdAssetsAssetIdPricesPost200Response companies_company_id_assets_asset_id_prices_post(company_id, asset_id, asset_price_history_input)
 
 Create a new price history record for an asset
 
@@ -606,7 +615,8 @@ Create a new price history record for an asset
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
+from spartera_api_sdk.models.asset_price_history_input import AssetPriceHistoryInput
+from spartera_api_sdk.models.companies_company_id_assets_asset_id_prices_post200_response import CompaniesCompanyIdAssetsAssetIdPricesPost200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -633,10 +643,11 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
     api_instance = spartera_api_sdk.AssetPriceHistoryApi(api_client)
     company_id = 'company_id_example' # str | 
     asset_id = 'asset_id_example' # str | 
+    asset_price_history_input = spartera_api_sdk.AssetPriceHistoryInput() # AssetPriceHistoryInput | 
 
     try:
         # Create a new price history record for an asset
-        api_response = api_instance.companies_company_id_assets_asset_id_prices_post(company_id, asset_id)
+        api_response = api_instance.companies_company_id_assets_asset_id_prices_post(company_id, asset_id, asset_price_history_input)
         print("The response of AssetPriceHistoryApi->companies_company_id_assets_asset_id_prices_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -652,10 +663,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **str**|  | 
  **asset_id** | **str**|  | 
+ **asset_price_history_input** | [**AssetPriceHistoryInput**](AssetPriceHistoryInput.md)|  | 
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdAssetsAssetIdPricesPost200Response**](CompaniesCompanyIdAssetsAssetIdPricesPost200Response.md)
 
 ### Authorization
 
@@ -663,7 +675,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details

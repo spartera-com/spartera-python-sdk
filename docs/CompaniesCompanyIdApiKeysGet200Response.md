@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **message** | **str** | Response status message | 
-**data** | **object** | Response data | [optional] 
+**data** | [**List[ApiKeys]**](ApiKeys.md) |  | 
 
 ## Example
 

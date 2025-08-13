@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **message** | **str** | Response status message | 
-**data** | [**List[Asset]**](Asset.md) |  | 
+**data** | [**List[Assets]**](Assets.md) |  | 
 
 ## Example
 

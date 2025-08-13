@@ -4,7 +4,7 @@ All URIs are relative to *https://api.spartera.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**analyze_company_handle_assets_asset_slug_get**](AssetsApi.md#analyze_company_handle_assets_asset_slug_get) | **GET** /analyze/{company_handle}/assets/{asset_slug} | Process (analyze) an asset. Attempt to process an analytic on a backend warehouse/AI model.
+[**analyze_company_handle_assets_asset_slug_get**](AssetsApi.md#analyze_company_handle_assets_asset_slug_get) | **GET** /analyze/{company_handle}/assets/{asset_slug} | Process (analyze) an asset.
 [**companies_company_id_assets_asset_id_delete**](AssetsApi.md#companies_company_id_assets_asset_id_delete) | **DELETE** /companies/{company_id}/assets/{asset_id} | Delete single asset by ID
 [**companies_company_id_assets_asset_id_get**](AssetsApi.md#companies_company_id_assets_asset_id_get) | **GET** /companies/{company_id}/assets/{asset_id} | Get single asset by ID
 [**companies_company_id_assets_asset_id_infoschema_get**](AssetsApi.md#companies_company_id_assets_asset_id_infoschema_get) | **GET** /companies/{company_id}/assets/{asset_id}/infoschema | Get the information schema for a specific asset&#39;s table
@@ -19,9 +19,9 @@ Method | HTTP request | Description
 
 
 # **analyze_company_handle_assets_asset_slug_get**
-> CompaniesCompanyIdAssetsAssetIdGet200Response analyze_company_handle_assets_asset_slug_get(company_handle, asset_slug)
+> AnalyzeCompanyHandleAssetsAssetSlugGet200Response analyze_company_handle_assets_asset_slug_get(asset_slug, company_handle)
 
-Process (analyze) an asset. Attempt to process an analytic on a backend warehouse/AI model.
+Process (analyze) an asset.
 
 ### Example
 
@@ -29,7 +29,7 @@ Process (analyze) an asset. Attempt to process an analytic on a backend warehous
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_assets_asset_id_get200_response import CompaniesCompanyIdAssetsAssetIdGet200Response
+from spartera_api_sdk.models.analyze_company_handle_assets_asset_slug_get200_response import AnalyzeCompanyHandleAssetsAssetSlugGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -54,12 +54,12 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 with spartera_api_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = spartera_api_sdk.AssetsApi(api_client)
-    company_handle = 'company_handle_example' # str | 
     asset_slug = 'asset_slug_example' # str | 
+    company_handle = 'company_handle_example' # str | 
 
     try:
-        # Process (analyze) an asset. Attempt to process an analytic on a backend warehouse/AI model.
-        api_response = api_instance.analyze_company_handle_assets_asset_slug_get(company_handle, asset_slug)
+        # Process (analyze) an asset.
+        api_response = api_instance.analyze_company_handle_assets_asset_slug_get(asset_slug, company_handle)
         print("The response of AssetsApi->analyze_company_handle_assets_asset_slug_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -73,12 +73,12 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **company_handle** | **str**|  | 
  **asset_slug** | **str**|  | 
+ **company_handle** | **str**|  | 
 
 ### Return type
 
-[**CompaniesCompanyIdAssetsAssetIdGet200Response**](CompaniesCompanyIdAssetsAssetIdGet200Response.md)
+[**AnalyzeCompanyHandleAssetsAssetSlugGet200Response**](AnalyzeCompanyHandleAssetsAssetSlugGet200Response.md)
 
 ### Authorization
 
@@ -183,7 +183,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_assets_asset_id_get**
-> CompaniesCompanyIdAssetsAssetIdGet200Response companies_company_id_assets_asset_id_get(company_id, asset_id)
+> AnalyzeCompanyHandleAssetsAssetSlugGet200Response companies_company_id_assets_asset_id_get(company_id, asset_id)
 
 Get single asset by ID
 
@@ -193,7 +193,7 @@ Get single asset by ID
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_assets_asset_id_get200_response import CompaniesCompanyIdAssetsAssetIdGet200Response
+from spartera_api_sdk.models.analyze_company_handle_assets_asset_slug_get200_response import AnalyzeCompanyHandleAssetsAssetSlugGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -242,7 +242,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdAssetsAssetIdGet200Response**](CompaniesCompanyIdAssetsAssetIdGet200Response.md)
+[**AnalyzeCompanyHandleAssetsAssetSlugGet200Response**](AnalyzeCompanyHandleAssetsAssetSlugGet200Response.md)
 
 ### Authorization
 
@@ -429,7 +429,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_assets_asset_id_patch**
-> CompaniesCompanyIdAssetsAssetIdPatch200Response companies_company_id_assets_asset_id_patch(company_id, asset_id, asset)
+> CompaniesCompanyIdAssetsAssetIdPatch200Response companies_company_id_assets_asset_id_patch(company_id, asset_id, assets_update)
 
 Update an existing asset by ID
 
@@ -439,7 +439,7 @@ Update an existing asset by ID
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.asset import Asset
+from spartera_api_sdk.models.assets_update import AssetsUpdate
 from spartera_api_sdk.models.companies_company_id_assets_asset_id_patch200_response import CompaniesCompanyIdAssetsAssetIdPatch200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
@@ -467,11 +467,11 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
     api_instance = spartera_api_sdk.AssetsApi(api_client)
     company_id = 'company_id_example' # str | 
     asset_id = 'asset_id_example' # str | 
-    asset = spartera_api_sdk.Asset() # Asset | 
+    assets_update = spartera_api_sdk.AssetsUpdate() # AssetsUpdate | 
 
     try:
         # Update an existing asset by ID
-        api_response = api_instance.companies_company_id_assets_asset_id_patch(company_id, asset_id, asset)
+        api_response = api_instance.companies_company_id_assets_asset_id_patch(company_id, asset_id, assets_update)
         print("The response of AssetsApi->companies_company_id_assets_asset_id_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -487,7 +487,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **str**|  | 
  **asset_id** | **str**|  | 
- **asset** | [**Asset**](Asset.md)|  | 
+ **assets_update** | [**AssetsUpdate**](AssetsUpdate.md)|  | 
 
 ### Return type
 
@@ -841,7 +841,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_assets_post**
-> CompaniesCompanyIdAssetsPost200Response companies_company_id_assets_post(company_id, asset)
+> CompaniesCompanyIdAssetsPost200Response companies_company_id_assets_post(company_id, assets_input)
 
 Create a new asset
 
@@ -851,7 +851,7 @@ Create a new asset
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.asset import Asset
+from spartera_api_sdk.models.assets_input import AssetsInput
 from spartera_api_sdk.models.companies_company_id_assets_post200_response import CompaniesCompanyIdAssetsPost200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
@@ -878,11 +878,11 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = spartera_api_sdk.AssetsApi(api_client)
     company_id = 'company_id_example' # str | 
-    asset = spartera_api_sdk.Asset() # Asset | 
+    assets_input = spartera_api_sdk.AssetsInput() # AssetsInput | 
 
     try:
         # Create a new asset
-        api_response = api_instance.companies_company_id_assets_post(company_id, asset)
+        api_response = api_instance.companies_company_id_assets_post(company_id, assets_input)
         print("The response of AssetsApi->companies_company_id_assets_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -897,7 +897,7 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **str**|  | 
- **asset** | [**Asset**](Asset.md)|  | 
+ **assets_input** | [**AssetsInput**](AssetsInput.md)|  | 
 
 ### Return type
 

@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **companies_company_id_users_user_id_favorites_category_category_get**
-> CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response companies_company_id_users_user_id_favorites_category_category_get(company_id, user_id, category)
+> CompaniesCompanyIdUsersUserIdFavoritesCategoryCategoryGet200Response companies_company_id_users_user_id_favorites_category_category_get(company_id, user_id, category)
 
 Get all favorites for the specified user in a specific category
 
@@ -25,7 +25,7 @@ Get all favorites for the specified user in a specific category
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_users_user_id_favorites_favorite_id_get200_response import CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response
+from spartera_api_sdk.models.companies_company_id_users_user_id_favorites_category_category_get200_response import CompaniesCompanyIdUsersUserIdFavoritesCategoryCategoryGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response**](CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response.md)
+[**CompaniesCompanyIdUsersUserIdFavoritesCategoryCategoryGet200Response**](CompaniesCompanyIdUsersUserIdFavoritesCategoryCategoryGet200Response.md)
 
 ### Authorization
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_users_user_id_favorites_check_asset_id_get**
-> CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response companies_company_id_users_user_id_favorites_check_asset_id_get(company_id, user_id, asset_id)
+> CompaniesCompanyIdUsersUserIdFavoritesCategoryCategoryGet200Response companies_company_id_users_user_id_favorites_check_asset_id_get(company_id, user_id, asset_id)
 
 Check if the specified user has favorited a specific asset
 
@@ -109,7 +109,7 @@ Check if the specified user has favorited a specific asset
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_users_user_id_favorites_favorite_id_get200_response import CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response
+from spartera_api_sdk.models.companies_company_id_users_user_id_favorites_category_category_get200_response import CompaniesCompanyIdUsersUserIdFavoritesCategoryCategoryGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response**](CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response.md)
+[**CompaniesCompanyIdUsersUserIdFavoritesCategoryCategoryGet200Response**](CompaniesCompanyIdUsersUserIdFavoritesCategoryCategoryGet200Response.md)
 
 ### Authorization
 
@@ -267,7 +267,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_users_user_id_favorites_favorite_id_get**
-> CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response companies_company_id_users_user_id_favorites_favorite_id_get(company_id, user_id, favorite_id)
+> CompaniesCompanyIdUsersUserIdFavoritesCategoryCategoryGet200Response companies_company_id_users_user_id_favorites_favorite_id_get(company_id, user_id, favorite_id)
 
 Get single favorite by ID
 
@@ -277,7 +277,7 @@ Get single favorite by ID
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_users_user_id_favorites_favorite_id_get200_response import CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response
+from spartera_api_sdk.models.companies_company_id_users_user_id_favorites_category_category_get200_response import CompaniesCompanyIdUsersUserIdFavoritesCategoryCategoryGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -328,7 +328,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response**](CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response.md)
+[**CompaniesCompanyIdUsersUserIdFavoritesCategoryCategoryGet200Response**](CompaniesCompanyIdUsersUserIdFavoritesCategoryCategoryGet200Response.md)
 
 ### Authorization
 
@@ -351,7 +351,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_users_user_id_favorites_favorite_id_patch**
-> CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200Response companies_company_id_users_user_id_favorites_favorite_id_patch(company_id, user_id, favorite_id, favorite)
+> CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200Response companies_company_id_users_user_id_favorites_favorite_id_patch(company_id, user_id, favorite_id, favorites_update)
 
 Update an existing favorite by ID
 
@@ -362,7 +362,7 @@ Update an existing favorite by ID
 ```python
 import spartera_api_sdk
 from spartera_api_sdk.models.companies_company_id_users_user_id_favorites_favorite_id_patch200_response import CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200Response
-from spartera_api_sdk.models.favorite import Favorite
+from spartera_api_sdk.models.favorites_update import FavoritesUpdate
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -390,11 +390,11 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
     company_id = 'company_id_example' # str | 
     user_id = 'user_id_example' # str | 
     favorite_id = 'favorite_id_example' # str | 
-    favorite = spartera_api_sdk.Favorite() # Favorite | 
+    favorites_update = spartera_api_sdk.FavoritesUpdate() # FavoritesUpdate | 
 
     try:
         # Update an existing favorite by ID
-        api_response = api_instance.companies_company_id_users_user_id_favorites_favorite_id_patch(company_id, user_id, favorite_id, favorite)
+        api_response = api_instance.companies_company_id_users_user_id_favorites_favorite_id_patch(company_id, user_id, favorite_id, favorites_update)
         print("The response of FavoritesApi->companies_company_id_users_user_id_favorites_favorite_id_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -411,7 +411,7 @@ Name | Type | Description  | Notes
  **company_id** | **str**|  | 
  **user_id** | **str**|  | 
  **favorite_id** | **str**|  | 
- **favorite** | [**Favorite**](Favorite.md)|  | 
+ **favorites_update** | [**FavoritesUpdate**](FavoritesUpdate.md)|  | 
 
 ### Return type
 
@@ -521,7 +521,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_users_user_id_favorites_post**
-> CompaniesCompanyIdUsersUserIdFavoritesPost200Response companies_company_id_users_user_id_favorites_post(company_id, user_id, favorite)
+> CompaniesCompanyIdUsersUserIdFavoritesPost200Response companies_company_id_users_user_id_favorites_post(company_id, user_id, favorites_input)
 
 POST /companies/{company_id}/users/{user_id}/favorites
 
@@ -532,7 +532,7 @@ POST /companies/{company_id}/users/{user_id}/favorites
 ```python
 import spartera_api_sdk
 from spartera_api_sdk.models.companies_company_id_users_user_id_favorites_post200_response import CompaniesCompanyIdUsersUserIdFavoritesPost200Response
-from spartera_api_sdk.models.favorite import Favorite
+from spartera_api_sdk.models.favorites_input import FavoritesInput
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -559,11 +559,11 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
     api_instance = spartera_api_sdk.FavoritesApi(api_client)
     company_id = 'company_id_example' # str | 
     user_id = 'user_id_example' # str | 
-    favorite = spartera_api_sdk.Favorite() # Favorite | 
+    favorites_input = spartera_api_sdk.FavoritesInput() # FavoritesInput | 
 
     try:
         # POST /companies/{company_id}/users/{user_id}/favorites
-        api_response = api_instance.companies_company_id_users_user_id_favorites_post(company_id, user_id, favorite)
+        api_response = api_instance.companies_company_id_users_user_id_favorites_post(company_id, user_id, favorites_input)
         print("The response of FavoritesApi->companies_company_id_users_user_id_favorites_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -579,7 +579,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **str**|  | 
  **user_id** | **str**|  | 
- **favorite** | [**Favorite**](Favorite.md)|  | 
+ **favorites_input** | [**FavoritesInput**](FavoritesInput.md)|  | 
 
 ### Return type
 

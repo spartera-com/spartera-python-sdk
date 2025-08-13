@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **message** | **str** | Response status message | 
-**data** | [**List[Favorite]**](Favorite.md) |  | 
+**data** | [**List[Favorites]**](Favorites.md) |  | 
 
 ## Example
 

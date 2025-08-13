@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_users_user_id_alerts_alert_id_get**
-> CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response companies_company_id_users_user_id_alerts_alert_id_get(company_id, user_id, alert_id)
+> CompaniesCompanyIdUsersUserIdAlertsAssetAssetIdGet200Response companies_company_id_users_user_id_alerts_alert_id_get(company_id, user_id, alert_id)
 
 Get single alert by ID
 
@@ -108,7 +108,7 @@ Get single alert by ID
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_users_user_id_alerts_alert_id_get200_response import CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response
+from spartera_api_sdk.models.companies_company_id_users_user_id_alerts_asset_asset_id_get200_response import CompaniesCompanyIdUsersUserIdAlertsAssetAssetIdGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response**](CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response.md)
+[**CompaniesCompanyIdUsersUserIdAlertsAssetAssetIdGet200Response**](CompaniesCompanyIdUsersUserIdAlertsAssetAssetIdGet200Response.md)
 
 ### Authorization
 
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_users_user_id_alerts_alert_id_patch**
-> CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200Response companies_company_id_users_user_id_alerts_alert_id_patch(company_id, user_id, alert_id, alert)
+> CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200Response companies_company_id_users_user_id_alerts_alert_id_patch(company_id, user_id, alert_id, alerts_update)
 
 Update an existing alert by ID
 
@@ -192,7 +192,7 @@ Update an existing alert by ID
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.alert import Alert
+from spartera_api_sdk.models.alerts_update import AlertsUpdate
 from spartera_api_sdk.models.companies_company_id_users_user_id_alerts_alert_id_patch200_response import CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
@@ -221,11 +221,11 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
     company_id = 'company_id_example' # str | 
     user_id = 'user_id_example' # str | 
     alert_id = 'alert_id_example' # str | 
-    alert = spartera_api_sdk.Alert() # Alert | 
+    alerts_update = spartera_api_sdk.AlertsUpdate() # AlertsUpdate | 
 
     try:
         # Update an existing alert by ID
-        api_response = api_instance.companies_company_id_users_user_id_alerts_alert_id_patch(company_id, user_id, alert_id, alert)
+        api_response = api_instance.companies_company_id_users_user_id_alerts_alert_id_patch(company_id, user_id, alert_id, alerts_update)
         print("The response of AlertsApi->companies_company_id_users_user_id_alerts_alert_id_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -242,7 +242,7 @@ Name | Type | Description  | Notes
  **company_id** | **str**|  | 
  **user_id** | **str**|  | 
  **alert_id** | **str**|  | 
- **alert** | [**Alert**](Alert.md)|  | 
+ **alerts_update** | [**AlertsUpdate**](AlertsUpdate.md)|  | 
 
 ### Return type
 
@@ -354,7 +354,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_users_user_id_alerts_asset_asset_id_get**
-> CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response companies_company_id_users_user_id_alerts_asset_asset_id_get(company_id, user_id, asset_id)
+> CompaniesCompanyIdUsersUserIdAlertsAssetAssetIdGet200Response companies_company_id_users_user_id_alerts_asset_asset_id_get(company_id, user_id, asset_id)
 
 Get all alerts for a specific asset (by user)
 
@@ -364,7 +364,7 @@ Get all alerts for a specific asset (by user)
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_users_user_id_alerts_alert_id_get200_response import CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response
+from spartera_api_sdk.models.companies_company_id_users_user_id_alerts_asset_asset_id_get200_response import CompaniesCompanyIdUsersUserIdAlertsAssetAssetIdGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -415,7 +415,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response**](CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response.md)
+[**CompaniesCompanyIdUsersUserIdAlertsAssetAssetIdGet200Response**](CompaniesCompanyIdUsersUserIdAlertsAssetAssetIdGet200Response.md)
 
 ### Authorization
 
@@ -520,7 +520,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_users_user_id_alerts_post**
-> CompaniesCompanyIdUsersUserIdAlertsPost200Response companies_company_id_users_user_id_alerts_post(company_id, user_id, alert)
+> CompaniesCompanyIdUsersUserIdAlertsPost200Response companies_company_id_users_user_id_alerts_post(company_id, user_id, alerts_input)
 
 POST /companies/{company_id}/users/{user_id}/alerts
 
@@ -530,7 +530,7 @@ POST /companies/{company_id}/users/{user_id}/alerts
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.alert import Alert
+from spartera_api_sdk.models.alerts_input import AlertsInput
 from spartera_api_sdk.models.companies_company_id_users_user_id_alerts_post200_response import CompaniesCompanyIdUsersUserIdAlertsPost200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
@@ -558,11 +558,11 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
     api_instance = spartera_api_sdk.AlertsApi(api_client)
     company_id = 'company_id_example' # str | 
     user_id = 'user_id_example' # str | 
-    alert = spartera_api_sdk.Alert() # Alert | 
+    alerts_input = spartera_api_sdk.AlertsInput() # AlertsInput | 
 
     try:
         # POST /companies/{company_id}/users/{user_id}/alerts
-        api_response = api_instance.companies_company_id_users_user_id_alerts_post(company_id, user_id, alert)
+        api_response = api_instance.companies_company_id_users_user_id_alerts_post(company_id, user_id, alerts_input)
         print("The response of AlertsApi->companies_company_id_users_user_id_alerts_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -578,7 +578,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **str**|  | 
  **user_id** | **str**|  | 
- **alert** | [**Alert**](Alert.md)|  | 
+ **alerts_input** | [**AlertsInput**](AlertsInput.md)|  | 
 
 ### Return type
 

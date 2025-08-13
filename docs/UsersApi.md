@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**companies_company_id_users_user_id_delete**](UsersApi.md#companies_company_id_users_user_id_delete) | **DELETE** /companies/{company_id}/users/{user_id} | Delete single user by ID
 [**companies_company_id_users_user_id_get**](UsersApi.md#companies_company_id_users_user_id_get) | **GET** /companies/{company_id}/users/{user_id} | Get single user by ID
 [**companies_company_id_users_user_id_patch**](UsersApi.md#companies_company_id_users_user_id_patch) | **PATCH** /companies/{company_id}/users/{user_id} | Update an existing user by ID
-[**me_get**](UsersApi.md#me_get) | **GET** /me | Get current authenticated user&#39;s profile information.              Returns:                 JSON response with user profile data from database
+[**me_get**](UsersApi.md#me_get) | **GET** /me | Get current authenticated user&#39;s profile.
 
 
 # **companies_company_id_users_get**
@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_users_post**
-> CompaniesCompanyIdUsersPost200Response companies_company_id_users_post(company_id, user)
+> CompaniesCompanyIdUsersPost200Response companies_company_id_users_post(company_id, users_input)
 
 Create a new user
 
@@ -104,7 +104,7 @@ Create a new user
 ```python
 import spartera_api_sdk
 from spartera_api_sdk.models.companies_company_id_users_post200_response import CompaniesCompanyIdUsersPost200Response
-from spartera_api_sdk.models.user import User
+from spartera_api_sdk.models.users_input import UsersInput
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -130,11 +130,11 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = spartera_api_sdk.UsersApi(api_client)
     company_id = 'company_id_example' # str | 
-    user = spartera_api_sdk.User() # User | 
+    users_input = spartera_api_sdk.UsersInput() # UsersInput | 
 
     try:
         # Create a new user
-        api_response = api_instance.companies_company_id_users_post(company_id, user)
+        api_response = api_instance.companies_company_id_users_post(company_id, users_input)
         print("The response of UsersApi->companies_company_id_users_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -149,7 +149,7 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **str**|  | 
- **user** | [**User**](User.md)|  | 
+ **users_input** | [**UsersInput**](UsersInput.md)|  | 
 
 ### Return type
 
@@ -340,7 +340,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_users_user_id_patch**
-> CompaniesCompanyIdUsersUserIdPatch200Response companies_company_id_users_user_id_patch(company_id, user_id, user)
+> CompaniesCompanyIdUsersUserIdPatch200Response companies_company_id_users_user_id_patch(company_id, user_id, users_update)
 
 Update an existing user by ID
 
@@ -351,7 +351,7 @@ Update an existing user by ID
 ```python
 import spartera_api_sdk
 from spartera_api_sdk.models.companies_company_id_users_user_id_patch200_response import CompaniesCompanyIdUsersUserIdPatch200Response
-from spartera_api_sdk.models.user import User
+from spartera_api_sdk.models.users_update import UsersUpdate
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -378,11 +378,11 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
     api_instance = spartera_api_sdk.UsersApi(api_client)
     company_id = 'company_id_example' # str | 
     user_id = 'user_id_example' # str | 
-    user = spartera_api_sdk.User() # User | 
+    users_update = spartera_api_sdk.UsersUpdate() # UsersUpdate | 
 
     try:
         # Update an existing user by ID
-        api_response = api_instance.companies_company_id_users_user_id_patch(company_id, user_id, user)
+        api_response = api_instance.companies_company_id_users_user_id_patch(company_id, user_id, users_update)
         print("The response of UsersApi->companies_company_id_users_user_id_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -398,7 +398,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **str**|  | 
  **user_id** | **str**|  | 
- **user** | [**User**](User.md)|  | 
+ **users_update** | [**UsersUpdate**](UsersUpdate.md)|  | 
 
 ### Return type
 
@@ -426,9 +426,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **me_get**
-> MeGet200Response me_get()
+> CompaniesCompanyIdUsersGet200Response me_get()
 
-Get current authenticated user's profile information.              Returns:                 JSON response with user profile data from database
+Get current authenticated user's profile.
 
 ### Example
 
@@ -436,7 +436,7 @@ Get current authenticated user's profile information.              Returns:     
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.me_get200_response import MeGet200Response
+from spartera_api_sdk.models.companies_company_id_users_get200_response import CompaniesCompanyIdUsersGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -463,7 +463,7 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
     api_instance = spartera_api_sdk.UsersApi(api_client)
 
     try:
-        # Get current authenticated user's profile information.              Returns:                 JSON response with user profile data from database
+        # Get current authenticated user's profile.
         api_response = api_instance.me_get()
         print("The response of UsersApi->me_get:\n")
         pprint(api_response)
@@ -479,7 +479,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MeGet200Response**](MeGet200Response.md)
+[**CompaniesCompanyIdUsersGet200Response**](CompaniesCompanyIdUsersGet200Response.md)
 
 ### Authorization
 

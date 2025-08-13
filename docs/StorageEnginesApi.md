@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **cloud_providers_provider_id_storage_engines_engine_id_get**
-> CompaniesCompanyIdApiKeysGet200Response cloud_providers_provider_id_storage_engines_engine_id_get(provider_id, engine_id)
+> CloudProvidersProviderIdStorageEnginesGet200Response cloud_providers_provider_id_storage_engines_engine_id_get(provider_id, engine_id)
 
 Get single storage engine by ID
 
@@ -19,7 +19,7 @@ Get single storage engine by ID
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
+from spartera_api_sdk.models.cloud_providers_provider_id_storage_engines_get200_response import CloudProvidersProviderIdStorageEnginesGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CloudProvidersProviderIdStorageEnginesGet200Response**](CloudProvidersProviderIdStorageEnginesGet200Response.md)
 
 ### Authorization
 
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cloud_providers_provider_id_storage_engines_get**
-> CompaniesCompanyIdApiKeysGet200Response cloud_providers_provider_id_storage_engines_get(provider_id)
+> CloudProvidersProviderIdStorageEnginesGet200Response cloud_providers_provider_id_storage_engines_get(provider_id)
 
 Get a list of all storage engines
 
@@ -101,7 +101,7 @@ Get a list of all storage engines
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
+from spartera_api_sdk.models.cloud_providers_provider_id_storage_engines_get200_response import CloudProvidersProviderIdStorageEnginesGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CloudProvidersProviderIdStorageEnginesGet200Response**](CloudProvidersProviderIdStorageEnginesGet200Response.md)
 
 ### Authorization
 

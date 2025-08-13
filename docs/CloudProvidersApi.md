@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **cloud_providers_get**
-> CompaniesCompanyIdApiKeysGet200Response cloud_providers_get()
+> CloudProvidersGet200Response cloud_providers_get()
 
 Get a list of all cloud providers
 
@@ -19,7 +19,7 @@ Get a list of all cloud providers
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
+from spartera_api_sdk.models.cloud_providers_get200_response import CloudProvidersGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -62,7 +62,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CloudProvidersGet200Response**](CloudProvidersGet200Response.md)
 
 ### Authorization
 
@@ -85,7 +85,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cloud_providers_provider_id_get**
-> CompaniesCompanyIdApiKeysGet200Response cloud_providers_provider_id_get(provider_id)
+> CloudProvidersProviderIdGet200Response cloud_providers_provider_id_get(provider_id)
 
 Get single cloud provider by ID
 
@@ -95,7 +95,7 @@ Get single cloud provider by ID
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
+from spartera_api_sdk.models.cloud_providers_provider_id_get200_response import CloudProvidersProviderIdGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -142,7 +142,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CloudProvidersProviderIdGet200Response**](CloudProvidersProviderIdGet200Response.md)
 
 ### Authorization
 

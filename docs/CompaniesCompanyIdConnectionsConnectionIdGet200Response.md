@@ -6,7 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **message** | **str** | Response status message | 
-**data** | [**Connection**](Connection.md) |  | 
+**data** | [**Connections**](Connections.md) |  | 
 
 ## Example
 

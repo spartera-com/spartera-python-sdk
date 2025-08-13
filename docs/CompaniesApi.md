@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **companies_company_id_analytics_assets_get**
-> CompaniesCompanyIdApiKeysGet200Response companies_company_id_analytics_assets_get(company_id)
+> CompaniesCompanyIdAnalyticsAssetsGet200Response companies_company_id_analytics_assets_get(company_id)
 
 Get asset performance analytics     Query params: start_date, end_date, limit, sort_by, include
 
@@ -26,7 +26,7 @@ Get asset performance analytics     Query params: start_date, end_date, limit, s
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
+from spartera_api_sdk.models.companies_company_id_analytics_assets_get200_response import CompaniesCompanyIdAnalyticsAssetsGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdAnalyticsAssetsGet200Response**](CompaniesCompanyIdAnalyticsAssetsGet200Response.md)
 
 ### Authorization
 
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_analytics_customers_get**
-> CompaniesCompanyIdApiKeysGet200Response companies_company_id_analytics_customers_get(company_id)
+> CompaniesCompanyIdAnalyticsAssetsGet200Response companies_company_id_analytics_customers_get(company_id)
 
 Get customer analytics including growth and segmentation     Query params: start_date, end_date, group_by, segment_by
 
@@ -106,7 +106,7 @@ Get customer analytics including growth and segmentation     Query params: start
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
+from spartera_api_sdk.models.companies_company_id_analytics_assets_get200_response import CompaniesCompanyIdAnalyticsAssetsGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdAnalyticsAssetsGet200Response**](CompaniesCompanyIdAnalyticsAssetsGet200Response.md)
 
 ### Authorization
 
@@ -176,7 +176,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_analytics_dashboard_get**
-> CompaniesCompanyIdApiKeysGet200Response companies_company_id_analytics_dashboard_get(company_id)
+> CompaniesCompanyIdAnalyticsAssetsGet200Response companies_company_id_analytics_dashboard_get(company_id)
 
 Get comprehensive dashboard analytics for seller dashboard     Includes all metrics needed for dashboard charts in one call     Query params: start_date, end_date, period (day/week/month/quarter)
 
@@ -186,7 +186,7 @@ Get comprehensive dashboard analytics for seller dashboard     Includes all metr
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
+from spartera_api_sdk.models.companies_company_id_analytics_assets_get200_response import CompaniesCompanyIdAnalyticsAssetsGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdAnalyticsAssetsGet200Response**](CompaniesCompanyIdAnalyticsAssetsGet200Response.md)
 
 ### Authorization
 
@@ -256,7 +256,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_analytics_sales_get**
-> CompaniesCompanyIdApiKeysGet200Response companies_company_id_analytics_sales_get(company_id)
+> CompaniesCompanyIdAnalyticsAssetsGet200Response companies_company_id_analytics_sales_get(company_id)
 
 Get sales over time analytics     Query params: start_date, end_date, group_by (day/week/month/quarter), metrics
 
@@ -266,7 +266,7 @@ Get sales over time analytics     Query params: start_date, end_date, group_by (
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
+from spartera_api_sdk.models.companies_company_id_analytics_assets_get200_response import CompaniesCompanyIdAnalyticsAssetsGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -313,7 +313,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdAnalyticsAssetsGet200Response**](CompaniesCompanyIdAnalyticsAssetsGet200Response.md)
 
 ### Authorization
 
@@ -336,7 +336,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_get**
-> CompaniesCompanyIdApiKeysGet200Response companies_company_id_get(company_id)
+> CompaniesCompanyIdGet200Response companies_company_id_get(company_id)
 
 Get details of the requestor's own company
 
@@ -346,7 +346,7 @@ Get details of the requestor's own company
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
+from spartera_api_sdk.models.companies_company_id_get200_response import CompaniesCompanyIdGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -393,7 +393,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdGet200Response**](CompaniesCompanyIdGet200Response.md)
 
 ### Authorization
 
@@ -416,7 +416,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_objects_get**
-> CompaniesCompanyIdApiKeysGet200Response companies_company_id_objects_get(company_id)
+> CompaniesCompanyIdAnalyticsAssetsGet200Response companies_company_id_objects_get(company_id)
 
 Get all objects (connections, assets) of a single company
 
@@ -426,7 +426,7 @@ Get all objects (connections, assets) of a single company
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
+from spartera_api_sdk.models.companies_company_id_analytics_assets_get200_response import CompaniesCompanyIdAnalyticsAssetsGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -473,7 +473,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdAnalyticsAssetsGet200Response**](CompaniesCompanyIdAnalyticsAssetsGet200Response.md)
 
 ### Authorization
 
@@ -496,7 +496,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_patch**
-> CompaniesCompanyIdApiKeysGet200Response companies_company_id_patch(company_id)
+> CompaniesCompanyIdPatch200Response companies_company_id_patch(company_id, companies_update)
 
 Update an existing company by ID
 
@@ -506,7 +506,8 @@ Update an existing company by ID
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
+from spartera_api_sdk.models.companies_company_id_patch200_response import CompaniesCompanyIdPatch200Response
+from spartera_api_sdk.models.companies_update import CompaniesUpdate
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -532,10 +533,11 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = spartera_api_sdk.CompaniesApi(api_client)
     company_id = 'company_id_example' # str | 
+    companies_update = spartera_api_sdk.CompaniesUpdate() # CompaniesUpdate | 
 
     try:
         # Update an existing company by ID
-        api_response = api_instance.companies_company_id_patch(company_id)
+        api_response = api_instance.companies_company_id_patch(company_id, companies_update)
         print("The response of CompaniesApi->companies_company_id_patch:\n")
         pprint(api_response)
     except Exception as e:
@@ -550,10 +552,11 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company_id** | **str**|  | 
+ **companies_update** | [**CompaniesUpdate**](CompaniesUpdate.md)|  | 
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdPatch200Response**](CompaniesCompanyIdPatch200Response.md)
 
 ### Authorization
 
@@ -561,7 +564,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -577,7 +580,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_requests_plan_get**
-> CompaniesCompanyIdApiKeysGet200Response companies_company_id_requests_plan_get(company_id)
+> CompaniesCompanyIdAnalyticsAssetsGet200Response companies_company_id_requests_plan_get(company_id)
 
 Get the total number of requests allocated in the company's current subscription plan.
 
@@ -587,7 +590,7 @@ Get the total number of requests allocated in the company's current subscription
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
+from spartera_api_sdk.models.companies_company_id_analytics_assets_get200_response import CompaniesCompanyIdAnalyticsAssetsGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -634,7 +637,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdAnalyticsAssetsGet200Response**](CompaniesCompanyIdAnalyticsAssetsGet200Response.md)
 
 ### Authorization
 
@@ -657,7 +660,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **companies_company_id_requests_usage_get**
-> CompaniesCompanyIdApiKeysGet200Response companies_company_id_requests_usage_get(company_id)
+> CompaniesCompanyIdAnalyticsAssetsGet200Response companies_company_id_requests_usage_get(company_id)
 
 Get company request usage data for a specific month. Returns JSON metrics by default or CSV logs when download parameter is included.
 
@@ -667,7 +670,7 @@ Get company request usage data for a specific month. Returns JSON metrics by def
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_api_keys_get200_response import CompaniesCompanyIdApiKeysGet200Response
+from spartera_api_sdk.models.companies_company_id_analytics_assets_get200_response import CompaniesCompanyIdAnalyticsAssetsGet200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -714,7 +717,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdAnalyticsAssetsGet200Response**](CompaniesCompanyIdAnalyticsAssetsGet200Response.md)
 
 ### Authorization
 
