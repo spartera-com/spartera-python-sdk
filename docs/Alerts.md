@@ -1,17 +1,17 @@
 # Alerts
 
-User alerts for when assets are updated
+A notification alert triggered when a subscribed asset is updated
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**date_created** | **datetime** |  | [optional] 
-**last_updated** | **datetime** |  | [optional] 
-**alert_id** | **int** |  | [optional] 
-**asset_id** | **str** |  | 
-**user_id** | **str** |  | [optional] 
-**company_id** | **str** |  | 
+**date_created** | **datetime** | Optional. | [optional] 
+**last_updated** | **datetime** | Optional. | [optional] 
+**alert_id** | **int** | Auto-generated unique identifier. | [optional] 
+**asset_id** | **str** | References assets.asset_id — A published analytics asset — a calculation or visualization built on a data connection. See GET /assets for valid values. Required. | 
+**user_id** | **str** | References users.user_id — An individual user account within a company. See GET /users for valid values. Optional. | [optional] 
+**company_id** | **str** | References companies.company_id — A Spartera seller or buyer company account. See GET /companies for valid values. Required. | 
 **is_active** | **bool** | Whether this alert is currently active | 
 
 ## Example

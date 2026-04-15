@@ -1,15 +1,15 @@
 # JobFunctions
 
-Metadata about the different kinds of job function our users have.
+Job function categories for user profile classification
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**date_created** | **datetime** |  | [optional] 
-**last_updated** | **datetime** |  | [optional] 
-**function_id** | **int** |  | 
-**name** | **str** |  | 
+**date_created** | **datetime** | Optional. | [optional] 
+**last_updated** | **datetime** | Optional. | [optional] 
+**function_id** | **int** | Auto-generated unique identifier. | 
+**name** | **str** | Required. Must be unique. | 
 
 ## Example
 

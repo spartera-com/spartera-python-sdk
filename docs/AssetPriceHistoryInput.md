@@ -6,9 +6,10 @@ Input schema for creating AssetPriceHistory
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**asset_id** | **str** |  | 
-**price_usd** | **float** |  | [optional] 
-**date_ended** | **datetime** | When did the price end (Datetime) | [optional] 
+**asset_id** | **str** | FK to assets. NULL when this record belongs to an endpoint. | [optional] 
+**endpoint_id** | **str** | FK to endpoints. NULL when this record belongs to an asset. | [optional] 
+**price_usd** | **float** | Optional. | [optional] 
+**date_ended** | **datetime** | SCD Type 2 — when this price record was superseded | [optional] 
 
 ## Example
 

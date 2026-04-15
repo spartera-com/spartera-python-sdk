@@ -4,12 +4,12 @@ All URIs are relative to *https://api.spartera.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cloud_providers_provider_id_storage_engines_engine_id_get**](StorageEnginesApi.md#cloud_providers_provider_id_storage_engines_engine_id_get) | **GET** /cloud-providers/{provider_id}/storage-engines/{engine_id} | Get single storage engine by ID
-[**cloud_providers_provider_id_storage_engines_get**](StorageEnginesApi.md#cloud_providers_provider_id_storage_engines_get) | **GET** /cloud-providers/{provider_id}/storage-engines | Get a list of all storage engines
+[**get_storage_engines_by_id**](StorageEnginesApi.md#get_storage_engines_by_id) | **GET** /cloud-providers/{provider_id}/storage-engines/{engine_id} | Get single storage engine by ID
+[**list_storage_engines**](StorageEnginesApi.md#list_storage_engines) | **GET** /cloud-providers/{provider_id}/storage-engines | Get a list of all storage engines
 
 
-# **cloud_providers_provider_id_storage_engines_engine_id_get**
-> CloudProvidersProviderIdStorageEnginesGet200Response cloud_providers_provider_id_storage_engines_engine_id_get(provider_id, engine_id)
+# **get_storage_engines_by_id**
+> GetStorageEnginesById200Response get_storage_engines_by_id(provider_id, engine_id)
 
 Get single storage engine by ID
 
@@ -19,7 +19,7 @@ Get single storage engine by ID
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.cloud_providers_provider_id_storage_engines_get200_response import CloudProvidersProviderIdStorageEnginesGet200Response
+from spartera_api_sdk.models.get_storage_engines_by_id200_response import GetStorageEnginesById200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -44,16 +44,16 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 with spartera_api_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = spartera_api_sdk.StorageEnginesApi(api_client)
-    provider_id = 'provider_id_example' # str | 
-    engine_id = 'engine_id_example' # str | 
+    provider_id = 'provider_id_example' # str | Unique identifier for the Provider
+    engine_id = 'engine_id_example' # str | Unique identifier for the Engine
 
     try:
         # Get single storage engine by ID
-        api_response = api_instance.cloud_providers_provider_id_storage_engines_engine_id_get(provider_id, engine_id)
-        print("The response of StorageEnginesApi->cloud_providers_provider_id_storage_engines_engine_id_get:\n")
+        api_response = api_instance.get_storage_engines_by_id(provider_id, engine_id)
+        print("The response of StorageEnginesApi->get_storage_engines_by_id:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling StorageEnginesApi->cloud_providers_provider_id_storage_engines_engine_id_get: %s\n" % e)
+        print("Exception when calling StorageEnginesApi->get_storage_engines_by_id: %s\n" % e)
 ```
 
 
@@ -63,12 +63,12 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **provider_id** | **str**|  | 
- **engine_id** | **str**|  | 
+ **provider_id** | **str**| Unique identifier for the Provider | 
+ **engine_id** | **str**| Unique identifier for the Engine | 
 
 ### Return type
 
-[**CloudProvidersProviderIdStorageEnginesGet200Response**](CloudProvidersProviderIdStorageEnginesGet200Response.md)
+[**GetStorageEnginesById200Response**](GetStorageEnginesById200Response.md)
 
 ### Authorization
 
@@ -87,11 +87,13 @@ Name | Type | Description  | Notes
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
+**429** | Rate limit exceeded |  -  |
+**500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **cloud_providers_provider_id_storage_engines_get**
-> CloudProvidersProviderIdStorageEnginesGet200Response cloud_providers_provider_id_storage_engines_get(provider_id)
+# **list_storage_engines**
+> ListStorageEngines200Response list_storage_engines(provider_id, page=page, limit=limit, sort_by=sort_by, sort_order=sort_order, search=search)
 
 Get a list of all storage engines
 
@@ -101,7 +103,7 @@ Get a list of all storage engines
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.cloud_providers_provider_id_storage_engines_get200_response import CloudProvidersProviderIdStorageEnginesGet200Response
+from spartera_api_sdk.models.list_storage_engines200_response import ListStorageEngines200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -126,15 +128,20 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 with spartera_api_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = spartera_api_sdk.StorageEnginesApi(api_client)
-    provider_id = 'provider_id_example' # str | 
+    provider_id = 'provider_id_example' # str | Unique identifier for the Provider
+    page = 1 # int | Page number for pagination (optional) (default to 1)
+    limit = 20 # int | Number of items per page (optional) (default to 20)
+    sort_by = 'sort_by_example' # str | Field to sort by (optional)
+    sort_order = desc # str | Sort order (ascending or descending) (optional) (default to desc)
+    search = 'search_example' # str | Search term to filter results (optional)
 
     try:
         # Get a list of all storage engines
-        api_response = api_instance.cloud_providers_provider_id_storage_engines_get(provider_id)
-        print("The response of StorageEnginesApi->cloud_providers_provider_id_storage_engines_get:\n")
+        api_response = api_instance.list_storage_engines(provider_id, page=page, limit=limit, sort_by=sort_by, sort_order=sort_order, search=search)
+        print("The response of StorageEnginesApi->list_storage_engines:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling StorageEnginesApi->cloud_providers_provider_id_storage_engines_get: %s\n" % e)
+        print("Exception when calling StorageEnginesApi->list_storage_engines: %s\n" % e)
 ```
 
 
@@ -144,11 +151,16 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **provider_id** | **str**|  | 
+ **provider_id** | **str**| Unique identifier for the Provider | 
+ **page** | **int**| Page number for pagination | [optional] [default to 1]
+ **limit** | **int**| Number of items per page | [optional] [default to 20]
+ **sort_by** | **str**| Field to sort by | [optional] 
+ **sort_order** | **str**| Sort order (ascending or descending) | [optional] [default to desc]
+ **search** | **str**| Search term to filter results | [optional] 
 
 ### Return type
 
-[**CloudProvidersProviderIdStorageEnginesGet200Response**](CloudProvidersProviderIdStorageEnginesGet200Response.md)
+[**ListStorageEngines200Response**](ListStorageEngines200Response.md)
 
 ### Authorization
 
@@ -167,6 +179,8 @@ Name | Type | Description  | Notes
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
+**429** | Rate limit exceeded |  -  |
+**500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -1,17 +1,21 @@
 # ApiKeys
 
-API Keys model storing every key created with SOC2 compliance
+API keys for authenticating requests to the Spartera platform
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**date_created** | **datetime** |  | [optional] 
-**last_updated** | **datetime** |  | [optional] 
-**api_key_id** | **int** |  | 
+**date_created** | **datetime** | Optional. | [optional] 
+**last_updated** | **datetime** | Optional. | [optional] 
+**api_key_id** | **int** | Unique identifier. | 
 **user_id** | **str** | User who owns this API key | [optional] 
 **company_id** | **str** | Company this API key belongs to | 
 **role_id** | **int** | Role/permission level for this API key | 
+**key_type** | **str** | Type of API key (analytics, mcp, or endpoint) | 
+**is_system_generated** | **bool** | True if key was auto-generated for MCP deployment | 
+**mcp_deployment_id** | **str** | MCP deployment this key is tied to (NULL for analytics/endpoint keys) | [optional] 
+**endpoint_id** | **str** | Endpoint this key is tied to (NULL for analytics/mcp keys) | [optional] 
 **name** | **str** | Human-readable name for this API key | [optional] 
 **expiration_date_utc** | **datetime** | When this API key expires (NULL &#x3D; never expires) | [optional] 
 

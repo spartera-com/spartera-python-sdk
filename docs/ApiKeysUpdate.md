@@ -9,6 +9,10 @@ Name | Type | Description | Notes
 **user_id** | **str** | User who owns this API key | [optional] 
 **company_id** | **str** | Company this API key belongs to | [optional] 
 **role_id** | **int** | Role/permission level for this API key | [optional] 
+**key_type** | **str** | Type of API key (analytics, mcp, or endpoint) | [optional] 
+**is_system_generated** | **bool** | True if key was auto-generated for MCP deployment | [optional] 
+**mcp_deployment_id** | **str** | MCP deployment this key is tied to (NULL for analytics/endpoint keys) | [optional] 
+**endpoint_id** | **str** | Endpoint this key is tied to (NULL for analytics/mcp keys) | [optional] 
 **name** | **str** | Human-readable name for this API key | [optional] 
 **expiration_date_utc** | **datetime** | When this API key expires (NULL &#x3D; never expires) | [optional] 
 

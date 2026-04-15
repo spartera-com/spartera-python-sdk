@@ -6,7 +6,7 @@ Update schema for modifying JobFunction
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** |  | [optional] 
+**name** | **str** | Required. Must be unique. | [optional] 
 
 ## Example
 

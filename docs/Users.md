@@ -1,19 +1,21 @@
 # Users
 
-Individual users within a company with SOC2 authentication tracking
+An individual user account within a company
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**date_created** | **datetime** |  | [optional] 
-**last_updated** | **datetime** |  | [optional] 
-**user_id** | **str** |  | [optional] 
-**company_id** | **str** |  | 
-**function_id** | **int** |  | [optional] 
-**status** | **str** | Enum type: StatusCodes | 
-**email_address** | **str** |  | [optional] 
-**timezone** | **str** |  | [optional] 
+**date_created** | **datetime** | Optional. | [optional] 
+**last_updated** | **datetime** | Optional. | [optional] 
+**user_id** | **str** | Unique identifier. | [optional] 
+**company_id** | **str** | References companies.company_id — A Spartera seller or buyer company account. See GET /companies for valid values. Required. | 
+**role_id** | **int** | User&#39;s role for RBAC - single source of truth | 
+**function_id** | **int** | User&#39;s job function/title | [optional] 
+**status** | **str** | Required. One of: ACTIVE, PENDING, INACTIVE, BANNED. | 
+**email_address** | **str** | Optional. Must be unique. | [optional] 
+**timezone** | **str** | Optional. | [optional] 
+**marketing_opt_out** | **bool** | Whether user has opted out of marketing communications. Default false &#x3D; opted in per ToS. | 
 
 ## Example
 

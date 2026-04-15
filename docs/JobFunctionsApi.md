@@ -4,12 +4,12 @@ All URIs are relative to *https://api.spartera.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**job_functions_function_id_get**](JobFunctionsApi.md#job_functions_function_id_get) | **GET** /job-functions/{function_id} | Get single job function by ID
-[**job_functions_get**](JobFunctionsApi.md#job_functions_get) | **GET** /job-functions | Get a list of all job functions
+[**get_job_functions_by_id**](JobFunctionsApi.md#get_job_functions_by_id) | **GET** /job-functions/{function_id} | Get single job function by ID
+[**list_job_functions**](JobFunctionsApi.md#list_job_functions) | **GET** /job-functions | Get a list of all job functions
 
 
-# **job_functions_function_id_get**
-> JobFunctionsFunctionIdGet200Response job_functions_function_id_get(function_id)
+# **get_job_functions_by_id**
+> GetJobFunctionsById200Response get_job_functions_by_id(function_id)
 
 Get single job function by ID
 
@@ -19,7 +19,7 @@ Get single job function by ID
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.job_functions_function_id_get200_response import JobFunctionsFunctionIdGet200Response
+from spartera_api_sdk.models.get_job_functions_by_id200_response import GetJobFunctionsById200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -44,15 +44,15 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 with spartera_api_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = spartera_api_sdk.JobFunctionsApi(api_client)
-    function_id = 'function_id_example' # str | 
+    function_id = 'function_id_example' # str | Unique identifier for the Function
 
     try:
         # Get single job function by ID
-        api_response = api_instance.job_functions_function_id_get(function_id)
-        print("The response of JobFunctionsApi->job_functions_function_id_get:\n")
+        api_response = api_instance.get_job_functions_by_id(function_id)
+        print("The response of JobFunctionsApi->get_job_functions_by_id:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling JobFunctionsApi->job_functions_function_id_get: %s\n" % e)
+        print("Exception when calling JobFunctionsApi->get_job_functions_by_id: %s\n" % e)
 ```
 
 
@@ -62,11 +62,11 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **function_id** | **str**|  | 
+ **function_id** | **str**| Unique identifier for the Function | 
 
 ### Return type
 
-[**JobFunctionsFunctionIdGet200Response**](JobFunctionsFunctionIdGet200Response.md)
+[**GetJobFunctionsById200Response**](GetJobFunctionsById200Response.md)
 
 ### Authorization
 
@@ -85,11 +85,13 @@ Name | Type | Description  | Notes
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
+**429** | Rate limit exceeded |  -  |
+**500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **job_functions_get**
-> JobFunctionsGet200Response job_functions_get()
+# **list_job_functions**
+> ListJobFunctions200Response list_job_functions(page=page, limit=limit, sort_by=sort_by, sort_order=sort_order, search=search)
 
 Get a list of all job functions
 
@@ -99,7 +101,7 @@ Get a list of all job functions
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.job_functions_get200_response import JobFunctionsGet200Response
+from spartera_api_sdk.models.list_job_functions200_response import ListJobFunctions200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -124,25 +126,37 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 with spartera_api_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = spartera_api_sdk.JobFunctionsApi(api_client)
+    page = 1 # int | Page number for pagination (optional) (default to 1)
+    limit = 20 # int | Number of items per page (optional) (default to 20)
+    sort_by = 'sort_by_example' # str | Field to sort by (optional)
+    sort_order = desc # str | Sort order (ascending or descending) (optional) (default to desc)
+    search = 'search_example' # str | Search term to filter results (optional)
 
     try:
         # Get a list of all job functions
-        api_response = api_instance.job_functions_get()
-        print("The response of JobFunctionsApi->job_functions_get:\n")
+        api_response = api_instance.list_job_functions(page=page, limit=limit, sort_by=sort_by, sort_order=sort_order, search=search)
+        print("The response of JobFunctionsApi->list_job_functions:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling JobFunctionsApi->job_functions_get: %s\n" % e)
+        print("Exception when calling JobFunctionsApi->list_job_functions: %s\n" % e)
 ```
 
 
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| Page number for pagination | [optional] [default to 1]
+ **limit** | **int**| Number of items per page | [optional] [default to 20]
+ **sort_by** | **str**| Field to sort by | [optional] 
+ **sort_order** | **str**| Sort order (ascending or descending) | [optional] [default to desc]
+ **search** | **str**| Search term to filter results | [optional] 
 
 ### Return type
 
-[**JobFunctionsGet200Response**](JobFunctionsGet200Response.md)
+[**ListJobFunctions200Response**](ListJobFunctions200Response.md)
 
 ### Authorization
 
@@ -161,6 +175,8 @@ This endpoint does not need any parameter.
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
+**429** | Rate limit exceeded |  -  |
+**500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -6,9 +6,9 @@ Input schema for creating CloudProvider
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** |  | 
-**parent_company** | **str** |  | [optional] 
-**marketing_homepage_url** | **str** |  | [optional] 
+**name** | **str** | Required. | 
+**parent_company** | **str** | Optional. | [optional] 
+**marketing_homepage_url** | **str** | Optional. | [optional] 
 
 ## Example
 

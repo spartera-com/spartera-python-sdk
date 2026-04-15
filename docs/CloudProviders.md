@@ -1,17 +1,17 @@
 # CloudProviders
 
-Cloud providers (platforms) database
+Supported cloud platforms and database engines available for connections
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**date_created** | **datetime** |  | [optional] 
-**last_updated** | **datetime** |  | [optional] 
-**provider_id** | **int** |  | [optional] 
-**name** | **str** |  | 
-**parent_company** | **str** |  | [optional] 
-**marketing_homepage_url** | **str** |  | [optional] 
+**date_created** | **datetime** | Optional. | [optional] 
+**last_updated** | **datetime** | Optional. | [optional] 
+**provider_id** | **int** | Auto-generated unique identifier. | [optional] 
+**name** | **str** | Required. | 
+**parent_company** | **str** | Optional. | [optional] 
+**marketing_homepage_url** | **str** | Optional. | [optional] 
 
 ## Example
 

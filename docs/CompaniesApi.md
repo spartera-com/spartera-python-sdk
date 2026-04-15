@@ -4,339 +4,20 @@ All URIs are relative to *https://api.spartera.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**companies_company_id_analytics_assets_get**](CompaniesApi.md#companies_company_id_analytics_assets_get) | **GET** /companies/{company_id}/analytics/assets | Get asset performance analytics     Query params: start_date, end_date, limit, sort_by, include
-[**companies_company_id_analytics_customers_get**](CompaniesApi.md#companies_company_id_analytics_customers_get) | **GET** /companies/{company_id}/analytics/customers | Get customer analytics including growth and segmentation     Query params: start_date, end_date, group_by, segment_by
-[**companies_company_id_analytics_dashboard_get**](CompaniesApi.md#companies_company_id_analytics_dashboard_get) | **GET** /companies/{company_id}/analytics/dashboard | Get comprehensive dashboard analytics for seller dashboard     Includes all metrics needed for dashboard charts in one call     Query params: start_date, end_date, period (day/week/month/quarter)
-[**companies_company_id_analytics_sales_get**](CompaniesApi.md#companies_company_id_analytics_sales_get) | **GET** /companies/{company_id}/analytics/sales | Get sales over time analytics     Query params: start_date, end_date, group_by (day/week/month/quarter), metrics
-[**companies_company_id_get**](CompaniesApi.md#companies_company_id_get) | **GET** /companies/{company_id} | Get details of the requestor&#39;s own company
-[**companies_company_id_objects_get**](CompaniesApi.md#companies_company_id_objects_get) | **GET** /companies/{company_id}/objects | Get all objects (connections, assets) of a single company
-[**companies_company_id_patch**](CompaniesApi.md#companies_company_id_patch) | **PATCH** /companies/{company_id} | Update an existing company by ID
-[**companies_company_id_requests_plan_get**](CompaniesApi.md#companies_company_id_requests_plan_get) | **GET** /companies/{company_id}/requests/plan | Get the total number of requests allocated in the company&#39;s current subscription plan.
-[**companies_company_id_requests_usage_get**](CompaniesApi.md#companies_company_id_requests_usage_get) | **GET** /companies/{company_id}/requests/usage | Get company request usage data for a specific month. Returns JSON metrics by default or CSV logs when download parameter is included.
-
-
-# **companies_company_id_analytics_assets_get**
-> CompaniesCompanyIdAnalyticsAssetsGet200Response companies_company_id_analytics_assets_get(company_id)
-
-Get asset performance analytics     Query params: start_date, end_date, limit, sort_by, include
-
-### Example
-
-* Api Key Authentication (ApiKeyAuth):
-
-```python
-import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_analytics_assets_get200_response import CompaniesCompanyIdAnalyticsAssetsGet200Response
-from spartera_api_sdk.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to https://api.spartera.com
-# See configuration.py for a list of all supported configuration parameters.
-configuration = spartera_api_sdk.Configuration(
-    host = "https://api.spartera.com"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: ApiKeyAuth
-configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
-
-# Enter a context with an instance of the API client
-with spartera_api_sdk.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = spartera_api_sdk.CompaniesApi(api_client)
-    company_id = 'company_id_example' # str | 
-
-    try:
-        # Get asset performance analytics     Query params: start_date, end_date, limit, sort_by, include
-        api_response = api_instance.companies_company_id_analytics_assets_get(company_id)
-        print("The response of CompaniesApi->companies_company_id_analytics_assets_get:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling CompaniesApi->companies_company_id_analytics_assets_get: %s\n" % e)
-```
-
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **company_id** | **str**|  | 
-
-### Return type
-
-[**CompaniesCompanyIdAnalyticsAssetsGet200Response**](CompaniesCompanyIdAnalyticsAssetsGet200Response.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successfully retrieved companies |  -  |
-**401** | Authentication required |  -  |
-**403** | Permission denied |  -  |
-**404** | Resource not found |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **companies_company_id_analytics_customers_get**
-> CompaniesCompanyIdAnalyticsAssetsGet200Response companies_company_id_analytics_customers_get(company_id)
-
-Get customer analytics including growth and segmentation     Query params: start_date, end_date, group_by, segment_by
-
-### Example
-
-* Api Key Authentication (ApiKeyAuth):
-
-```python
-import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_analytics_assets_get200_response import CompaniesCompanyIdAnalyticsAssetsGet200Response
-from spartera_api_sdk.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to https://api.spartera.com
-# See configuration.py for a list of all supported configuration parameters.
-configuration = spartera_api_sdk.Configuration(
-    host = "https://api.spartera.com"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: ApiKeyAuth
-configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
-
-# Enter a context with an instance of the API client
-with spartera_api_sdk.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = spartera_api_sdk.CompaniesApi(api_client)
-    company_id = 'company_id_example' # str | 
-
-    try:
-        # Get customer analytics including growth and segmentation     Query params: start_date, end_date, group_by, segment_by
-        api_response = api_instance.companies_company_id_analytics_customers_get(company_id)
-        print("The response of CompaniesApi->companies_company_id_analytics_customers_get:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling CompaniesApi->companies_company_id_analytics_customers_get: %s\n" % e)
-```
-
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **company_id** | **str**|  | 
-
-### Return type
-
-[**CompaniesCompanyIdAnalyticsAssetsGet200Response**](CompaniesCompanyIdAnalyticsAssetsGet200Response.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successfully retrieved companies |  -  |
-**401** | Authentication required |  -  |
-**403** | Permission denied |  -  |
-**404** | Resource not found |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **companies_company_id_analytics_dashboard_get**
-> CompaniesCompanyIdAnalyticsAssetsGet200Response companies_company_id_analytics_dashboard_get(company_id)
-
-Get comprehensive dashboard analytics for seller dashboard     Includes all metrics needed for dashboard charts in one call     Query params: start_date, end_date, period (day/week/month/quarter)
-
-### Example
-
-* Api Key Authentication (ApiKeyAuth):
-
-```python
-import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_analytics_assets_get200_response import CompaniesCompanyIdAnalyticsAssetsGet200Response
-from spartera_api_sdk.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to https://api.spartera.com
-# See configuration.py for a list of all supported configuration parameters.
-configuration = spartera_api_sdk.Configuration(
-    host = "https://api.spartera.com"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: ApiKeyAuth
-configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
-
-# Enter a context with an instance of the API client
-with spartera_api_sdk.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = spartera_api_sdk.CompaniesApi(api_client)
-    company_id = 'company_id_example' # str | 
-
-    try:
-        # Get comprehensive dashboard analytics for seller dashboard     Includes all metrics needed for dashboard charts in one call     Query params: start_date, end_date, period (day/week/month/quarter)
-        api_response = api_instance.companies_company_id_analytics_dashboard_get(company_id)
-        print("The response of CompaniesApi->companies_company_id_analytics_dashboard_get:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling CompaniesApi->companies_company_id_analytics_dashboard_get: %s\n" % e)
-```
-
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **company_id** | **str**|  | 
-
-### Return type
-
-[**CompaniesCompanyIdAnalyticsAssetsGet200Response**](CompaniesCompanyIdAnalyticsAssetsGet200Response.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successfully retrieved companies |  -  |
-**401** | Authentication required |  -  |
-**403** | Permission denied |  -  |
-**404** | Resource not found |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **companies_company_id_analytics_sales_get**
-> CompaniesCompanyIdAnalyticsAssetsGet200Response companies_company_id_analytics_sales_get(company_id)
-
-Get sales over time analytics     Query params: start_date, end_date, group_by (day/week/month/quarter), metrics
-
-### Example
-
-* Api Key Authentication (ApiKeyAuth):
-
-```python
-import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_analytics_assets_get200_response import CompaniesCompanyIdAnalyticsAssetsGet200Response
-from spartera_api_sdk.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to https://api.spartera.com
-# See configuration.py for a list of all supported configuration parameters.
-configuration = spartera_api_sdk.Configuration(
-    host = "https://api.spartera.com"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: ApiKeyAuth
-configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
-
-# Enter a context with an instance of the API client
-with spartera_api_sdk.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = spartera_api_sdk.CompaniesApi(api_client)
-    company_id = 'company_id_example' # str | 
-
-    try:
-        # Get sales over time analytics     Query params: start_date, end_date, group_by (day/week/month/quarter), metrics
-        api_response = api_instance.companies_company_id_analytics_sales_get(company_id)
-        print("The response of CompaniesApi->companies_company_id_analytics_sales_get:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling CompaniesApi->companies_company_id_analytics_sales_get: %s\n" % e)
-```
-
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **company_id** | **str**|  | 
-
-### Return type
-
-[**CompaniesCompanyIdAnalyticsAssetsGet200Response**](CompaniesCompanyIdAnalyticsAssetsGet200Response.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successfully retrieved companies |  -  |
-**401** | Authentication required |  -  |
-**403** | Permission denied |  -  |
-**404** | Resource not found |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **companies_company_id_get**
-> CompaniesCompanyIdGet200Response companies_company_id_get(company_id)
+[**get_companies_by_id**](CompaniesApi.md#get_companies_by_id) | **GET** /companies/{company_id} | Get details of the requestor&#39;s own company
+[**list_companies**](CompaniesApi.md#list_companies) | **GET** /companies/{company_id}/requests/plan | Get the total number of requests allocated in the company&#39;s current subscription plan.
+[**list_companies_analytics_assets**](CompaniesApi.md#list_companies_analytics_assets) | **GET** /companies/{company_id}/analytics/assets | Get asset performance analytics.     Query params: start_date, end_date, limit, sort_by, include
+[**list_companies_analytics_customers**](CompaniesApi.md#list_companies_analytics_customers) | **GET** /companies/{company_id}/analytics/customers | Get customer analytics including growth and segmentation.     Query params: start_date, end_date, group_by, segment_by
+[**list_companies_analytics_dashboard**](CompaniesApi.md#list_companies_analytics_dashboard) | **GET** /companies/{company_id}/analytics/dashboard | Get comprehensive dashboard analytics for seller dashboard.     Query params: start_date, end_date, period (day/week/month/quarter)
+[**list_companies_analytics_metrics**](CompaniesApi.md#list_companies_analytics_metrics) | **GET** /companies/{company_id}/analytics/metrics | Get summary metrics (counts only). No date params needed — returns all-time totals.     Performance: &lt; 0.1s
+[**list_companies_analytics_sales**](CompaniesApi.md#list_companies_analytics_sales) | **GET** /companies/{company_id}/analytics/sales | Get sales over time analytics.     Query params: start_date, end_date, group_by (day/week/month/quarter), metrics
+[**list_companies_objects**](CompaniesApi.md#list_companies_objects) | **GET** /companies/{company_id}/objects | Get all objects (connections, assets) of a single company
+[**list_companies_requests_usage**](CompaniesApi.md#list_companies_requests_usage) | **GET** /companies/{company_id}/requests/usage | Get company request usage data for a specific month.
+[**update_companies**](CompaniesApi.md#update_companies) | **PATCH** /companies/{company_id} | Update an existing company by ID
+
+
+# **get_companies_by_id**
+> GetCompaniesById200Response get_companies_by_id(company_id)
 
 Get details of the requestor's own company
 
@@ -346,7 +27,7 @@ Get details of the requestor's own company
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_get200_response import CompaniesCompanyIdGet200Response
+from spartera_api_sdk.models.get_companies_by_id200_response import GetCompaniesById200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -371,15 +52,15 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 with spartera_api_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = spartera_api_sdk.CompaniesApi(api_client)
-    company_id = 'company_id_example' # str | 
+    company_id = 'company_id_example' # str | Unique identifier for the Company
 
     try:
         # Get details of the requestor's own company
-        api_response = api_instance.companies_company_id_get(company_id)
-        print("The response of CompaniesApi->companies_company_id_get:\n")
+        api_response = api_instance.get_companies_by_id(company_id)
+        print("The response of CompaniesApi->get_companies_by_id:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling CompaniesApi->companies_company_id_get: %s\n" % e)
+        print("Exception when calling CompaniesApi->get_companies_by_id: %s\n" % e)
 ```
 
 
@@ -389,11 +70,11 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **company_id** | **str**|  | 
+ **company_id** | **str**| Unique identifier for the Company | 
 
 ### Return type
 
-[**CompaniesCompanyIdGet200Response**](CompaniesCompanyIdGet200Response.md)
+[**GetCompaniesById200Response**](GetCompaniesById200Response.md)
 
 ### Authorization
 
@@ -412,11 +93,565 @@ Name | Type | Description  | Notes
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
+**429** | Rate limit exceeded |  -  |
+**500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **companies_company_id_objects_get**
-> CompaniesCompanyIdAnalyticsAssetsGet200Response companies_company_id_objects_get(company_id)
+# **list_companies**
+> ListCompaniesAnalyticsAssets200Response list_companies(company_id, page=page, limit=limit, sort_by=sort_by, sort_order=sort_order, search=search)
+
+Get the total number of requests allocated in the company's current subscription plan.
+
+### Example
+
+* Api Key Authentication (ApiKeyAuth):
+
+```python
+import spartera_api_sdk
+from spartera_api_sdk.models.list_companies_analytics_assets200_response import ListCompaniesAnalyticsAssets200Response
+from spartera_api_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.spartera.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = spartera_api_sdk.Configuration(
+    host = "https://api.spartera.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with spartera_api_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = spartera_api_sdk.CompaniesApi(api_client)
+    company_id = 'company_id_example' # str | Unique identifier for the Company
+    page = 1 # int | Page number for pagination (optional) (default to 1)
+    limit = 20 # int | Number of items per page (optional) (default to 20)
+    sort_by = 'sort_by_example' # str | Field to sort by (optional)
+    sort_order = desc # str | Sort order (ascending or descending) (optional) (default to desc)
+    search = 'search_example' # str | Search term to filter results (optional)
+
+    try:
+        # Get the total number of requests allocated in the company's current subscription plan.
+        api_response = api_instance.list_companies(company_id, page=page, limit=limit, sort_by=sort_by, sort_order=sort_order, search=search)
+        print("The response of CompaniesApi->list_companies:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling CompaniesApi->list_companies: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **company_id** | **str**| Unique identifier for the Company | 
+ **page** | **int**| Page number for pagination | [optional] [default to 1]
+ **limit** | **int**| Number of items per page | [optional] [default to 20]
+ **sort_by** | **str**| Field to sort by | [optional] 
+ **sort_order** | **str**| Sort order (ascending or descending) | [optional] [default to desc]
+ **search** | **str**| Search term to filter results | [optional] 
+
+### Return type
+
+[**ListCompaniesAnalyticsAssets200Response**](ListCompaniesAnalyticsAssets200Response.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successfully retrieved companies |  -  |
+**401** | Authentication required |  -  |
+**403** | Permission denied |  -  |
+**404** | Resource not found |  -  |
+**429** | Rate limit exceeded |  -  |
+**500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **list_companies_analytics_assets**
+> ListCompaniesAnalyticsAssets200Response list_companies_analytics_assets(company_id, page=page, limit=limit, sort_by=sort_by, sort_order=sort_order, search=search)
+
+Get asset performance analytics.     Query params: start_date, end_date, limit, sort_by, include
+
+### Example
+
+* Api Key Authentication (ApiKeyAuth):
+
+```python
+import spartera_api_sdk
+from spartera_api_sdk.models.list_companies_analytics_assets200_response import ListCompaniesAnalyticsAssets200Response
+from spartera_api_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.spartera.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = spartera_api_sdk.Configuration(
+    host = "https://api.spartera.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with spartera_api_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = spartera_api_sdk.CompaniesApi(api_client)
+    company_id = 'company_id_example' # str | Unique identifier for the Company
+    page = 1 # int | Page number for pagination (optional) (default to 1)
+    limit = 20 # int | Number of items per page (optional) (default to 20)
+    sort_by = 'sort_by_example' # str | Field to sort by (optional)
+    sort_order = desc # str | Sort order (ascending or descending) (optional) (default to desc)
+    search = 'search_example' # str | Search term to filter results (optional)
+
+    try:
+        # Get asset performance analytics.     Query params: start_date, end_date, limit, sort_by, include
+        api_response = api_instance.list_companies_analytics_assets(company_id, page=page, limit=limit, sort_by=sort_by, sort_order=sort_order, search=search)
+        print("The response of CompaniesApi->list_companies_analytics_assets:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling CompaniesApi->list_companies_analytics_assets: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **company_id** | **str**| Unique identifier for the Company | 
+ **page** | **int**| Page number for pagination | [optional] [default to 1]
+ **limit** | **int**| Number of items per page | [optional] [default to 20]
+ **sort_by** | **str**| Field to sort by | [optional] 
+ **sort_order** | **str**| Sort order (ascending or descending) | [optional] [default to desc]
+ **search** | **str**| Search term to filter results | [optional] 
+
+### Return type
+
+[**ListCompaniesAnalyticsAssets200Response**](ListCompaniesAnalyticsAssets200Response.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successfully retrieved companies |  -  |
+**401** | Authentication required |  -  |
+**403** | Permission denied |  -  |
+**404** | Resource not found |  -  |
+**429** | Rate limit exceeded |  -  |
+**500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **list_companies_analytics_customers**
+> ListCompaniesAnalyticsAssets200Response list_companies_analytics_customers(company_id, page=page, limit=limit, sort_by=sort_by, sort_order=sort_order, search=search)
+
+Get customer analytics including growth and segmentation.     Query params: start_date, end_date, group_by, segment_by
+
+### Example
+
+* Api Key Authentication (ApiKeyAuth):
+
+```python
+import spartera_api_sdk
+from spartera_api_sdk.models.list_companies_analytics_assets200_response import ListCompaniesAnalyticsAssets200Response
+from spartera_api_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.spartera.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = spartera_api_sdk.Configuration(
+    host = "https://api.spartera.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with spartera_api_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = spartera_api_sdk.CompaniesApi(api_client)
+    company_id = 'company_id_example' # str | Unique identifier for the Company
+    page = 1 # int | Page number for pagination (optional) (default to 1)
+    limit = 20 # int | Number of items per page (optional) (default to 20)
+    sort_by = 'sort_by_example' # str | Field to sort by (optional)
+    sort_order = desc # str | Sort order (ascending or descending) (optional) (default to desc)
+    search = 'search_example' # str | Search term to filter results (optional)
+
+    try:
+        # Get customer analytics including growth and segmentation.     Query params: start_date, end_date, group_by, segment_by
+        api_response = api_instance.list_companies_analytics_customers(company_id, page=page, limit=limit, sort_by=sort_by, sort_order=sort_order, search=search)
+        print("The response of CompaniesApi->list_companies_analytics_customers:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling CompaniesApi->list_companies_analytics_customers: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **company_id** | **str**| Unique identifier for the Company | 
+ **page** | **int**| Page number for pagination | [optional] [default to 1]
+ **limit** | **int**| Number of items per page | [optional] [default to 20]
+ **sort_by** | **str**| Field to sort by | [optional] 
+ **sort_order** | **str**| Sort order (ascending or descending) | [optional] [default to desc]
+ **search** | **str**| Search term to filter results | [optional] 
+
+### Return type
+
+[**ListCompaniesAnalyticsAssets200Response**](ListCompaniesAnalyticsAssets200Response.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successfully retrieved companies |  -  |
+**401** | Authentication required |  -  |
+**403** | Permission denied |  -  |
+**404** | Resource not found |  -  |
+**429** | Rate limit exceeded |  -  |
+**500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **list_companies_analytics_dashboard**
+> ListCompaniesAnalyticsAssets200Response list_companies_analytics_dashboard(company_id, page=page, limit=limit, sort_by=sort_by, sort_order=sort_order, search=search)
+
+Get comprehensive dashboard analytics for seller dashboard.     Query params: start_date, end_date, period (day/week/month/quarter)
+
+### Example
+
+* Api Key Authentication (ApiKeyAuth):
+
+```python
+import spartera_api_sdk
+from spartera_api_sdk.models.list_companies_analytics_assets200_response import ListCompaniesAnalyticsAssets200Response
+from spartera_api_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.spartera.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = spartera_api_sdk.Configuration(
+    host = "https://api.spartera.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with spartera_api_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = spartera_api_sdk.CompaniesApi(api_client)
+    company_id = 'company_id_example' # str | Unique identifier for the Company
+    page = 1 # int | Page number for pagination (optional) (default to 1)
+    limit = 20 # int | Number of items per page (optional) (default to 20)
+    sort_by = 'sort_by_example' # str | Field to sort by (optional)
+    sort_order = desc # str | Sort order (ascending or descending) (optional) (default to desc)
+    search = 'search_example' # str | Search term to filter results (optional)
+
+    try:
+        # Get comprehensive dashboard analytics for seller dashboard.     Query params: start_date, end_date, period (day/week/month/quarter)
+        api_response = api_instance.list_companies_analytics_dashboard(company_id, page=page, limit=limit, sort_by=sort_by, sort_order=sort_order, search=search)
+        print("The response of CompaniesApi->list_companies_analytics_dashboard:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling CompaniesApi->list_companies_analytics_dashboard: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **company_id** | **str**| Unique identifier for the Company | 
+ **page** | **int**| Page number for pagination | [optional] [default to 1]
+ **limit** | **int**| Number of items per page | [optional] [default to 20]
+ **sort_by** | **str**| Field to sort by | [optional] 
+ **sort_order** | **str**| Sort order (ascending or descending) | [optional] [default to desc]
+ **search** | **str**| Search term to filter results | [optional] 
+
+### Return type
+
+[**ListCompaniesAnalyticsAssets200Response**](ListCompaniesAnalyticsAssets200Response.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successfully retrieved companies |  -  |
+**401** | Authentication required |  -  |
+**403** | Permission denied |  -  |
+**404** | Resource not found |  -  |
+**429** | Rate limit exceeded |  -  |
+**500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **list_companies_analytics_metrics**
+> ListCompaniesAnalyticsAssets200Response list_companies_analytics_metrics(company_id, page=page, limit=limit, sort_by=sort_by, sort_order=sort_order, search=search)
+
+Get summary metrics (counts only). No date params needed — returns all-time totals.     Performance: < 0.1s
+
+### Example
+
+* Api Key Authentication (ApiKeyAuth):
+
+```python
+import spartera_api_sdk
+from spartera_api_sdk.models.list_companies_analytics_assets200_response import ListCompaniesAnalyticsAssets200Response
+from spartera_api_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.spartera.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = spartera_api_sdk.Configuration(
+    host = "https://api.spartera.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with spartera_api_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = spartera_api_sdk.CompaniesApi(api_client)
+    company_id = 'company_id_example' # str | Unique identifier for the Company
+    page = 1 # int | Page number for pagination (optional) (default to 1)
+    limit = 20 # int | Number of items per page (optional) (default to 20)
+    sort_by = 'sort_by_example' # str | Field to sort by (optional)
+    sort_order = desc # str | Sort order (ascending or descending) (optional) (default to desc)
+    search = 'search_example' # str | Search term to filter results (optional)
+
+    try:
+        # Get summary metrics (counts only). No date params needed — returns all-time totals.     Performance: < 0.1s
+        api_response = api_instance.list_companies_analytics_metrics(company_id, page=page, limit=limit, sort_by=sort_by, sort_order=sort_order, search=search)
+        print("The response of CompaniesApi->list_companies_analytics_metrics:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling CompaniesApi->list_companies_analytics_metrics: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **company_id** | **str**| Unique identifier for the Company | 
+ **page** | **int**| Page number for pagination | [optional] [default to 1]
+ **limit** | **int**| Number of items per page | [optional] [default to 20]
+ **sort_by** | **str**| Field to sort by | [optional] 
+ **sort_order** | **str**| Sort order (ascending or descending) | [optional] [default to desc]
+ **search** | **str**| Search term to filter results | [optional] 
+
+### Return type
+
+[**ListCompaniesAnalyticsAssets200Response**](ListCompaniesAnalyticsAssets200Response.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successfully retrieved companies |  -  |
+**401** | Authentication required |  -  |
+**403** | Permission denied |  -  |
+**404** | Resource not found |  -  |
+**429** | Rate limit exceeded |  -  |
+**500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **list_companies_analytics_sales**
+> ListCompaniesAnalyticsAssets200Response list_companies_analytics_sales(company_id, page=page, limit=limit, sort_by=sort_by, sort_order=sort_order, search=search)
+
+Get sales over time analytics.     Query params: start_date, end_date, group_by (day/week/month/quarter), metrics
+
+### Example
+
+* Api Key Authentication (ApiKeyAuth):
+
+```python
+import spartera_api_sdk
+from spartera_api_sdk.models.list_companies_analytics_assets200_response import ListCompaniesAnalyticsAssets200Response
+from spartera_api_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.spartera.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = spartera_api_sdk.Configuration(
+    host = "https://api.spartera.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with spartera_api_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = spartera_api_sdk.CompaniesApi(api_client)
+    company_id = 'company_id_example' # str | Unique identifier for the Company
+    page = 1 # int | Page number for pagination (optional) (default to 1)
+    limit = 20 # int | Number of items per page (optional) (default to 20)
+    sort_by = 'sort_by_example' # str | Field to sort by (optional)
+    sort_order = desc # str | Sort order (ascending or descending) (optional) (default to desc)
+    search = 'search_example' # str | Search term to filter results (optional)
+
+    try:
+        # Get sales over time analytics.     Query params: start_date, end_date, group_by (day/week/month/quarter), metrics
+        api_response = api_instance.list_companies_analytics_sales(company_id, page=page, limit=limit, sort_by=sort_by, sort_order=sort_order, search=search)
+        print("The response of CompaniesApi->list_companies_analytics_sales:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling CompaniesApi->list_companies_analytics_sales: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **company_id** | **str**| Unique identifier for the Company | 
+ **page** | **int**| Page number for pagination | [optional] [default to 1]
+ **limit** | **int**| Number of items per page | [optional] [default to 20]
+ **sort_by** | **str**| Field to sort by | [optional] 
+ **sort_order** | **str**| Sort order (ascending or descending) | [optional] [default to desc]
+ **search** | **str**| Search term to filter results | [optional] 
+
+### Return type
+
+[**ListCompaniesAnalyticsAssets200Response**](ListCompaniesAnalyticsAssets200Response.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successfully retrieved companies |  -  |
+**401** | Authentication required |  -  |
+**403** | Permission denied |  -  |
+**404** | Resource not found |  -  |
+**429** | Rate limit exceeded |  -  |
+**500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **list_companies_objects**
+> ListCompaniesAnalyticsAssets200Response list_companies_objects(company_id, page=page, limit=limit, sort_by=sort_by, sort_order=sort_order, search=search)
 
 Get all objects (connections, assets) of a single company
 
@@ -426,7 +661,7 @@ Get all objects (connections, assets) of a single company
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_analytics_assets_get200_response import CompaniesCompanyIdAnalyticsAssetsGet200Response
+from spartera_api_sdk.models.list_companies_analytics_assets200_response import ListCompaniesAnalyticsAssets200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -451,15 +686,20 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 with spartera_api_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = spartera_api_sdk.CompaniesApi(api_client)
-    company_id = 'company_id_example' # str | 
+    company_id = 'company_id_example' # str | Unique identifier for the Company
+    page = 1 # int | Page number for pagination (optional) (default to 1)
+    limit = 20 # int | Number of items per page (optional) (default to 20)
+    sort_by = 'sort_by_example' # str | Field to sort by (optional)
+    sort_order = desc # str | Sort order (ascending or descending) (optional) (default to desc)
+    search = 'search_example' # str | Search term to filter results (optional)
 
     try:
         # Get all objects (connections, assets) of a single company
-        api_response = api_instance.companies_company_id_objects_get(company_id)
-        print("The response of CompaniesApi->companies_company_id_objects_get:\n")
+        api_response = api_instance.list_companies_objects(company_id, page=page, limit=limit, sort_by=sort_by, sort_order=sort_order, search=search)
+        print("The response of CompaniesApi->list_companies_objects:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling CompaniesApi->companies_company_id_objects_get: %s\n" % e)
+        print("Exception when calling CompaniesApi->list_companies_objects: %s\n" % e)
 ```
 
 
@@ -469,11 +709,16 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **company_id** | **str**|  | 
+ **company_id** | **str**| Unique identifier for the Company | 
+ **page** | **int**| Page number for pagination | [optional] [default to 1]
+ **limit** | **int**| Number of items per page | [optional] [default to 20]
+ **sort_by** | **str**| Field to sort by | [optional] 
+ **sort_order** | **str**| Sort order (ascending or descending) | [optional] [default to desc]
+ **search** | **str**| Search term to filter results | [optional] 
 
 ### Return type
 
-[**CompaniesCompanyIdAnalyticsAssetsGet200Response**](CompaniesCompanyIdAnalyticsAssetsGet200Response.md)
+[**ListCompaniesAnalyticsAssets200Response**](ListCompaniesAnalyticsAssets200Response.md)
 
 ### Authorization
 
@@ -492,13 +737,15 @@ Name | Type | Description  | Notes
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **404** | Resource not found |  -  |
+**429** | Rate limit exceeded |  -  |
+**500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **companies_company_id_patch**
-> CompaniesCompanyIdPatch200Response companies_company_id_patch(company_id, companies_update)
+# **list_companies_requests_usage**
+> ListCompaniesAnalyticsAssets200Response list_companies_requests_usage(company_id, page=page, limit=limit, sort_by=sort_by, sort_order=sort_order, search=search)
 
-Update an existing company by ID
+Get company request usage data for a specific month.
 
 ### Example
 
@@ -506,8 +753,7 @@ Update an existing company by ID
 
 ```python
 import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_patch200_response import CompaniesCompanyIdPatch200Response
-from spartera_api_sdk.models.companies_update import CompaniesUpdate
+from spartera_api_sdk.models.list_companies_analytics_assets200_response import ListCompaniesAnalyticsAssets200Response
 from spartera_api_sdk.rest import ApiException
 from pprint import pprint
 
@@ -532,16 +778,20 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 with spartera_api_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = spartera_api_sdk.CompaniesApi(api_client)
-    company_id = 'company_id_example' # str | 
-    companies_update = spartera_api_sdk.CompaniesUpdate() # CompaniesUpdate | 
+    company_id = 'company_id_example' # str | Unique identifier for the Company
+    page = 1 # int | Page number for pagination (optional) (default to 1)
+    limit = 20 # int | Number of items per page (optional) (default to 20)
+    sort_by = 'sort_by_example' # str | Field to sort by (optional)
+    sort_order = desc # str | Sort order (ascending or descending) (optional) (default to desc)
+    search = 'search_example' # str | Search term to filter results (optional)
 
     try:
-        # Update an existing company by ID
-        api_response = api_instance.companies_company_id_patch(company_id, companies_update)
-        print("The response of CompaniesApi->companies_company_id_patch:\n")
+        # Get company request usage data for a specific month.
+        api_response = api_instance.list_companies_requests_usage(company_id, page=page, limit=limit, sort_by=sort_by, sort_order=sort_order, search=search)
+        print("The response of CompaniesApi->list_companies_requests_usage:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling CompaniesApi->companies_company_id_patch: %s\n" % e)
+        print("Exception when calling CompaniesApi->list_companies_requests_usage: %s\n" % e)
 ```
 
 
@@ -551,12 +801,101 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **company_id** | **str**|  | 
+ **company_id** | **str**| Unique identifier for the Company | 
+ **page** | **int**| Page number for pagination | [optional] [default to 1]
+ **limit** | **int**| Number of items per page | [optional] [default to 20]
+ **sort_by** | **str**| Field to sort by | [optional] 
+ **sort_order** | **str**| Sort order (ascending or descending) | [optional] [default to desc]
+ **search** | **str**| Search term to filter results | [optional] 
+
+### Return type
+
+[**ListCompaniesAnalyticsAssets200Response**](ListCompaniesAnalyticsAssets200Response.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successfully retrieved companies |  -  |
+**401** | Authentication required |  -  |
+**403** | Permission denied |  -  |
+**404** | Resource not found |  -  |
+**429** | Rate limit exceeded |  -  |
+**500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_companies**
+> UpdateCompanies200Response update_companies(company_id, companies_update)
+
+Update an existing company by ID
+
+### Example
+
+* Api Key Authentication (ApiKeyAuth):
+
+```python
+import spartera_api_sdk
+from spartera_api_sdk.models.companies_update import CompaniesUpdate
+from spartera_api_sdk.models.update_companies200_response import UpdateCompanies200Response
+from spartera_api_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.spartera.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = spartera_api_sdk.Configuration(
+    host = "https://api.spartera.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with spartera_api_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = spartera_api_sdk.CompaniesApi(api_client)
+    company_id = 'company_id_example' # str | Unique identifier for the Company
+    companies_update = spartera_api_sdk.CompaniesUpdate() # CompaniesUpdate | 
+
+    try:
+        # Update an existing company by ID
+        api_response = api_instance.update_companies(company_id, companies_update)
+        print("The response of CompaniesApi->update_companies:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling CompaniesApi->update_companies: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **company_id** | **str**| Unique identifier for the Company | 
  **companies_update** | [**CompaniesUpdate**](CompaniesUpdate.md)|  | 
 
 ### Return type
 
-[**CompaniesCompanyIdPatch200Response**](CompaniesCompanyIdPatch200Response.md)
+[**UpdateCompanies200Response**](UpdateCompanies200Response.md)
 
 ### Authorization
 
@@ -575,167 +914,11 @@ Name | Type | Description  | Notes
 **401** | Authentication required |  -  |
 **403** | Permission denied |  -  |
 **400** | Invalid input |  -  |
+**409** | Resource conflict (duplicate, constraint violation) |  -  |
+**422** | Request well-formed but semantically invalid |  -  |
 **404** | Resource not found |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **companies_company_id_requests_plan_get**
-> CompaniesCompanyIdAnalyticsAssetsGet200Response companies_company_id_requests_plan_get(company_id)
-
-Get the total number of requests allocated in the company's current subscription plan.
-
-### Example
-
-* Api Key Authentication (ApiKeyAuth):
-
-```python
-import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_analytics_assets_get200_response import CompaniesCompanyIdAnalyticsAssetsGet200Response
-from spartera_api_sdk.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to https://api.spartera.com
-# See configuration.py for a list of all supported configuration parameters.
-configuration = spartera_api_sdk.Configuration(
-    host = "https://api.spartera.com"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: ApiKeyAuth
-configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
-
-# Enter a context with an instance of the API client
-with spartera_api_sdk.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = spartera_api_sdk.CompaniesApi(api_client)
-    company_id = 'company_id_example' # str | 
-
-    try:
-        # Get the total number of requests allocated in the company's current subscription plan.
-        api_response = api_instance.companies_company_id_requests_plan_get(company_id)
-        print("The response of CompaniesApi->companies_company_id_requests_plan_get:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling CompaniesApi->companies_company_id_requests_plan_get: %s\n" % e)
-```
-
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **company_id** | **str**|  | 
-
-### Return type
-
-[**CompaniesCompanyIdAnalyticsAssetsGet200Response**](CompaniesCompanyIdAnalyticsAssetsGet200Response.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successfully retrieved companies |  -  |
-**401** | Authentication required |  -  |
-**403** | Permission denied |  -  |
-**404** | Resource not found |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **companies_company_id_requests_usage_get**
-> CompaniesCompanyIdAnalyticsAssetsGet200Response companies_company_id_requests_usage_get(company_id)
-
-Get company request usage data for a specific month. Returns JSON metrics by default or CSV logs when download parameter is included.
-
-### Example
-
-* Api Key Authentication (ApiKeyAuth):
-
-```python
-import spartera_api_sdk
-from spartera_api_sdk.models.companies_company_id_analytics_assets_get200_response import CompaniesCompanyIdAnalyticsAssetsGet200Response
-from spartera_api_sdk.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to https://api.spartera.com
-# See configuration.py for a list of all supported configuration parameters.
-configuration = spartera_api_sdk.Configuration(
-    host = "https://api.spartera.com"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: ApiKeyAuth
-configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
-
-# Enter a context with an instance of the API client
-with spartera_api_sdk.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = spartera_api_sdk.CompaniesApi(api_client)
-    company_id = 'company_id_example' # str | 
-
-    try:
-        # Get company request usage data for a specific month. Returns JSON metrics by default or CSV logs when download parameter is included.
-        api_response = api_instance.companies_company_id_requests_usage_get(company_id)
-        print("The response of CompaniesApi->companies_company_id_requests_usage_get:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling CompaniesApi->companies_company_id_requests_usage_get: %s\n" % e)
-```
-
-
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **company_id** | **str**|  | 
-
-### Return type
-
-[**CompaniesCompanyIdAnalyticsAssetsGet200Response**](CompaniesCompanyIdAnalyticsAssetsGet200Response.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successfully retrieved companies |  -  |
-**401** | Authentication required |  -  |
-**403** | Permission denied |  -  |
-**404** | Resource not found |  -  |
+**429** | Rate limit exceeded |  -  |
+**500** | Internal server error |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

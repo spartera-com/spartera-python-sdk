@@ -6,14 +6,14 @@ Update schema for modifying Connection
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**user_id** | **str** |  | [optional] 
-**engine_id** | **int** |  | [optional] 
-**company_id** | **str** |  | [optional] 
-**credential_type** | **str** | Enum type: CredentialType | [optional] 
-**name** | **str** |  | [optional] 
-**description** | **str** |  | [optional] 
-**provider_domain** | **str** |  | [optional] 
-**verified_usage_ability** | **bool** |  | [optional] 
+**user_id** | **str** | References users.user_id — An individual user account within a company. See GET /users for valid values. Optional. | [optional] 
+**engine_id** | **int** | References storage_engines.engine_id — Fact table of all the different storage engines we support. See GET /storage_engines for valid values. Required. | [optional] 
+**company_id** | **str** | References companies.company_id — A Spartera seller or buyer company account. See GET /companies for valid values. Required. | [optional] 
+**credential_type** | **str** | Optional. One of: SERVICE_ACCOUNT, USERNAME_PASSWORD, API_KEY, SERVICE_IDENTITY, ACCESS_KEY, … (8 total). | [optional] 
+**name** | **str** | Optional. | [optional] 
+**description** | **str** | Optional. | [optional] 
+**provider_domain** | **str** | Domain of the external API provider (e.g., &#39;api.weather.com&#39;) | [optional] 
+**verified_usage_ability** | **bool** | Optional. | [optional] 
 
 ## Example
 

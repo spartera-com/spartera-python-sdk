@@ -1,22 +1,22 @@
 # Connections
 
-Model for every connection setup from our platform
+Secure connections from Spartera to your databases and data warehouses
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**date_created** | **datetime** |  | [optional] 
-**last_updated** | **datetime** |  | [optional] 
-**connection_id** | **str** |  | [optional] 
-**user_id** | **str** |  | [optional] 
-**engine_id** | **int** |  | 
-**company_id** | **str** |  | 
-**credential_type** | **str** | Enum type: CredentialType | [optional] 
-**name** | **str** |  | [optional] 
-**description** | **str** |  | [optional] 
-**provider_domain** | **str** |  | [optional] 
-**verified_usage_ability** | **bool** |  | [optional] 
+**date_created** | **datetime** | Optional. | [optional] 
+**last_updated** | **datetime** | Optional. | [optional] 
+**connection_id** | **str** | Unique identifier. | [optional] 
+**user_id** | **str** | References users.user_id — An individual user account within a company. See GET /users for valid values. Optional. | [optional] 
+**engine_id** | **int** | References storage_engines.engine_id — Fact table of all the different storage engines we support. See GET /storage_engines for valid values. Required. | 
+**company_id** | **str** | References companies.company_id — A Spartera seller or buyer company account. See GET /companies for valid values. Required. | 
+**credential_type** | **str** | Optional. One of: SERVICE_ACCOUNT, USERNAME_PASSWORD, API_KEY, SERVICE_IDENTITY, ACCESS_KEY, … (8 total). | [optional] 
+**name** | **str** | Optional. | [optional] 
+**description** | **str** | Optional. | [optional] 
+**provider_domain** | **str** | Domain of the external API provider (e.g., &#39;api.weather.com&#39;) | [optional] 
+**verified_usage_ability** | **bool** | Optional. | [optional] 
 
 ## Example
 

@@ -6,7 +6,7 @@ Input schema for creating JobFunction
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** |  | 
+**name** | **str** | Required. Must be unique. | 
 
 ## Example
 

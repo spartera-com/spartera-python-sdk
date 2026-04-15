@@ -1,57 +1,72 @@
 # Assets
 
-Asset model for every asset (insight/visualization/feed/etc.) customer creates
+A published analytics asset — a calculation or visualization built on a data connection
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**date_created** | **datetime** |  | [optional] 
-**last_updated** | **datetime** |  | [optional] 
-**asset_id** | **str** |  | [optional] 
-**user_id** | **str** |  | [optional] 
-**company_id** | **str** |  | 
-**connection_id** | **str** |  | [optional] 
-**llm_connection_id** | **str** |  | [optional] 
-**snippet_id** | **int** |  | [optional] 
-**industry_id** | **int** |  | [optional] 
+**date_created** | **datetime** | Optional. | [optional] 
+**last_updated** | **datetime** | Optional. | [optional] 
+**asset_id** | **str** | Unique identifier. | [optional] 
+**user_id** | **str** | References users.user_id — An individual user account within a company. See GET /users for valid values. Optional. | [optional] 
+**company_id** | **str** | References companies.company_id — A Spartera seller or buyer company account. See GET /companies for valid values. Required. | 
+**connection_id** | **str** | Optional. | [optional] 
+**llm_connection_id** | **str** | References connections.connection_id — Secure connections from Spartera to your databases and data warehouses. See GET /connections for valid values. Optional. | [optional] 
+**snippet_id** | **int** | References snippets.snippet_id — Predefined code snippets to accelerate insight creation. See GET /snippets for valid values. Optional. | [optional] 
+**industry_id** | **int** | References industries.industry_id — Available industry categories for asset classification. Based on US NAISC codes.. See GET /industries for valid values. Optional. | [optional] 
 **ai_job_id** | **str** | Links to the AutoInsights job that created this asset | [optional] 
+**auc_id** | **int** | Primary use case for this asset, from clustering analysis | [optional] 
+**function_id** | **str** | Optional identifier for routing to specific functions/models at seller endpoint. For GET: appended to URL path. For POST: included in JSON body. | [optional] 
 **approval_status** | **str** | Approval status for AI-generated assets | [optional] 
 **approved_by_user_id** | **str** | User who approved this asset for marketplace | [optional] 
 **approved_at** | **datetime** | When this asset was approved for marketplace | [optional] 
-**name** | **str** |  | 
-**slug** | **str** |  | [optional] 
-**description** | **str** |  | [optional] 
-**source** | **str** | Enum type: Source | 
-**asset_type** | **str** | Enum type: AssetType | [optional] 
+**name** | **str** | Required. | 
+**slug** | **str** | Optional. | [optional] 
+**description** | **str** | Optional. | [optional] 
+**detailed_description** | **str** | Long-form HTML description for product pages and SEO | [optional] 
+**source** | **str** | Required. One of: MANUAL, AUTOMATIC. | 
+**asset_type** | **str** | Optional. One of: CALCULATION, VISUALIZATION, DATA. | [optional] 
 **asset_schema** | **object** | Stores database table schema data including columns, types, and metadata | [optional] 
-**visibility** | **str** | Enum type: Visibility | [optional] 
-**tags** | **str** |  | [optional] 
-**sql_logic** | **str** |  | [optional] 
-**source_schema_name** | **str** |  | [optional] 
-**source_table_name** | **str** |  | [optional] 
-**sell_in_marketplace** | **bool** |  | 
-**viz_chart_library** | **str** | Enum type: PlottingLibrary | [optional] 
-**viz_chart_type** | **str** | Enum type: ChartType | [optional] 
-**viz_dep_var_col_name** | **str** |  | [optional] 
-**viz_indep_var_col_name** | **str** |  | [optional] 
-**viz_size_col_name** | **str** |  | [optional] 
-**viz_color_col_name** | **str** |  | [optional] 
-**viz_data_aggregation** | **str** | Enum type: AggregationType | [optional] 
-**viz_sort_direction** | **str** | Enum type: SortDirection | [optional] 
-**viz_data_limit** | **int** |  | [optional] 
-**viz_color_scheme** | **str** | Enum type: ColorScheme | [optional] 
-**allow_params** | **bool** |  | 
-**accept_terms** | **bool** |  | 
-**cached** | **bool** |  | [optional] 
-**schedule** | **str** |  | [optional] 
-**next_run** | **datetime** |  | [optional] 
+**visibility** | **str** | Optional. One of: PRIVATE, SHARED. | [optional] 
+**tags** | **str** | Optional. | [optional] 
+**short_code** | **str** | Short code for tera.ac URL shortener (e.g., &#39;f78zq1&#39;) | [optional] 
+**restricted_domains** | **str** | Semicolon or comma-separated list of domains restricted from accessing this asset | [optional] 
+**sql_logic** | **str** | Optional. | [optional] 
+**source_schema_name** | **str** | Optional. | [optional] 
+**source_table_name** | **str** | Optional. | [optional] 
+**sell_in_marketplace** | **bool** | Required. | 
+**require_customization** | **bool** | Whether this asset requires customization before use | 
+**viz_chart_library** | **str** | Optional. One of: PLOTLY, MATPLOTLIB, SEABORN. | [optional] 
+**viz_chart_type** | **str** | Optional. One of: LINE, BAR, PIE, DOUGHNUT, POLAR, … (8 total). | [optional] 
+**viz_dep_var_col_name** | **str** | Optional. | [optional] 
+**viz_indep_var_col_name** | **str** | Optional. | [optional] 
+**viz_size_col_name** | **str** | Optional. | [optional] 
+**viz_color_col_name** | **str** | Optional. | [optional] 
+**viz_data_aggregation** | **str** | Optional. One of: No Aggregation, Sum, Average, Count, Minimum, … (6 total). | [optional] 
+**viz_sort_direction** | **str** | Optional. One of: No Sorting, Ascending, Descending. | [optional] 
+**viz_data_limit** | **int** | Optional. | [optional] 
+**viz_color_scheme** | **str** | Optional. One of: Default, Sequential, Diverging, Categorical, Monochrome, … (8 total). | [optional] 
+**viz_show_legend** | **bool** | Show/hide chart legend | [optional] 
+**viz_show_grid** | **bool** | Show/hide grid lines | [optional] 
+**viz_show_trendline** | **bool** | Show trendline for scatter/line charts | [optional] 
+**viz_line_smoothing** | **bool** | Enable smoothing for line charts | [optional] 
+**viz_bar_stacked** | **bool** | Stack bars instead of grouping | [optional] 
+**viz_filter_direction** | **str** | Whether data_limit shows TOP or BOTTOM N | [optional] 
+**allow_params** | **bool** | Required. | 
+**accept_terms** | **bool** | Required. | 
+**cached** | **bool** | Optional. | [optional] 
+**schedule** | **str** | Optional. | [optional] 
+**next_run** | **datetime** | Optional. | [optional] 
 **data_time_period_start** | **datetime** | Start date of the data time period covered | [optional] 
 **data_time_period_end** | **datetime** | End date of the data time period covered | [optional] 
-**geographic_coverage_type** | **str** | Type of geographic coverage (Enum type: GeographicCoverage) | [optional] 
+**geographic_coverage_type** | **str** | Type of geographic coverage | [optional] 
 **geographic_coverage_details** | **str** | Specific regions/countries covered (e.g., &#39;United States, Canada, Mexico&#39;) | [optional] 
-**data_source_refresh_frequency** | **str** | How often the source data is refreshed (Enum type: DataRefreshFrequency) | [optional] 
+**data_source_refresh_frequency** | **str** | How often the source data is refreshed | [optional] 
 **data_source_last_refreshed** | **datetime** | When the source data was last refreshed | [optional] 
+**rate_limit_number** | **int** | Number of requests allowed per period (e.g., 100) | [optional] 
+**rate_limit_period** | **str** | Time period for rate limiting (second, minute, hour, day) | [optional] 
+**rate_limit_granularity** | **str** | Granularity level for rate limiting (USER, COMPANY, IP) | [optional] 
 
 ## Example
 
