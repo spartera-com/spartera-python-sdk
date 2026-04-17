@@ -1,6 +1,6 @@
 [project]
 name = "spartera_api_sdk"
-version = "1.0.78"
+version = "1.0.80"
 description = "Spartera API Documentation"
 authors = [
   {name = "API Support",email = "support@spartera.com"},
