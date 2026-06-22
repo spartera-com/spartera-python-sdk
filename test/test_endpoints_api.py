@@ -41,6 +41,13 @@ class TestEndpointsApi(unittest.TestCase):
         """
         pass
 
+    def test_create_endpoints_scan_column(self) -> None:
+        """Test case for create_endpoints_scan_column
+
+        POST /companies/{company_id}/endpoints/{endpoint_id}/scan_column
+        """
+        pass
+
     def test_delete_endpoints(self) -> None:
         """Test case for delete_endpoints
 
@@ -87,6 +94,13 @@ class TestEndpointsApi(unittest.TestCase):
         """Test case for get_endpoints_by_id_keys
 
         GET /companies/{company_id}/endpoints/{endpoint_id}/keys
+        """
+        pass
+
+    def test_get_endpoints_by_id_recommendations(self) -> None:
+        """Test case for get_endpoints_by_id_recommendations
+
+        GET /companies/{company_id}/endpoints/{endpoint_id}/recommendations
         """
         pass
 

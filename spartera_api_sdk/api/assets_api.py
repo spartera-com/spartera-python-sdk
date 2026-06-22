@@ -440,8 +440,8 @@ class AssetsApi:
     @validate_call
     def create_assets_analyze(
         self,
-        asset_slug: Annotated[StrictStr, Field(description="URL-friendly slug for the Asset")],
         company_handle: Annotated[StrictStr, Field(description="Human-readable handle for the Company")],
+        asset_slug: Annotated[StrictStr, Field(description="URL-friendly slug for the Asset")],
         assets_input: AssetsInput,
         _request_timeout: Union[
             None,
@@ -459,10 +459,10 @@ class AssetsApi:
         """Process (analyze) an asset with dynamic rate limiting applied via decorator.
 
 
-        :param asset_slug: URL-friendly slug for the Asset (required)
-        :type asset_slug: str
         :param company_handle: Human-readable handle for the Company (required)
         :type company_handle: str
+        :param asset_slug: URL-friendly slug for the Asset (required)
+        :type asset_slug: str
         :param assets_input: (required)
         :type assets_input: AssetsInput
         :param _request_timeout: timeout setting for this request. If one
@@ -488,8 +488,8 @@ class AssetsApi:
         """ # noqa: E501
 
         _param = self._create_assets_analyze_serialize(
-            asset_slug=asset_slug,
             company_handle=company_handle,
+            asset_slug=asset_slug,
             assets_input=assets_input,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -521,8 +521,8 @@ class AssetsApi:
     @validate_call
     def create_assets_analyze_with_http_info(
         self,
-        asset_slug: Annotated[StrictStr, Field(description="URL-friendly slug for the Asset")],
         company_handle: Annotated[StrictStr, Field(description="Human-readable handle for the Company")],
+        asset_slug: Annotated[StrictStr, Field(description="URL-friendly slug for the Asset")],
         assets_input: AssetsInput,
         _request_timeout: Union[
             None,
@@ -540,10 +540,10 @@ class AssetsApi:
         """Process (analyze) an asset with dynamic rate limiting applied via decorator.
 
 
-        :param asset_slug: URL-friendly slug for the Asset (required)
-        :type asset_slug: str
         :param company_handle: Human-readable handle for the Company (required)
         :type company_handle: str
+        :param asset_slug: URL-friendly slug for the Asset (required)
+        :type asset_slug: str
         :param assets_input: (required)
         :type assets_input: AssetsInput
         :param _request_timeout: timeout setting for this request. If one
@@ -569,8 +569,8 @@ class AssetsApi:
         """ # noqa: E501
 
         _param = self._create_assets_analyze_serialize(
-            asset_slug=asset_slug,
             company_handle=company_handle,
+            asset_slug=asset_slug,
             assets_input=assets_input,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -602,8 +602,8 @@ class AssetsApi:
     @validate_call
     def create_assets_analyze_without_preload_content(
         self,
-        asset_slug: Annotated[StrictStr, Field(description="URL-friendly slug for the Asset")],
         company_handle: Annotated[StrictStr, Field(description="Human-readable handle for the Company")],
+        asset_slug: Annotated[StrictStr, Field(description="URL-friendly slug for the Asset")],
         assets_input: AssetsInput,
         _request_timeout: Union[
             None,
@@ -621,10 +621,10 @@ class AssetsApi:
         """Process (analyze) an asset with dynamic rate limiting applied via decorator.
 
 
-        :param asset_slug: URL-friendly slug for the Asset (required)
-        :type asset_slug: str
         :param company_handle: Human-readable handle for the Company (required)
         :type company_handle: str
+        :param asset_slug: URL-friendly slug for the Asset (required)
+        :type asset_slug: str
         :param assets_input: (required)
         :type assets_input: AssetsInput
         :param _request_timeout: timeout setting for this request. If one
@@ -650,8 +650,8 @@ class AssetsApi:
         """ # noqa: E501
 
         _param = self._create_assets_analyze_serialize(
-            asset_slug=asset_slug,
             company_handle=company_handle,
+            asset_slug=asset_slug,
             assets_input=assets_input,
             _request_auth=_request_auth,
             _content_type=_content_type,
@@ -678,8 +678,8 @@ class AssetsApi:
 
     def _create_assets_analyze_serialize(
         self,
-        asset_slug,
         company_handle,
+        asset_slug,
         assets_input,
         _request_auth,
         _content_type,
@@ -702,10 +702,10 @@ class AssetsApi:
         _body_params: Optional[bytes] = None
 
         # process the path parameters
-        if asset_slug is not None:
-            _path_params['asset_slug'] = asset_slug
         if company_handle is not None:
             _path_params['company_handle'] = company_handle
+        if asset_slug is not None:
+            _path_params['asset_slug'] = asset_slug
         # process the query parameters
         # process the header parameters
         # process the form parameters
@@ -2270,8 +2270,8 @@ class AssetsApi:
     @validate_call
     def get_assets_by_id_analyze(
         self,
-        asset_slug: Annotated[StrictStr, Field(description="URL-friendly slug for the Asset")],
         company_handle: Annotated[StrictStr, Field(description="Human-readable handle for the Company")],
+        asset_slug: Annotated[StrictStr, Field(description="URL-friendly slug for the Asset")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2288,10 +2288,10 @@ class AssetsApi:
         """Process (analyze) an asset with dynamic rate limiting applied via decorator.
 
 
-        :param asset_slug: URL-friendly slug for the Asset (required)
-        :type asset_slug: str
         :param company_handle: Human-readable handle for the Company (required)
         :type company_handle: str
+        :param asset_slug: URL-friendly slug for the Asset (required)
+        :type asset_slug: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -2315,8 +2315,8 @@ class AssetsApi:
         """ # noqa: E501
 
         _param = self._get_assets_by_id_analyze_serialize(
-            asset_slug=asset_slug,
             company_handle=company_handle,
+            asset_slug=asset_slug,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2345,8 +2345,8 @@ class AssetsApi:
     @validate_call
     def get_assets_by_id_analyze_with_http_info(
         self,
-        asset_slug: Annotated[StrictStr, Field(description="URL-friendly slug for the Asset")],
         company_handle: Annotated[StrictStr, Field(description="Human-readable handle for the Company")],
+        asset_slug: Annotated[StrictStr, Field(description="URL-friendly slug for the Asset")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2363,10 +2363,10 @@ class AssetsApi:
         """Process (analyze) an asset with dynamic rate limiting applied via decorator.
 
 
-        :param asset_slug: URL-friendly slug for the Asset (required)
-        :type asset_slug: str
         :param company_handle: Human-readable handle for the Company (required)
         :type company_handle: str
+        :param asset_slug: URL-friendly slug for the Asset (required)
+        :type asset_slug: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -2390,8 +2390,8 @@ class AssetsApi:
         """ # noqa: E501
 
         _param = self._get_assets_by_id_analyze_serialize(
-            asset_slug=asset_slug,
             company_handle=company_handle,
+            asset_slug=asset_slug,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2420,8 +2420,8 @@ class AssetsApi:
     @validate_call
     def get_assets_by_id_analyze_without_preload_content(
         self,
-        asset_slug: Annotated[StrictStr, Field(description="URL-friendly slug for the Asset")],
         company_handle: Annotated[StrictStr, Field(description="Human-readable handle for the Company")],
+        asset_slug: Annotated[StrictStr, Field(description="URL-friendly slug for the Asset")],
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -2438,10 +2438,10 @@ class AssetsApi:
         """Process (analyze) an asset with dynamic rate limiting applied via decorator.
 
 
-        :param asset_slug: URL-friendly slug for the Asset (required)
-        :type asset_slug: str
         :param company_handle: Human-readable handle for the Company (required)
         :type company_handle: str
+        :param asset_slug: URL-friendly slug for the Asset (required)
+        :type asset_slug: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -2465,8 +2465,8 @@ class AssetsApi:
         """ # noqa: E501
 
         _param = self._get_assets_by_id_analyze_serialize(
-            asset_slug=asset_slug,
             company_handle=company_handle,
+            asset_slug=asset_slug,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -2490,8 +2490,8 @@ class AssetsApi:
 
     def _get_assets_by_id_analyze_serialize(
         self,
-        asset_slug,
         company_handle,
+        asset_slug,
         _request_auth,
         _content_type,
         _headers,
@@ -2513,10 +2513,10 @@ class AssetsApi:
         _body_params: Optional[bytes] = None
 
         # process the path parameters
-        if asset_slug is not None:
-            _path_params['asset_slug'] = asset_slug
         if company_handle is not None:
             _path_params['company_handle'] = company_handle
+        if asset_slug is not None:
+            _path_params['asset_slug'] = asset_slug
         # process the query parameters
         # process the header parameters
         # process the form parameters

@@ -19,8 +19,8 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr, field_validator
-from typing import Any, ClassVar, Dict, List, Optional, Union
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr, field_validator
+from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 from pydantic_core import to_jsonable_python
@@ -41,27 +41,35 @@ class Endpoints(BaseModel):
     approved_by_user_id: Optional[StrictStr] = Field(default=None, description="User who approved this endpoint for marketplace")
     approved_at: Optional[datetime] = Field(default=None, description="Timestamp of marketplace approval")
     sell_in_marketplace: StrictBool = Field(description="Whether this endpoint appears in the public marketplace")
-    price_credits: StrictInt = Field(description="Credits deducted from the buyer's pool per successful (200 OK) request. Same credit pool as assets. price_usd kept for billing records / dashboards.")
     name: StrictStr = Field(description="Human-readable name for the endpoint")
     slug: Optional[StrictStr] = Field(default=None, description="Human-readable, URL-safe slug derived from name at creation time. e.g. 'NFL Live Moneyline & Spread Odds' → 'nfl-live-moneyline-spread-odds'. Never changes after creation. Unique within company (DB constraint). Creation fails with 409 if a duplicate name exists in the same company.")
     description: Optional[StrictStr] = Field(default=None, description="Description of what this endpoint provides")
+    detailed_description: Optional[StrictStr] = Field(default=None, description="Long-form HTML description for product pages and SEO")
+    top_questions: Optional[StrictStr] = Field(default=None, description="Top 3 questions this endpoint can help answer, in English. Stored as JSON array of strings (1-3 items, 15-200 chars each). Strongly encouraged for marketplace endpoints but not required — nudge via UI completeness score, not hard validation.")
     source_schema_name: Optional[StrictStr] = Field(default=None, description="Schema/database name where the table resides")
     source_table_name: Optional[StrictStr] = Field(default=None, description="Table name to query from")
-    customer_name: Optional[StrictStr] = Field(default=None, description="Named customer for B2B deals (marketplace uses price_credits instead)")
-    price_usd: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="USD reference price for billing records and seller dashboards")
+    customer_name: Optional[StrictStr] = Field(default=None, description="Named customer for B2B deals (pricing handled via asset_price_history)")
     endpoint_schema: Optional[Dict[str, Any]] = Field(default=None, description="Column configurations including aggregations, filters, and visibility. Format: {columns: [{name, type, aggregation, filter, is_hidden, alias, ...}]}. This is the source of truth — SQL is generated at runtime from this configuration.")
-    rate_limit_requests: Optional[StrictInt] = Field(default=None, description="Number of requests allowed per rate_limit_period")
+    rate_limit_number: Optional[StrictInt] = Field(default=None, description="Number of requests allowed per rate_limit_period")
     rate_limit_period: Optional[StrictStr] = Field(default=None, description="Time period for rate limiting (HOUR, DAY, MONTH)")
     rate_limit_granularity: Optional[StrictStr] = Field(default=None, description="How to group rate limits (IP, USER, COMPANY, API_KEY, GLOBAL)")
     access_method: Optional[StrictStr] = Field(default=None, description="Access control method (OPEN, API_KEY, IP, EMAIL, DOMAIN)")
     access_whitelist: Optional[Dict[str, Any]] = Field(default=None, description="List of allowed IPs, emails, or domains based on access_method. Format: {type: 'ip'|'email'|'domain', values: ['192.168.1.1', ...]}")
     status: StrictStr = Field(description="Current status of the endpoint (ACTIVE, INACTIVE, DEPRECATED)")
+    data_time_period_start: Optional[datetime] = Field(default=None, description="Start date of the data time period covered")
+    data_time_period_end: Optional[datetime] = Field(default=None, description="End date of the data time period covered")
+    date_collection_start: Optional[datetime] = Field(default=None, description="When the seller began actively collecting this data. Distinct from data_time_period_start, which describes when the records themselves begin. Backfilled historical data will have date_collection_start > data_time_period_start.")
+    geographic_coverage_type: Optional[StrictStr] = Field(default=None, description="Type of geographic coverage")
+    geographic_coverage_details: Optional[StrictStr] = Field(default=None, description="Specific regions/countries covered (e.g., 'United States, Canada, Mexico')")
+    data_source_refresh_frequency: Optional[StrictStr] = Field(default=None, description="How often the source data is refreshed")
     tags: Optional[StrictStr] = Field(default=None, description="Comma-separated tags for organizing endpoints")
     last_accessed: Optional[datetime] = Field(default=None, description="When this endpoint was last called")
     max_records_per_request: Optional[StrictInt] = Field(default=None, description="Seller-enforced row cap per request. Buyers cannot exceed this. Default 1000.")
+    export_enabled: StrictBool = Field(description="Whether this endpoint supports bulk export to GCS. When True, buyers can request delivery=gcs with format=csv|parquet. Independent of max_records_per_request, which only governs inline JSON.")
+    max_records_per_export: Optional[StrictInt] = Field(default=None, description="Hard ceiling on rows returned per GCS export. Separate from max_records_per_request so sellers can offer larger downloads via file delivery without expanding inline JSON responses.")
     sample_response: Optional[Dict[str, Any]] = Field(default=None, description="Last successful {spartera, request, response} envelope. Saved on each successful marketplace run. Displayed as preview on product page load.")
     active: StrictBool = Field(description="Required.")
-    __properties: ClassVar[List[str]] = ["date_created", "last_updated", "endpoint_id", "user_id", "company_id", "connection_id", "industry_id", "auc_id", "approval_status", "approved_by_user_id", "approved_at", "sell_in_marketplace", "price_credits", "name", "slug", "description", "source_schema_name", "source_table_name", "customer_name", "price_usd", "endpoint_schema", "rate_limit_requests", "rate_limit_period", "rate_limit_granularity", "access_method", "access_whitelist", "status", "tags", "last_accessed", "max_records_per_request", "sample_response", "active"]
+    __properties: ClassVar[List[str]] = ["date_created", "last_updated", "endpoint_id", "user_id", "company_id", "connection_id", "industry_id", "auc_id", "approval_status", "approved_by_user_id", "approved_at", "sell_in_marketplace", "name", "slug", "description", "detailed_description", "top_questions", "source_schema_name", "source_table_name", "customer_name", "endpoint_schema", "rate_limit_number", "rate_limit_period", "rate_limit_granularity", "access_method", "access_whitelist", "status", "data_time_period_start", "data_time_period_end", "date_collection_start", "geographic_coverage_type", "geographic_coverage_details", "data_source_refresh_frequency", "tags", "last_accessed", "max_records_per_request", "export_enabled", "max_records_per_export", "sample_response", "active"]
 
     @field_validator('approval_status')
     def approval_status_validate_enum(cls, value):
@@ -108,6 +116,26 @@ class Endpoints(BaseModel):
         """Validates the enum"""
         if value not in set(['ACTIVE', 'INACTIVE', 'DEPRECATED']):
             raise ValueError("must be one of enum values ('ACTIVE', 'INACTIVE', 'DEPRECATED')")
+        return value
+
+    @field_validator('geographic_coverage_type')
+    def geographic_coverage_type_validate_enum(cls, value):
+        """Validates the enum"""
+        if value is None:
+            return value
+
+        if value not in set(['GLOBAL', 'CONTINENTAL', 'REGIONAL', 'NATIONAL', 'STATE', 'LOCAL', 'CUSTOM', 'UNKNOWN']):
+            raise ValueError("must be one of enum values ('GLOBAL', 'CONTINENTAL', 'REGIONAL', 'NATIONAL', 'STATE', 'LOCAL', 'CUSTOM', 'UNKNOWN')")
+        return value
+
+    @field_validator('data_source_refresh_frequency')
+    def data_source_refresh_frequency_validate_enum(cls, value):
+        """Validates the enum"""
+        if value is None:
+            return value
+
+        if value not in set(['EVERY_SECOND', 'EVERY_MINUTE', 'EVERY_HOUR', 'EVERY_DAY', 'EVERY_WEEK', 'EVERY_MONTH', 'EVERY_QUARTER', 'EVERY_YEAR', 'NEVER', 'UNKNOWN']):
+            raise ValueError("must be one of enum values ('EVERY_SECOND', 'EVERY_MINUTE', 'EVERY_HOUR', 'EVERY_DAY', 'EVERY_WEEK', 'EVERY_MONTH', 'EVERY_QUARTER', 'EVERY_YEAR', 'NEVER', 'UNKNOWN')")
         return value
 
     model_config = ConfigDict(
@@ -173,24 +201,32 @@ class Endpoints(BaseModel):
             "approved_by_user_id": obj.get("approved_by_user_id"),
             "approved_at": obj.get("approved_at"),
             "sell_in_marketplace": obj.get("sell_in_marketplace"),
-            "price_credits": obj.get("price_credits"),
             "name": obj.get("name"),
             "slug": obj.get("slug"),
             "description": obj.get("description"),
+            "detailed_description": obj.get("detailed_description"),
+            "top_questions": obj.get("top_questions"),
             "source_schema_name": obj.get("source_schema_name"),
             "source_table_name": obj.get("source_table_name"),
             "customer_name": obj.get("customer_name"),
-            "price_usd": obj.get("price_usd"),
             "endpoint_schema": obj.get("endpoint_schema"),
-            "rate_limit_requests": obj.get("rate_limit_requests"),
+            "rate_limit_number": obj.get("rate_limit_number"),
             "rate_limit_period": obj.get("rate_limit_period"),
             "rate_limit_granularity": obj.get("rate_limit_granularity"),
             "access_method": obj.get("access_method"),
             "access_whitelist": obj.get("access_whitelist"),
             "status": obj.get("status"),
+            "data_time_period_start": obj.get("data_time_period_start"),
+            "data_time_period_end": obj.get("data_time_period_end"),
+            "date_collection_start": obj.get("date_collection_start"),
+            "geographic_coverage_type": obj.get("geographic_coverage_type"),
+            "geographic_coverage_details": obj.get("geographic_coverage_details"),
+            "data_source_refresh_frequency": obj.get("data_source_refresh_frequency"),
             "tags": obj.get("tags"),
             "last_accessed": obj.get("last_accessed"),
             "max_records_per_request": obj.get("max_records_per_request"),
+            "export_enabled": obj.get("export_enabled"),
+            "max_records_per_export": obj.get("max_records_per_export"),
             "sample_response": obj.get("sample_response"),
             "active": obj.get("active")
         })

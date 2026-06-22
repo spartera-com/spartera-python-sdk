@@ -46,6 +46,7 @@ class AssetsInput(BaseModel):
     asset_type: Optional[StrictStr] = Field(default=None, description="Optional. One of: CALCULATION, VISUALIZATION, DATA.")
     asset_schema: Optional[Dict[str, Any]] = Field(default=None, description="Stores database table schema data including columns, types, and metadata")
     tags: Optional[StrictStr] = Field(default=None, description="Optional.")
+    top_questions: Optional[StrictStr] = Field(default=None, description="Top 3 questions this asset can help answer, in English. Stored as JSON array of strings (1-3 items, 15-200 chars each). Required for marketplace assets.")
     short_code: Optional[StrictStr] = Field(default=None, description="Short code for tera.ac URL shortener (e.g., 'f78zq1')")
     restricted_domains: Optional[StrictStr] = Field(default=None, description="Semicolon or comma-separated list of domains restricted from accessing this asset")
     sql_logic: Optional[StrictStr] = Field(default=None, description="Optional.")
@@ -53,6 +54,7 @@ class AssetsInput(BaseModel):
     source_table_name: Optional[StrictStr] = Field(default=None, description="Optional.")
     sell_in_marketplace: Optional[StrictBool] = Field(default=None, description="Required.")
     require_customization: Optional[StrictBool] = Field(default=None, description="Whether this asset requires customization before use")
+    viz_spec: Optional[Dict[str, Any]] = Field(default=None, description="Plotly figure JSON describing the visualization. Authored via the visual editor or via API. When populated, takes precedence over the legacy viz_* fields. Shape follows Plotly's figure schema: {data: [{type: '...', xsrc: '...', ...}], layout: {...}}. Column references use *src keys (xsrc, ysrc, labelssrc, etc.) and are hydrated with actual data at render time.")
     viz_chart_library: Optional[StrictStr] = Field(default=None, description="Optional. One of: PLOTLY, MATPLOTLIB, SEABORN.")
     viz_chart_type: Optional[StrictStr] = Field(default=None, description="Optional. One of: LINE, BAR, PIE, DOUGHNUT, POLAR, … (8 total).")
     viz_dep_var_col_name: Optional[StrictStr] = Field(default=None, description="Optional.")
@@ -76,14 +78,14 @@ class AssetsInput(BaseModel):
     next_run: Optional[datetime] = Field(default=None, description="Optional.")
     data_time_period_start: Optional[datetime] = Field(default=None, description="Start date of the data time period covered")
     data_time_period_end: Optional[datetime] = Field(default=None, description="End date of the data time period covered")
+    date_collection_start: Optional[datetime] = Field(default=None, description="When the seller began actively collecting this data. Distinct from data_time_period_start, which describes when the records themselves begin. Backfilled historical data will have date_collection_start > data_time_period_start.")
     geographic_coverage_type: Optional[StrictStr] = Field(default=None, description="Type of geographic coverage")
     geographic_coverage_details: Optional[StrictStr] = Field(default=None, description="Specific regions/countries covered (e.g., 'United States, Canada, Mexico')")
     data_source_refresh_frequency: Optional[StrictStr] = Field(default=None, description="How often the source data is refreshed")
-    data_source_last_refreshed: Optional[datetime] = Field(default=None, description="When the source data was last refreshed")
     rate_limit_number: Optional[StrictInt] = Field(default=None, description="Number of requests allowed per period (e.g., 100)")
     rate_limit_period: Optional[StrictStr] = Field(default=None, description="Time period for rate limiting (second, minute, hour, day)")
     rate_limit_granularity: Optional[StrictStr] = Field(default=None, description="Granularity level for rate limiting (USER, COMPANY, IP)")
-    __properties: ClassVar[List[str]] = ["user_id", "company_id", "connection_id", "industry_id", "auc_id", "function_id", "approval_status", "approved_by_user_id", "approved_at", "name", "slug", "description", "detailed_description", "source", "asset_type", "asset_schema", "tags", "short_code", "restricted_domains", "sql_logic", "source_schema_name", "source_table_name", "sell_in_marketplace", "require_customization", "viz_chart_library", "viz_chart_type", "viz_dep_var_col_name", "viz_indep_var_col_name", "viz_size_col_name", "viz_color_col_name", "viz_data_aggregation", "viz_sort_direction", "viz_data_limit", "viz_color_scheme", "viz_show_legend", "viz_show_grid", "viz_show_trendline", "viz_line_smoothing", "viz_bar_stacked", "viz_filter_direction", "allow_params", "accept_terms", "cached", "schedule", "next_run", "data_time_period_start", "data_time_period_end", "geographic_coverage_type", "geographic_coverage_details", "data_source_refresh_frequency", "data_source_last_refreshed", "rate_limit_number", "rate_limit_period", "rate_limit_granularity"]
+    __properties: ClassVar[List[str]] = ["user_id", "company_id", "connection_id", "industry_id", "auc_id", "function_id", "approval_status", "approved_by_user_id", "approved_at", "name", "slug", "description", "detailed_description", "source", "asset_type", "asset_schema", "tags", "top_questions", "short_code", "restricted_domains", "sql_logic", "source_schema_name", "source_table_name", "sell_in_marketplace", "require_customization", "viz_spec", "viz_chart_library", "viz_chart_type", "viz_dep_var_col_name", "viz_indep_var_col_name", "viz_size_col_name", "viz_color_col_name", "viz_data_aggregation", "viz_sort_direction", "viz_data_limit", "viz_color_scheme", "viz_show_legend", "viz_show_grid", "viz_show_trendline", "viz_line_smoothing", "viz_bar_stacked", "viz_filter_direction", "allow_params", "accept_terms", "cached", "schedule", "next_run", "data_time_period_start", "data_time_period_end", "date_collection_start", "geographic_coverage_type", "geographic_coverage_details", "data_source_refresh_frequency", "rate_limit_number", "rate_limit_period", "rate_limit_granularity"]
 
     @field_validator('approval_status')
     def approval_status_validate_enum(cls, value):
@@ -188,8 +190,8 @@ class AssetsInput(BaseModel):
         if value is None:
             return value
 
-        if value not in set(['REAL_TIME', 'HOURLY', 'DAILY', 'WEEKLY', 'MONTHLY', 'QUARTERLY', 'ANNUAL', 'ONE_TIME', 'CUSTOM', 'UNKNOWN']):
-            raise ValueError("must be one of enum values ('REAL_TIME', 'HOURLY', 'DAILY', 'WEEKLY', 'MONTHLY', 'QUARTERLY', 'ANNUAL', 'ONE_TIME', 'CUSTOM', 'UNKNOWN')")
+        if value not in set(['EVERY_SECOND', 'EVERY_MINUTE', 'EVERY_HOUR', 'EVERY_DAY', 'EVERY_WEEK', 'EVERY_MONTH', 'EVERY_QUARTER', 'EVERY_YEAR', 'NEVER', 'UNKNOWN']):
+            raise ValueError("must be one of enum values ('EVERY_SECOND', 'EVERY_MINUTE', 'EVERY_HOUR', 'EVERY_DAY', 'EVERY_WEEK', 'EVERY_MONTH', 'EVERY_QUARTER', 'EVERY_YEAR', 'NEVER', 'UNKNOWN')")
         return value
 
     @field_validator('rate_limit_period')
@@ -280,6 +282,7 @@ class AssetsInput(BaseModel):
             "asset_type": obj.get("asset_type"),
             "asset_schema": obj.get("asset_schema"),
             "tags": obj.get("tags"),
+            "top_questions": obj.get("top_questions"),
             "short_code": obj.get("short_code"),
             "restricted_domains": obj.get("restricted_domains"),
             "sql_logic": obj.get("sql_logic"),
@@ -287,6 +290,7 @@ class AssetsInput(BaseModel):
             "source_table_name": obj.get("source_table_name"),
             "sell_in_marketplace": obj.get("sell_in_marketplace"),
             "require_customization": obj.get("require_customization"),
+            "viz_spec": obj.get("viz_spec"),
             "viz_chart_library": obj.get("viz_chart_library"),
             "viz_chart_type": obj.get("viz_chart_type"),
             "viz_dep_var_col_name": obj.get("viz_dep_var_col_name"),
@@ -310,10 +314,10 @@ class AssetsInput(BaseModel):
             "next_run": obj.get("next_run"),
             "data_time_period_start": obj.get("data_time_period_start"),
             "data_time_period_end": obj.get("data_time_period_end"),
+            "date_collection_start": obj.get("date_collection_start"),
             "geographic_coverage_type": obj.get("geographic_coverage_type"),
             "geographic_coverage_details": obj.get("geographic_coverage_details"),
             "data_source_refresh_frequency": obj.get("data_source_refresh_frequency"),
-            "data_source_last_refreshed": obj.get("data_source_last_refreshed"),
             "rate_limit_number": obj.get("rate_limit_number"),
             "rate_limit_period": obj.get("rate_limit_period"),
             "rate_limit_granularity": obj.get("rate_limit_granularity")

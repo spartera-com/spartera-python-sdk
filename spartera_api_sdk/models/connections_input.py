@@ -31,7 +31,7 @@ class ConnectionsInput(BaseModel):
     user_id: Optional[StrictStr] = Field(default=None, description="References users.user_id — An individual user account within a company. See GET /users for valid values. Optional.")
     engine_id: StrictInt = Field(description="References storage_engines.engine_id — Fact table of all the different storage engines we support. See GET /storage_engines for valid values. Required.")
     company_id: StrictStr = Field(description="References companies.company_id — A Spartera seller or buyer company account. See GET /companies for valid values. Required.")
-    credential_type: Optional[StrictStr] = Field(default=None, description="Optional. One of: SERVICE_ACCOUNT, USERNAME_PASSWORD, API_KEY, SERVICE_IDENTITY, ACCESS_KEY, … (8 total).")
+    credential_type: Optional[StrictStr] = Field(default=None, description="Optional. One of: SERVICE_ACCOUNT, USERNAME_PASSWORD, API_KEY, SERVICE_IDENTITY, ACCESS_KEY, … (10 total).")
     name: Optional[StrictStr] = Field(default=None, description="Optional.")
     description: Optional[StrictStr] = Field(default=None, description="Optional.")
     provider_domain: Optional[StrictStr] = Field(default=None, description="Domain of the external API provider (e.g., 'api.weather.com')")
@@ -44,8 +44,8 @@ class ConnectionsInput(BaseModel):
         if value is None:
             return value
 
-        if value not in set(['SERVICE_ACCOUNT', 'USERNAME_PASSWORD', 'API_KEY', 'SERVICE_IDENTITY', 'ACCESS_KEY', 'NONE', 'OAUTH', 'JSON']):
-            raise ValueError("must be one of enum values ('SERVICE_ACCOUNT', 'USERNAME_PASSWORD', 'API_KEY', 'SERVICE_IDENTITY', 'ACCESS_KEY', 'NONE', 'OAUTH', 'JSON')")
+        if value not in set(['SERVICE_ACCOUNT', 'USERNAME_PASSWORD', 'API_KEY', 'SERVICE_IDENTITY', 'ACCESS_KEY', 'NONE', 'OAUTH', 'JSON', 'KEY_PAIR', 'CLIENT_SECRET']):
+            raise ValueError("must be one of enum values ('SERVICE_ACCOUNT', 'USERNAME_PASSWORD', 'API_KEY', 'SERVICE_IDENTITY', 'ACCESS_KEY', 'NONE', 'OAUTH', 'JSON', 'KEY_PAIR', 'CLIENT_SECRET')")
         return value
 
     model_config = ConfigDict(

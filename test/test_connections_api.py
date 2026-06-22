@@ -62,6 +62,13 @@ class TestConnectionsApi(unittest.TestCase):
         """
         pass
 
+    def test_get_connections_by_id_sample_data(self) -> None:
+        """Test case for get_connections_by_id_sample_data
+
+        Get a randomized sample of rows from a table on this connection.     Used by the visualization editor to give sellers data to author against.      Query Parameters:         schema_name (required): Schema/dataset name         table_name  (required): Table name         limit       (optional): Max rows to return (default 1000, max 10000)      Returns columnar data — {column_name: [values]} — ready for Plotly's     dataSources prop. The actual chart at render time will pull fresh data     via the asset's saved SQL; this is only for authoring preview.
+        """
+        pass
+
     def test_list_connections(self) -> None:
         """Test case for list_connections
 

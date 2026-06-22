@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_assets_analyze**
-> CreateAssetsAnalyze200Response create_assets_analyze(asset_slug, company_handle, assets_input)
+> CreateAssetsAnalyze200Response create_assets_analyze(company_handle, asset_slug, assets_input)
 
 Process (analyze) an asset with dynamic rate limiting applied via decorator.
 
@@ -156,13 +156,13 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 with spartera_api_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = spartera_api_sdk.AssetsApi(api_client)
-    asset_slug = 'asset_slug_example' # str | URL-friendly slug for the Asset
     company_handle = 'company_handle_example' # str | Human-readable handle for the Company
+    asset_slug = 'asset_slug_example' # str | URL-friendly slug for the Asset
     assets_input = spartera_api_sdk.AssetsInput() # AssetsInput | 
 
     try:
         # Process (analyze) an asset with dynamic rate limiting applied via decorator.
-        api_response = api_instance.create_assets_analyze(asset_slug, company_handle, assets_input)
+        api_response = api_instance.create_assets_analyze(company_handle, asset_slug, assets_input)
         print("The response of AssetsApi->create_assets_analyze:\n")
         pprint(api_response)
     except Exception as e:
@@ -176,8 +176,8 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **asset_slug** | **str**| URL-friendly slug for the Asset | 
  **company_handle** | **str**| Human-readable handle for the Company | 
+ **asset_slug** | **str**| URL-friendly slug for the Asset | 
  **assets_input** | [**AssetsInput**](AssetsInput.md)|  | 
 
 ### Return type
@@ -639,7 +639,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_assets_by_id_analyze**
-> GetAssetsByIdAnalyze200Response get_assets_by_id_analyze(asset_slug, company_handle)
+> GetAssetsByIdAnalyze200Response get_assets_by_id_analyze(company_handle, asset_slug)
 
 Process (analyze) an asset with dynamic rate limiting applied via decorator.
 
@@ -674,12 +674,12 @@ configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
 with spartera_api_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = spartera_api_sdk.AssetsApi(api_client)
-    asset_slug = 'asset_slug_example' # str | URL-friendly slug for the Asset
     company_handle = 'company_handle_example' # str | Human-readable handle for the Company
+    asset_slug = 'asset_slug_example' # str | URL-friendly slug for the Asset
 
     try:
         # Process (analyze) an asset with dynamic rate limiting applied via decorator.
-        api_response = api_instance.get_assets_by_id_analyze(asset_slug, company_handle)
+        api_response = api_instance.get_assets_by_id_analyze(company_handle, asset_slug)
         print("The response of AssetsApi->get_assets_by_id_analyze:\n")
         pprint(api_response)
     except Exception as e:
@@ -693,8 +693,8 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **asset_slug** | **str**| URL-friendly slug for the Asset | 
  **company_handle** | **str**| Human-readable handle for the Company | 
+ **asset_slug** | **str**| URL-friendly slug for the Asset | 
 
 ### Return type
 

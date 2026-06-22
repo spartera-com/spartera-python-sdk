@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**get_connections_by_id**](ConnectionsApi.md#get_connections_by_id) | **GET** /companies/{company_id}/connections/{connection_id} | Get single connection by ID
 [**get_connections_by_id2**](ConnectionsApi.md#get_connections_by_id2) | **GET** /companies/{company_id}/connections/{connection_id}/test | Test the specified connection
 [**get_connections_by_id_infoschema**](ConnectionsApi.md#get_connections_by_id_infoschema) | **GET** /companies/{company_id}/connections/{connection_id}/infoschema | Retrieve the information schema for the specified connection
+[**get_connections_by_id_sample_data**](ConnectionsApi.md#get_connections_by_id_sample_data) | **GET** /companies/{company_id}/connections/{connection_id}/sample-data | Get a randomized sample of rows from a table on this connection.     Used by the visualization editor to give sellers data to author against.      Query Parameters:         schema_name (required): Schema/dataset name         table_name  (required): Table name         limit       (optional): Max rows to return (default 1000, max 10000)      Returns columnar data — {column_name: [values]} — ready for Plotly&#39;s     dataSources prop. The actual chart at render time will pull fresh data     via the asset&#39;s saved SQL; this is only for authoring preview.
 [**list_connections**](ConnectionsApi.md#list_connections) | **GET** /companies/{company_id}/connections | Get all connections for a specific company
 [**update_connections**](ConnectionsApi.md#update_connections) | **PATCH** /companies/{company_id}/connections/{connection_id} | Update an existing connection by ID
 
@@ -408,6 +409,90 @@ with spartera_api_sdk.ApiClient(configuration) as api_client:
         pprint(api_response)
     except Exception as e:
         print("Exception when calling ConnectionsApi->get_connections_by_id_infoschema: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **company_id** | **str**| Unique identifier for the Company | 
+ **connection_id** | **str**| Unique identifier for the Connection | 
+
+### Return type
+
+[**GetConnectionsById200Response**](GetConnectionsById200Response.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successfully retrieved connections |  -  |
+**401** | Authentication required |  -  |
+**403** | Permission denied |  -  |
+**404** | Resource not found |  -  |
+**429** | Rate limit exceeded |  -  |
+**500** | Internal server error |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_connections_by_id_sample_data**
+> GetConnectionsById200Response get_connections_by_id_sample_data(company_id, connection_id)
+
+Get a randomized sample of rows from a table on this connection.     Used by the visualization editor to give sellers data to author against.      Query Parameters:         schema_name (required): Schema/dataset name         table_name  (required): Table name         limit       (optional): Max rows to return (default 1000, max 10000)      Returns columnar data — {column_name: [values]} — ready for Plotly's     dataSources prop. The actual chart at render time will pull fresh data     via the asset's saved SQL; this is only for authoring preview.
+
+### Example
+
+* Api Key Authentication (ApiKeyAuth):
+
+```python
+import spartera_api_sdk
+from spartera_api_sdk.models.get_connections_by_id200_response import GetConnectionsById200Response
+from spartera_api_sdk.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.spartera.com
+# See configuration.py for a list of all supported configuration parameters.
+configuration = spartera_api_sdk.Configuration(
+    host = "https://api.spartera.com"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKeyAuth
+configuration.api_key['ApiKeyAuth'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKeyAuth'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with spartera_api_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = spartera_api_sdk.ConnectionsApi(api_client)
+    company_id = 'company_id_example' # str | Unique identifier for the Company
+    connection_id = 'connection_id_example' # str | Unique identifier for the Connection
+
+    try:
+        # Get a randomized sample of rows from a table on this connection.     Used by the visualization editor to give sellers data to author against.      Query Parameters:         schema_name (required): Schema/dataset name         table_name  (required): Table name         limit       (optional): Max rows to return (default 1000, max 10000)      Returns columnar data — {column_name: [values]} — ready for Plotly's     dataSources prop. The actual chart at render time will pull fresh data     via the asset's saved SQL; this is only for authoring preview.
+        api_response = api_instance.get_connections_by_id_sample_data(company_id, connection_id)
+        print("The response of ConnectionsApi->get_connections_by_id_sample_data:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ConnectionsApi->get_connections_by_id_sample_data: %s\n" % e)
 ```
 
 
